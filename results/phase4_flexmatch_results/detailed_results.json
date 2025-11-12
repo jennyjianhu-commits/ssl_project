@@ -1,0 +1,110 @@
+[
+  {
+    "labeled_ratio": 0.1,
+    "seed": 42,
+    "test_accuracy": 93.48,
+    "best_val_accuracy": 93.62,
+    "final_train_accuracy": 99.98355263157895,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 123,
+    "test_accuracy": 92.64,
+    "best_val_accuracy": 93.72,
+    "final_train_accuracy": 99.98355263157895,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 456,
+    "test_accuracy": 92.99,
+    "best_val_accuracy": 93.24,
+    "final_train_accuracy": 99.98355263157895,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 42,
+    "test_accuracy": 92.69,
+    "best_val_accuracy": 92.68,
+    "final_train_accuracy": 99.98355263157895,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 123,
+    "test_accuracy": 93.07,
+    "best_val_accuracy": 93.14,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 456,
+    "test_accuracy": 92.99,
+    "best_val_accuracy": 93.46,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 42,
+    "test_accuracy": 90.54,
+    "best_val_accuracy": 91.22,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 123,
+    "test_accuracy": 91.85,
+    "best_val_accuracy": 92.58,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 456,
+    "test_accuracy": 91.23,
+    "best_val_accuracy": 92.1,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "mapping_type": "convex"
+  }
+]

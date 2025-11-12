@@ -1,0 +1,101 @@
+[
+  {
+    "labeled_ratio": 0.1,
+    "seed": 42,
+    "test_accuracy": 88.41,
+    "best_val_accuracy": 88.4,
+    "final_train_accuracy": 99.47481133999592,
+    "final_student_val_accuracy": 88.02,
+    "final_teacher_val_accuracy": 88.14,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 123,
+    "test_accuracy": 88.53,
+    "best_val_accuracy": 88.62,
+    "final_train_accuracy": 99.33968998572303,
+    "final_student_val_accuracy": 88.46,
+    "final_teacher_val_accuracy": 88.32,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 456,
+    "test_accuracy": 88.63,
+    "best_val_accuracy": 88.44,
+    "final_train_accuracy": 99.47991025902509,
+    "final_student_val_accuracy": 88.6,
+    "final_teacher_val_accuracy": 88.34,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 42,
+    "test_accuracy": 86.63,
+    "best_val_accuracy": 86.56,
+    "final_train_accuracy": 99.81758832565284,
+    "final_student_val_accuracy": 86.02,
+    "final_teacher_val_accuracy": 86.2,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 123,
+    "test_accuracy": 86.53,
+    "best_val_accuracy": 86.36,
+    "final_train_accuracy": 99.75758448540707,
+    "final_student_val_accuracy": 86.1,
+    "final_teacher_val_accuracy": 86.12,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 456,
+    "test_accuracy": 86.36,
+    "best_val_accuracy": 86.44,
+    "final_train_accuracy": 99.83198924731182,
+    "final_student_val_accuracy": 86.24,
+    "final_teacher_val_accuracy": 86.28,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 42,
+    "test_accuracy": 78.46,
+    "best_val_accuracy": 79.06,
+    "final_train_accuracy": 99.98620689655172,
+    "final_student_val_accuracy": 79.3,
+    "final_teacher_val_accuracy": 78.76,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 123,
+    "test_accuracy": 72.25,
+    "best_val_accuracy": 73.4,
+    "final_train_accuracy": 99.9816091954023,
+    "final_student_val_accuracy": 74.26,
+    "final_teacher_val_accuracy": 71.7,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 456,
+    "test_accuracy": 77.48,
+    "best_val_accuracy": 78.22,
+    "final_train_accuracy": 99.9816091954023,
+    "final_student_val_accuracy": 78.2,
+    "final_teacher_val_accuracy": 78.22,
+    "total_epochs": 100,
+    "total_params": 11173962
+  }
+]

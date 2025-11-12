@@ -1,0 +1,101 @@
+[
+  {
+    "labeled_ratio": 0.1,
+    "seed": 42,
+    "test_accuracy": 92.71,
+    "best_val_accuracy": 93.26,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9465402212407854
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 123,
+    "test_accuracy": 92.39,
+    "best_val_accuracy": 93.22,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9449529204103682
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 456,
+    "test_accuracy": 92.87,
+    "best_val_accuracy": 93.12,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9452381365829043
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 42,
+    "test_accuracy": 92.33,
+    "best_val_accuracy": 92.26,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9448521890138325
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 123,
+    "test_accuracy": 92.24,
+    "best_val_accuracy": 92.18,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9416673503423992
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 456,
+    "test_accuracy": 91.68,
+    "best_val_accuracy": 92.0,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9388768729410674
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 42,
+    "test_accuracy": 90.26,
+    "best_val_accuracy": 90.48,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9221567732095718
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 123,
+    "test_accuracy": 91.46,
+    "best_val_accuracy": 91.2,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9282945644855499
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 456,
+    "test_accuracy": 91.15,
+    "best_val_accuracy": 92.4,
+    "total_epochs": 280,
+    "total_params": 11173962,
+    "lambda_u": 1.0,
+    "threshold": 0.95,
+    "final_mask_ratio": 0.9326484525203704
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "labeled_ratio": 1.0,
+    "seed": 42,
+    "test_accuracy": 92.96,
+    "best_val_accuracy": 91.92,
+    "final_train_accuracy": 98.65333333333334,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 1.0,
+    "seed": 123,
+    "test_accuracy": 92.72,
+    "best_val_accuracy": 91.66,
+    "final_train_accuracy": 98.62666666666667,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 1.0,
+    "seed": 456,
+    "test_accuracy": 92.71,
+    "best_val_accuracy": 92.02,
+    "final_train_accuracy": 98.60444444444444,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 42,
+    "test_accuracy": 77.01,
+    "best_val_accuracy": 76.4,
+    "final_train_accuracy": 98.64,
+    "total_epochs": 98,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 123,
+    "test_accuracy": 77.22,
+    "best_val_accuracy": 76.32,
+    "final_train_accuracy": 98.3,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.1,
+    "seed": 456,
+    "test_accuracy": 77.85,
+    "best_val_accuracy": 76.64,
+    "final_train_accuracy": 97.6,
+    "total_epochs": 97,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 42,
+    "test_accuracy": 69.12,
+    "best_val_accuracy": 68.68,
+    "final_train_accuracy": 99.92,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 123,
+    "test_accuracy": 68.22,
+    "best_val_accuracy": 66.84,
+    "final_train_accuracy": 99.84,
+    "total_epochs": 99,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.05,
+    "seed": 456,
+    "test_accuracy": 68.05,
+    "best_val_accuracy": 65.94,
+    "final_train_accuracy": 99.84,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 42,
+    "test_accuracy": 39.68,
+    "best_val_accuracy": 39.48,
+    "final_train_accuracy": 100.0,
+    "total_epochs": 100,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 123,
+    "test_accuracy": 40.91,
+    "best_val_accuracy": 40.1,
+    "final_train_accuracy": 98.2,
+    "total_epochs": 57,
+    "total_params": 11173962
+  },
+  {
+    "labeled_ratio": 0.01,
+    "seed": 456,
+    "test_accuracy": 37.43,
+    "best_val_accuracy": 38.2,
+    "final_train_accuracy": 96.0,
+    "total_epochs": 42,
+    "total_params": 11173962
+  }
+]
+
