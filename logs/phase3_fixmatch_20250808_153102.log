@@ -1,0 +1,361 @@
+2025-08-08 15:31:02,542 - INFO - ================================================================================
+2025-08-08 15:31:02,542 - INFO - phase3_fixmatch Experiment
+2025-08-08 15:31:02,542 - INFO - ================================================================================
+2025-08-08 15:31:02,542 - INFO - Log file: ./logs/phase3_fixmatch_20250808_153102.log
+2025-08-08 15:31:02,542 - INFO - Experiment parameters:
+2025-08-08 15:31:02,542 - INFO -   labeled ratios: [0.1, 0.05, 0.01]
+2025-08-08 15:31:02,542 - INFO -   random seeds: [42, 123, 456]
+2025-08-08 15:31:02,542 - INFO -   training epochs: 280
+2025-08-08 15:31:02,542 - INFO -   save results: True
+2025-08-08 15:31:02,542 - INFO -   log file: ./logs/phase3_fixmatch_20250808_153102.log
+2025-08-08 15:31:02,542 - INFO - 🚀 Phase 3: CIFAR-10 FixMatch semi-supervised learning experiment
+2025-08-08 15:31:02,542 - INFO - ================================================================================
+2025-08-08 15:31:02,542 - INFO - experiment configuration:
+2025-08-08 15:31:02,542 - INFO -    dataset: CIFAR-10
+2025-08-08 15:31:02,542 - INFO -    model: Modified ResNet-18 (consistent with baseline)
+2025-08-08 15:31:02,542 - INFO -    algorithm: FixMatch (consistency regularization + pseudo-labeling)
+2025-08-08 15:31:02,542 - INFO -    labeled ratio: ['10.0%', '5.0%', '1.0%']
+2025-08-08 15:31:02,542 - INFO -    random seeds: [42, 123, 456]
+2025-08-08 15:31:02,542 - INFO -    training epochs: 280
+2025-08-08 15:31:02,542 - INFO - ================================================================================
+2025-08-08 15:31:02,542 - INFO - 
+📊 labeled ratio: 10.0%
+2025-08-08 15:31:02,542 - INFO - ------------------------------------------------------------
+2025-08-08 15:31:02,542 - INFO - 
+🎯 experiment 1/9 - seed: 42
+2025-08-08 15:31:02,544 - INFO - 🔄 prepare FixMatch data...
+2025-08-08 15:31:03,875 - INFO - labeled data: 5000 (10.0%)
+2025-08-08 15:31:03,875 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-08 15:31:03,875 - INFO - validation data: 5000 (10.0%)
+2025-08-08 15:31:03,875 - INFO - test data: 10000
+2025-08-08 15:31:03,875 - INFO - labeled batch size: 64
+2025-08-08 15:31:03,875 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-08 15:31:03,876 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-08 15:31:03,939 - INFO -     model parameters: 11,173,962
+2025-08-08 15:31:03,939 - INFO - 🏋️  start FixMatch training...
+2025-08-08 15:31:04,065 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-08 15:31:04,065 - INFO - Start FixMatch training, 280 epochs
+2025-08-08 15:31:04,065 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-08 15:31:04,065 - INFO - ------------------------------------------------------------
+2025-08-08 15:31:29,769 - INFO - Epoch    1/280 | Total Loss: 2.3618 | Sup Loss: 2.3618 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 12.32% | Val Acc: 8.94% | Mask: 0.0% | LR: 0.00214 | Time: 25.70s
+2025-08-08 15:39:13,745 - INFO - Epoch   20/280 | Total Loss: 0.8580 | Sup Loss: 0.7223 | Unsup Loss: 0.1356 | λ_u: 1.000 | Train Acc: 73.70% | Val Acc: 34.02% | Mask: 23.1% | LR: 0.02999 | Time: 24.37s
+2025-08-08 15:47:22,169 - INFO - Epoch   40/280 | Total Loss: 0.5260 | Sup Loss: 0.2242 | Unsup Loss: 0.3018 | λ_u: 1.000 | Train Acc: 92.27% | Val Acc: 59.30% | Mask: 53.2% | LR: 0.02973 | Time: 24.38s
+2025-08-08 15:55:30,637 - INFO - Epoch   60/280 | Total Loss: 0.4490 | Sup Loss: 0.1063 | Unsup Loss: 0.3426 | λ_u: 1.000 | Train Acc: 96.25% | Val Acc: 70.76% | Mask: 65.9% | LR: 0.02916 | Time: 24.39s
+2025-08-08 16:03:40,023 - INFO - Epoch   80/280 | Total Loss: 0.4084 | Sup Loss: 0.0765 | Unsup Loss: 0.3319 | λ_u: 1.000 | Train Acc: 97.39% | Val Acc: 76.34% | Mask: 71.6% | LR: 0.02827 | Time: 24.39s
+2025-08-08 16:11:48,785 - INFO - Epoch  100/280 | Total Loss: 0.3574 | Sup Loss: 0.0460 | Unsup Loss: 0.3113 | λ_u: 1.000 | Train Acc: 98.32% | Val Acc: 81.14% | Mask: 76.7% | LR: 0.02709 | Time: 24.44s
+2025-08-08 16:19:57,973 - INFO - Epoch  120/280 | Total Loss: 0.3220 | Sup Loss: 0.0320 | Unsup Loss: 0.2900 | λ_u: 1.000 | Train Acc: 98.90% | Val Acc: 80.70% | Mask: 80.1% | LR: 0.02561 | Time: 24.46s
+2025-08-08 16:28:07,702 - INFO - Epoch  140/280 | Total Loss: 0.2982 | Sup Loss: 0.0237 | Unsup Loss: 0.2745 | λ_u: 1.000 | Train Acc: 99.18% | Val Acc: 84.76% | Mask: 82.1% | LR: 0.02386 | Time: 24.48s
+2025-08-08 16:36:17,743 - INFO - Epoch  160/280 | Total Loss: 0.2765 | Sup Loss: 0.0163 | Unsup Loss: 0.2602 | λ_u: 1.000 | Train Acc: 99.46% | Val Acc: 88.04% | Mask: 84.7% | LR: 0.02186 | Time: 24.51s
+2025-08-08 16:44:27,828 - INFO - Epoch  180/280 | Total Loss: 0.2563 | Sup Loss: 0.0115 | Unsup Loss: 0.2449 | λ_u: 1.000 | Train Acc: 99.66% | Val Acc: 88.96% | Mask: 86.8% | LR: 0.01962 | Time: 24.44s
+2025-08-08 16:52:37,166 - INFO - Epoch  200/280 | Total Loss: 0.2378 | Sup Loss: 0.0083 | Unsup Loss: 0.2295 | λ_u: 1.000 | Train Acc: 99.77% | Val Acc: 89.94% | Mask: 88.2% | LR: 0.01718 | Time: 24.41s
+2025-08-08 17:00:46,104 - INFO - Epoch  220/280 | Total Loss: 0.2274 | Sup Loss: 0.0075 | Unsup Loss: 0.2199 | λ_u: 1.000 | Train Acc: 99.75% | Val Acc: 89.96% | Mask: 90.2% | LR: 0.01455 | Time: 24.43s
+2025-08-08 17:08:54,790 - INFO - Epoch  240/280 | Total Loss: 0.2044 | Sup Loss: 0.0037 | Unsup Loss: 0.2007 | λ_u: 1.000 | Train Acc: 99.93% | Val Acc: 91.10% | Mask: 91.7% | LR: 0.01177 | Time: 24.44s
+2025-08-08 17:17:03,862 - INFO - Epoch  260/280 | Total Loss: 0.1830 | Sup Loss: 0.0033 | Unsup Loss: 0.1798 | λ_u: 1.000 | Train Acc: 99.96% | Val Acc: 92.10% | Mask: 92.9% | LR: 0.00886 | Time: 24.50s
+2025-08-08 17:25:12,811 - INFO - Epoch  280/280 | Total Loss: 0.1651 | Sup Loss: 0.0015 | Unsup Loss: 0.1636 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 93.26% | Mask: 94.7% | LR: 0.00585 | Time: 24.53s
+2025-08-08 17:25:12,813 - INFO - ------------------------------------------------------------
+2025-08-08 17:25:12,813 - INFO - FixMatch training completed! Best validation accuracy: 93.26%
+2025-08-08 17:25:13,641 - INFO - ✅ final test accuracy: 92.71%
+2025-08-08 17:25:13,984 - INFO - 
+🎯 experiment 2/9 - seed: 123
+2025-08-08 17:25:13,984 - INFO - 🔄 prepare FixMatch data...
+2025-08-08 17:25:14,834 - INFO - labeled data: 5000 (10.0%)
+2025-08-08 17:25:14,834 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-08 17:25:14,834 - INFO - validation data: 5000 (10.0%)
+2025-08-08 17:25:14,834 - INFO - test data: 10000
+2025-08-08 17:25:14,834 - INFO - labeled batch size: 64
+2025-08-08 17:25:14,834 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-08 17:25:14,835 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-08 17:25:14,892 - INFO -     model parameters: 11,173,962
+2025-08-08 17:25:14,892 - INFO - 🏋️  start FixMatch training...
+2025-08-08 17:25:14,900 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-08 17:25:14,901 - INFO - Start FixMatch training, 280 epochs
+2025-08-08 17:25:14,901 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-08 17:25:14,901 - INFO - ------------------------------------------------------------
+2025-08-08 17:25:39,386 - INFO - Epoch    1/280 | Total Loss: 2.2919 | Sup Loss: 2.2919 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 14.10% | Val Acc: 10.64% | Mask: 0.0% | LR: 0.00214 | Time: 24.49s
+2025-08-08 17:33:24,456 - INFO - Epoch   20/280 | Total Loss: 0.8969 | Sup Loss: 0.7695 | Unsup Loss: 0.1274 | λ_u: 1.000 | Train Acc: 72.72% | Val Acc: 28.04% | Mask: 22.5% | LR: 0.02999 | Time: 24.41s
+2025-08-08 17:41:32,687 - INFO - Epoch   40/280 | Total Loss: 0.5368 | Sup Loss: 0.2296 | Unsup Loss: 0.3072 | λ_u: 1.000 | Train Acc: 91.92% | Val Acc: 38.42% | Mask: 53.4% | LR: 0.02973 | Time: 24.46s
+2025-08-08 17:49:41,129 - INFO - Epoch   60/280 | Total Loss: 0.4472 | Sup Loss: 0.0989 | Unsup Loss: 0.3483 | λ_u: 1.000 | Train Acc: 96.53% | Val Acc: 48.38% | Mask: 66.6% | LR: 0.02916 | Time: 24.34s
+2025-08-08 17:57:49,358 - INFO - Epoch   80/280 | Total Loss: 0.3923 | Sup Loss: 0.0711 | Unsup Loss: 0.3213 | λ_u: 1.000 | Train Acc: 97.51% | Val Acc: 65.42% | Mask: 73.0% | LR: 0.02827 | Time: 24.41s
+2025-08-08 18:05:58,013 - INFO - Epoch  100/280 | Total Loss: 0.3658 | Sup Loss: 0.0629 | Unsup Loss: 0.3028 | λ_u: 1.000 | Train Acc: 98.16% | Val Acc: 79.96% | Mask: 77.3% | LR: 0.02709 | Time: 24.47s
+2025-08-08 18:14:06,674 - INFO - Epoch  120/280 | Total Loss: 0.3287 | Sup Loss: 0.0397 | Unsup Loss: 0.2890 | λ_u: 1.000 | Train Acc: 98.67% | Val Acc: 83.22% | Mask: 79.7% | LR: 0.02561 | Time: 24.41s
+2025-08-08 18:22:15,660 - INFO - Epoch  140/280 | Total Loss: 0.3099 | Sup Loss: 0.0269 | Unsup Loss: 0.2829 | λ_u: 1.000 | Train Acc: 99.09% | Val Acc: 87.34% | Mask: 82.6% | LR: 0.02386 | Time: 24.43s
+2025-08-08 18:30:24,541 - INFO - Epoch  160/280 | Total Loss: 0.2770 | Sup Loss: 0.0194 | Unsup Loss: 0.2576 | λ_u: 1.000 | Train Acc: 99.33% | Val Acc: 88.78% | Mask: 84.3% | LR: 0.02186 | Time: 24.51s
+2025-08-08 18:38:33,050 - INFO - Epoch  180/280 | Total Loss: 0.2571 | Sup Loss: 0.0142 | Unsup Loss: 0.2429 | λ_u: 1.000 | Train Acc: 99.49% | Val Acc: 90.16% | Mask: 86.8% | LR: 0.01962 | Time: 24.38s
+2025-08-08 18:46:41,269 - INFO - Epoch  200/280 | Total Loss: 0.2529 | Sup Loss: 0.0114 | Unsup Loss: 0.2416 | λ_u: 1.000 | Train Acc: 99.63% | Val Acc: 91.18% | Mask: 88.5% | LR: 0.01718 | Time: 24.46s
+2025-08-08 18:54:49,652 - INFO - Epoch  220/280 | Total Loss: 0.2189 | Sup Loss: 0.0049 | Unsup Loss: 0.2140 | λ_u: 1.000 | Train Acc: 99.89% | Val Acc: 90.46% | Mask: 90.3% | LR: 0.01455 | Time: 24.40s
+2025-08-08 19:02:58,704 - INFO - Epoch  240/280 | Total Loss: 0.2032 | Sup Loss: 0.0031 | Unsup Loss: 0.2001 | λ_u: 1.000 | Train Acc: 99.95% | Val Acc: 91.78% | Mask: 91.3% | LR: 0.01177 | Time: 24.43s
+2025-08-08 19:11:07,798 - INFO - Epoch  260/280 | Total Loss: 0.1823 | Sup Loss: 0.0019 | Unsup Loss: 0.1804 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 92.98% | Mask: 93.0% | LR: 0.00886 | Time: 24.51s
+2025-08-08 19:19:16,514 - INFO - Epoch  280/280 | Total Loss: 0.1675 | Sup Loss: 0.0012 | Unsup Loss: 0.1663 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 92.70% | Mask: 94.5% | LR: 0.00585 | Time: 24.41s
+2025-08-08 19:19:16,516 - INFO - ------------------------------------------------------------
+2025-08-08 19:19:16,516 - INFO - FixMatch training completed! Best validation accuracy: 93.22%
+2025-08-08 19:19:17,354 - INFO - ✅ final test accuracy: 92.39%
+2025-08-08 19:19:17,653 - INFO - 
+🎯 experiment 3/9 - seed: 456
+2025-08-08 19:19:17,654 - INFO - 🔄 prepare FixMatch data...
+2025-08-08 19:19:18,517 - INFO - labeled data: 5000 (10.0%)
+2025-08-08 19:19:18,517 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-08 19:19:18,517 - INFO - validation data: 5000 (10.0%)
+2025-08-08 19:19:18,517 - INFO - test data: 10000
+2025-08-08 19:19:18,517 - INFO - labeled batch size: 64
+2025-08-08 19:19:18,517 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-08 19:19:18,518 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-08 19:19:18,577 - INFO -     model parameters: 11,173,962
+2025-08-08 19:19:18,577 - INFO - 🏋️  start FixMatch training...
+2025-08-08 19:19:18,585 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-08 19:19:18,585 - INFO - Start FixMatch training, 280 epochs
+2025-08-08 19:19:18,585 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-08 19:19:18,585 - INFO - ------------------------------------------------------------
+2025-08-08 19:19:43,089 - INFO - Epoch    1/280 | Total Loss: 2.3079 | Sup Loss: 2.3079 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 12.73% | Val Acc: 10.10% | Mask: 0.0% | LR: 0.00214 | Time: 24.50s
+2025-08-08 19:27:27,296 - INFO - Epoch   20/280 | Total Loss: 0.8937 | Sup Loss: 0.7700 | Unsup Loss: 0.1237 | λ_u: 1.000 | Train Acc: 72.28% | Val Acc: 29.40% | Mask: 20.7% | LR: 0.02999 | Time: 24.40s
+2025-08-08 19:35:36,097 - INFO - Epoch   40/280 | Total Loss: 0.5366 | Sup Loss: 0.2263 | Unsup Loss: 0.3103 | λ_u: 1.000 | Train Acc: 91.95% | Val Acc: 50.48% | Mask: 53.2% | LR: 0.02973 | Time: 24.47s
+2025-08-08 19:43:44,837 - INFO - Epoch   60/280 | Total Loss: 0.4479 | Sup Loss: 0.1038 | Unsup Loss: 0.3441 | λ_u: 1.000 | Train Acc: 96.67% | Val Acc: 59.04% | Mask: 66.6% | LR: 0.02916 | Time: 24.42s
+2025-08-08 19:51:53,688 - INFO - Epoch   80/280 | Total Loss: 0.3961 | Sup Loss: 0.0732 | Unsup Loss: 0.3228 | λ_u: 1.000 | Train Acc: 97.65% | Val Acc: 71.64% | Mask: 72.5% | LR: 0.02827 | Time: 24.41s
+2025-08-08 20:00:02,699 - INFO - Epoch  100/280 | Total Loss: 0.3538 | Sup Loss: 0.0489 | Unsup Loss: 0.3049 | λ_u: 1.000 | Train Acc: 98.26% | Val Acc: 81.88% | Mask: 77.3% | LR: 0.02709 | Time: 24.51s
+2025-08-08 20:08:11,636 - INFO - Epoch  120/280 | Total Loss: 0.3169 | Sup Loss: 0.0322 | Unsup Loss: 0.2847 | λ_u: 1.000 | Train Acc: 98.97% | Val Acc: 83.94% | Mask: 80.4% | LR: 0.02561 | Time: 24.41s
+2025-08-08 20:16:20,300 - INFO - Epoch  140/280 | Total Loss: 0.2965 | Sup Loss: 0.0257 | Unsup Loss: 0.2708 | λ_u: 1.000 | Train Acc: 99.09% | Val Acc: 87.42% | Mask: 82.9% | LR: 0.02386 | Time: 24.48s
+2025-08-08 20:24:28,897 - INFO - Epoch  160/280 | Total Loss: 0.2791 | Sup Loss: 0.0179 | Unsup Loss: 0.2612 | λ_u: 1.000 | Train Acc: 99.42% | Val Acc: 88.72% | Mask: 85.6% | LR: 0.02186 | Time: 24.46s
+2025-08-08 20:32:38,109 - INFO - Epoch  180/280 | Total Loss: 0.2483 | Sup Loss: 0.0107 | Unsup Loss: 0.2375 | λ_u: 1.000 | Train Acc: 99.63% | Val Acc: 89.12% | Mask: 87.0% | LR: 0.01962 | Time: 24.57s
+2025-08-08 20:40:47,524 - INFO - Epoch  200/280 | Total Loss: 0.2374 | Sup Loss: 0.0102 | Unsup Loss: 0.2272 | λ_u: 1.000 | Train Acc: 99.77% | Val Acc: 89.64% | Mask: 88.7% | LR: 0.01718 | Time: 24.54s
+2025-08-08 20:48:58,181 - INFO - Epoch  220/280 | Total Loss: 0.2173 | Sup Loss: 0.0041 | Unsup Loss: 0.2132 | λ_u: 1.000 | Train Acc: 99.91% | Val Acc: 91.24% | Mask: 90.2% | LR: 0.01455 | Time: 24.64s
+2025-08-08 20:57:09,667 - INFO - Epoch  240/280 | Total Loss: 0.1968 | Sup Loss: 0.0038 | Unsup Loss: 0.1930 | λ_u: 1.000 | Train Acc: 99.89% | Val Acc: 91.68% | Mask: 91.5% | LR: 0.01177 | Time: 24.44s
+2025-08-08 21:05:20,190 - INFO - Epoch  260/280 | Total Loss: 0.1827 | Sup Loss: 0.0020 | Unsup Loss: 0.1807 | λ_u: 1.000 | Train Acc: 99.96% | Val Acc: 91.78% | Mask: 93.1% | LR: 0.00886 | Time: 24.51s
+2025-08-08 21:13:29,449 - INFO - Epoch  280/280 | Total Loss: 0.1607 | Sup Loss: 0.0012 | Unsup Loss: 0.1596 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 92.66% | Mask: 94.5% | LR: 0.00585 | Time: 24.44s
+2025-08-08 21:13:29,451 - INFO - ------------------------------------------------------------
+2025-08-08 21:13:29,451 - INFO - FixMatch training completed! Best validation accuracy: 93.12%
+2025-08-08 21:13:30,289 - INFO - ✅ final test accuracy: 92.87%
+2025-08-08 21:13:30,594 - INFO - 
+📈 10.0% average result: 92.66% ± 0.20%
+2025-08-08 21:13:30,594 - INFO - 
+📊 labeled ratio: 5.0%
+2025-08-08 21:13:30,594 - INFO - ------------------------------------------------------------
+2025-08-08 21:13:30,594 - INFO - 
+🎯 experiment 4/9 - seed: 42
+2025-08-08 21:13:30,594 - INFO - 🔄 prepare FixMatch data...
+2025-08-08 21:13:31,393 - INFO - labeled data: 2500 (5.0%)
+2025-08-08 21:13:31,393 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-08 21:13:31,393 - INFO - validation data: 5000 (10.0%)
+2025-08-08 21:13:31,393 - INFO - test data: 10000
+2025-08-08 21:13:31,393 - INFO - labeled batch size: 64
+2025-08-08 21:13:31,393 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-08 21:13:31,395 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-08 21:13:31,453 - INFO -     model parameters: 11,173,962
+2025-08-08 21:13:31,453 - INFO - 🏋️  start FixMatch training...
+2025-08-08 21:13:31,462 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-08 21:13:31,462 - INFO - Start FixMatch training, 280 epochs
+2025-08-08 21:13:31,462 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-08 21:13:31,462 - INFO - ------------------------------------------------------------
+2025-08-08 21:13:57,434 - INFO - Epoch    1/280 | Total Loss: 2.3510 | Sup Loss: 2.3510 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 12.67% | Val Acc: 9.10% | Mask: 0.0% | LR: 0.00214 | Time: 25.97s
+2025-08-08 21:22:09,625 - INFO - Epoch   20/280 | Total Loss: 0.6049 | Sup Loss: 0.3663 | Unsup Loss: 0.2387 | λ_u: 1.000 | Train Acc: 87.15% | Val Acc: 34.30% | Mask: 32.8% | LR: 0.02999 | Time: 25.92s
+2025-08-08 21:30:48,070 - INFO - Epoch   40/280 | Total Loss: 0.4481 | Sup Loss: 0.0807 | Unsup Loss: 0.3675 | λ_u: 1.000 | Train Acc: 97.31% | Val Acc: 54.48% | Mask: 57.1% | LR: 0.02973 | Time: 25.90s
+2025-08-08 21:39:26,187 - INFO - Epoch   60/280 | Total Loss: 0.4009 | Sup Loss: 0.0639 | Unsup Loss: 0.3370 | λ_u: 1.000 | Train Acc: 98.46% | Val Acc: 58.26% | Mask: 66.1% | LR: 0.02916 | Time: 25.88s
+2025-08-08 21:48:04,276 - INFO - Epoch   80/280 | Total Loss: 0.3394 | Sup Loss: 0.0358 | Unsup Loss: 0.3035 | λ_u: 1.000 | Train Acc: 98.71% | Val Acc: 73.70% | Mask: 72.6% | LR: 0.02827 | Time: 25.88s
+2025-08-08 21:56:42,289 - INFO - Epoch  100/280 | Total Loss: 0.2978 | Sup Loss: 0.0182 | Unsup Loss: 0.2795 | λ_u: 1.000 | Train Acc: 99.41% | Val Acc: 77.08% | Mask: 78.1% | LR: 0.02709 | Time: 25.88s
+2025-08-08 22:05:22,749 - INFO - Epoch  120/280 | Total Loss: 0.2806 | Sup Loss: 0.0133 | Unsup Loss: 0.2673 | λ_u: 1.000 | Train Acc: 99.64% | Val Acc: 81.76% | Mask: 81.0% | LR: 0.02561 | Time: 25.93s
+2025-08-08 22:14:02,694 - INFO - Epoch  140/280 | Total Loss: 0.2594 | Sup Loss: 0.0069 | Unsup Loss: 0.2524 | λ_u: 1.000 | Train Acc: 99.83% | Val Acc: 85.30% | Mask: 83.6% | LR: 0.02386 | Time: 26.02s
+2025-08-08 22:22:43,346 - INFO - Epoch  160/280 | Total Loss: 0.2500 | Sup Loss: 0.0093 | Unsup Loss: 0.2407 | λ_u: 1.000 | Train Acc: 99.78% | Val Acc: 84.30% | Mask: 85.3% | LR: 0.02186 | Time: 26.10s
+2025-08-08 22:31:23,546 - INFO - Epoch  180/280 | Total Loss: 0.2218 | Sup Loss: 0.0044 | Unsup Loss: 0.2174 | λ_u: 1.000 | Train Acc: 99.90% | Val Acc: 88.22% | Mask: 87.3% | LR: 0.01962 | Time: 26.09s
+2025-08-08 22:40:03,373 - INFO - Epoch  200/280 | Total Loss: 0.2134 | Sup Loss: 0.0039 | Unsup Loss: 0.2096 | λ_u: 1.000 | Train Acc: 99.92% | Val Acc: 89.40% | Mask: 88.9% | LR: 0.01718 | Time: 25.95s
+2025-08-08 22:48:44,328 - INFO - Epoch  220/280 | Total Loss: 0.1933 | Sup Loss: 0.0021 | Unsup Loss: 0.1912 | λ_u: 1.000 | Train Acc: 99.97% | Val Acc: 89.64% | Mask: 90.2% | LR: 0.01455 | Time: 26.13s
+2025-08-08 22:57:23,795 - INFO - Epoch  240/280 | Total Loss: 0.1865 | Sup Loss: 0.0012 | Unsup Loss: 0.1853 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 90.82% | Mask: 91.6% | LR: 0.01177 | Time: 25.98s
+2025-08-08 23:06:04,036 - INFO - Epoch  260/280 | Total Loss: 0.1728 | Sup Loss: 0.0009 | Unsup Loss: 0.1719 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.62% | Mask: 92.8% | LR: 0.00886 | Time: 26.17s
+2025-08-08 23:14:42,896 - INFO - Epoch  280/280 | Total Loss: 0.1573 | Sup Loss: 0.0011 | Unsup Loss: 0.1563 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 91.74% | Mask: 94.5% | LR: 0.00585 | Time: 25.88s
+2025-08-08 23:14:42,897 - INFO - ------------------------------------------------------------
+2025-08-08 23:14:42,897 - INFO - FixMatch training completed! Best validation accuracy: 92.26%
+2025-08-08 23:14:43,726 - INFO - ✅ final test accuracy: 92.33%
+2025-08-08 23:14:44,026 - INFO - 
+🎯 experiment 5/9 - seed: 123
+2025-08-08 23:14:44,026 - INFO - 🔄 prepare FixMatch data...
+2025-08-08 23:14:44,829 - INFO - labeled data: 2500 (5.0%)
+2025-08-08 23:14:44,829 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-08 23:14:44,829 - INFO - validation data: 5000 (10.0%)
+2025-08-08 23:14:44,829 - INFO - test data: 10000
+2025-08-08 23:14:44,829 - INFO - labeled batch size: 64
+2025-08-08 23:14:44,829 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-08 23:14:44,830 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-08 23:14:44,887 - INFO -     model parameters: 11,173,962
+2025-08-08 23:14:44,887 - INFO - 🏋️  start FixMatch training...
+2025-08-08 23:14:44,895 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-08 23:14:44,895 - INFO - Start FixMatch training, 280 epochs
+2025-08-08 23:14:44,896 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-08 23:14:44,896 - INFO - ------------------------------------------------------------
+2025-08-08 23:15:10,855 - INFO - Epoch    1/280 | Total Loss: 2.2902 | Sup Loss: 2.2902 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 15.20% | Val Acc: 10.52% | Mask: 0.0% | LR: 0.00214 | Time: 25.96s
+2025-08-08 23:23:24,251 - INFO - Epoch   20/280 | Total Loss: 0.6113 | Sup Loss: 0.3780 | Unsup Loss: 0.2332 | λ_u: 1.000 | Train Acc: 86.85% | Val Acc: 29.66% | Mask: 32.1% | LR: 0.02999 | Time: 26.01s
+2025-08-08 23:32:02,907 - INFO - Epoch   40/280 | Total Loss: 0.4697 | Sup Loss: 0.0939 | Unsup Loss: 0.3759 | λ_u: 1.000 | Train Acc: 96.68% | Val Acc: 28.64% | Mask: 56.8% | LR: 0.02973 | Time: 25.87s
+2025-08-08 23:40:40,730 - INFO - Epoch   60/280 | Total Loss: 0.4044 | Sup Loss: 0.0544 | Unsup Loss: 0.3500 | λ_u: 1.000 | Train Acc: 98.09% | Val Acc: 50.36% | Mask: 65.3% | LR: 0.02916 | Time: 25.96s
+2025-08-08 23:49:18,418 - INFO - Epoch   80/280 | Total Loss: 0.3602 | Sup Loss: 0.0425 | Unsup Loss: 0.3178 | λ_u: 1.000 | Train Acc: 98.63% | Val Acc: 61.98% | Mask: 72.3% | LR: 0.02827 | Time: 25.83s
+2025-08-08 23:57:56,603 - INFO - Epoch  100/280 | Total Loss: 0.3211 | Sup Loss: 0.0230 | Unsup Loss: 0.2981 | λ_u: 1.000 | Train Acc: 99.21% | Val Acc: 81.30% | Mask: 77.4% | LR: 0.02709 | Time: 25.97s
+2025-08-09 00:06:34,591 - INFO - Epoch  120/280 | Total Loss: 0.2846 | Sup Loss: 0.0144 | Unsup Loss: 0.2702 | λ_u: 1.000 | Train Acc: 99.59% | Val Acc: 82.88% | Mask: 80.5% | LR: 0.02561 | Time: 25.87s
+2025-08-09 00:15:13,006 - INFO - Epoch  140/280 | Total Loss: 0.2722 | Sup Loss: 0.0117 | Unsup Loss: 0.2605 | λ_u: 1.000 | Train Acc: 99.65% | Val Acc: 83.68% | Mask: 83.7% | LR: 0.02386 | Time: 25.94s
+2025-08-09 00:23:50,686 - INFO - Epoch  160/280 | Total Loss: 0.2522 | Sup Loss: 0.0083 | Unsup Loss: 0.2439 | λ_u: 1.000 | Train Acc: 99.75% | Val Acc: 86.20% | Mask: 85.5% | LR: 0.02186 | Time: 25.85s
+2025-08-09 00:32:29,056 - INFO - Epoch  180/280 | Total Loss: 0.2326 | Sup Loss: 0.0062 | Unsup Loss: 0.2264 | λ_u: 1.000 | Train Acc: 99.80% | Val Acc: 88.46% | Mask: 87.3% | LR: 0.01962 | Time: 25.86s
+2025-08-09 00:41:07,004 - INFO - Epoch  200/280 | Total Loss: 0.2166 | Sup Loss: 0.0039 | Unsup Loss: 0.2128 | λ_u: 1.000 | Train Acc: 99.93% | Val Acc: 88.44% | Mask: 88.4% | LR: 0.01718 | Time: 25.89s
+2025-08-09 00:49:45,129 - INFO - Epoch  220/280 | Total Loss: 0.2013 | Sup Loss: 0.0026 | Unsup Loss: 0.1987 | λ_u: 1.000 | Train Acc: 99.95% | Val Acc: 90.06% | Mask: 90.0% | LR: 0.01455 | Time: 25.90s
+2025-08-09 00:58:23,312 - INFO - Epoch  240/280 | Total Loss: 0.1793 | Sup Loss: 0.0010 | Unsup Loss: 0.1783 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.08% | Mask: 91.4% | LR: 0.01177 | Time: 25.94s
+2025-08-09 01:07:01,484 - INFO - Epoch  260/280 | Total Loss: 0.1731 | Sup Loss: 0.0008 | Unsup Loss: 0.1723 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.34% | Mask: 92.9% | LR: 0.00886 | Time: 25.87s
+2025-08-09 01:15:39,221 - INFO - Epoch  280/280 | Total Loss: 0.1571 | Sup Loss: 0.0005 | Unsup Loss: 0.1566 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.64% | Mask: 94.2% | LR: 0.00585 | Time: 25.99s
+2025-08-09 01:15:39,223 - INFO - ------------------------------------------------------------
+2025-08-09 01:15:39,223 - INFO - FixMatch training completed! Best validation accuracy: 92.18%
+2025-08-09 01:15:40,053 - INFO - ✅ final test accuracy: 92.24%
+2025-08-09 01:15:40,355 - INFO - 
+🎯 experiment 6/9 - seed: 456
+2025-08-09 01:15:40,356 - INFO - 🔄 prepare FixMatch data...
+2025-08-09 01:15:41,189 - INFO - labeled data: 2500 (5.0%)
+2025-08-09 01:15:41,189 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-09 01:15:41,189 - INFO - validation data: 5000 (10.0%)
+2025-08-09 01:15:41,189 - INFO - test data: 10000
+2025-08-09 01:15:41,189 - INFO - labeled batch size: 64
+2025-08-09 01:15:41,189 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-09 01:15:41,192 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-09 01:15:41,249 - INFO -     model parameters: 11,173,962
+2025-08-09 01:15:41,249 - INFO - 🏋️  start FixMatch training...
+2025-08-09 01:15:41,259 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-09 01:15:41,259 - INFO - Start FixMatch training, 280 epochs
+2025-08-09 01:15:41,259 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-09 01:15:41,259 - INFO - ------------------------------------------------------------
+2025-08-09 01:16:07,109 - INFO - Epoch    1/280 | Total Loss: 2.3110 | Sup Loss: 2.3110 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 13.32% | Val Acc: 8.90% | Mask: 0.0% | LR: 0.00214 | Time: 25.85s
+2025-08-09 01:24:19,682 - INFO - Epoch   20/280 | Total Loss: 0.6060 | Sup Loss: 0.3703 | Unsup Loss: 0.2357 | λ_u: 1.000 | Train Acc: 86.88% | Val Acc: 27.54% | Mask: 32.1% | LR: 0.02999 | Time: 25.89s
+2025-08-09 01:32:58,355 - INFO - Epoch   40/280 | Total Loss: 0.4551 | Sup Loss: 0.0905 | Unsup Loss: 0.3646 | λ_u: 1.000 | Train Acc: 96.93% | Val Acc: 45.88% | Mask: 55.9% | LR: 0.02973 | Time: 25.89s
+2025-08-09 01:41:37,127 - INFO - Epoch   60/280 | Total Loss: 0.4255 | Sup Loss: 0.0689 | Unsup Loss: 0.3567 | λ_u: 1.000 | Train Acc: 97.68% | Val Acc: 45.80% | Mask: 64.8% | LR: 0.02916 | Time: 25.93s
+2025-08-09 01:50:16,159 - INFO - Epoch   80/280 | Total Loss: 0.3650 | Sup Loss: 0.0336 | Unsup Loss: 0.3314 | λ_u: 1.000 | Train Acc: 99.00% | Val Acc: 65.64% | Mask: 71.6% | LR: 0.02827 | Time: 26.00s
+2025-08-09 01:58:54,975 - INFO - Epoch  100/280 | Total Loss: 0.3201 | Sup Loss: 0.0236 | Unsup Loss: 0.2965 | λ_u: 1.000 | Train Acc: 99.19% | Val Acc: 74.02% | Mask: 76.4% | LR: 0.02709 | Time: 25.92s
+2025-08-09 02:07:33,810 - INFO - Epoch  120/280 | Total Loss: 0.2933 | Sup Loss: 0.0152 | Unsup Loss: 0.2780 | λ_u: 1.000 | Train Acc: 99.61% | Val Acc: 82.48% | Mask: 80.4% | LR: 0.02561 | Time: 25.99s
+2025-08-09 02:16:12,710 - INFO - Epoch  140/280 | Total Loss: 0.2680 | Sup Loss: 0.0073 | Unsup Loss: 0.2607 | λ_u: 1.000 | Train Acc: 99.83% | Val Acc: 84.78% | Mask: 82.9% | LR: 0.02386 | Time: 25.94s
+2025-08-09 02:24:51,842 - INFO - Epoch  160/280 | Total Loss: 0.2457 | Sup Loss: 0.0072 | Unsup Loss: 0.2385 | λ_u: 1.000 | Train Acc: 99.78% | Val Acc: 87.50% | Mask: 85.2% | LR: 0.02186 | Time: 25.98s
+2025-08-09 02:33:30,536 - INFO - Epoch  180/280 | Total Loss: 0.2307 | Sup Loss: 0.0054 | Unsup Loss: 0.2253 | λ_u: 1.000 | Train Acc: 99.92% | Val Acc: 89.30% | Mask: 86.7% | LR: 0.01962 | Time: 25.91s
+2025-08-09 02:42:09,015 - INFO - Epoch  200/280 | Total Loss: 0.2148 | Sup Loss: 0.0032 | Unsup Loss: 0.2117 | λ_u: 1.000 | Train Acc: 99.97% | Val Acc: 88.06% | Mask: 88.4% | LR: 0.01718 | Time: 25.97s
+2025-08-09 02:50:47,538 - INFO - Epoch  220/280 | Total Loss: 0.2036 | Sup Loss: 0.0026 | Unsup Loss: 0.2010 | λ_u: 1.000 | Train Acc: 99.97% | Val Acc: 90.24% | Mask: 89.9% | LR: 0.01455 | Time: 25.92s
+2025-08-09 02:59:25,970 - INFO - Epoch  240/280 | Total Loss: 0.1842 | Sup Loss: 0.0016 | Unsup Loss: 0.1826 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 91.24% | Mask: 91.1% | LR: 0.01177 | Time: 25.90s
+2025-08-09 03:08:04,139 - INFO - Epoch  260/280 | Total Loss: 0.1733 | Sup Loss: 0.0012 | Unsup Loss: 0.1721 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.80% | Mask: 92.6% | LR: 0.00886 | Time: 25.93s
+2025-08-09 03:16:42,395 - INFO - Epoch  280/280 | Total Loss: 0.1556 | Sup Loss: 0.0005 | Unsup Loss: 0.1551 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.34% | Mask: 93.9% | LR: 0.00585 | Time: 25.89s
+2025-08-09 03:16:42,397 - INFO - ------------------------------------------------------------
+2025-08-09 03:16:42,397 - INFO - FixMatch training completed! Best validation accuracy: 92.00%
+2025-08-09 03:16:43,223 - INFO - ✅ final test accuracy: 91.68%
+2025-08-09 03:16:43,596 - INFO - 
+📈 5.0% average result: 92.08% ± 0.29%
+2025-08-09 03:16:43,596 - INFO - 
+📊 labeled ratio: 1.0%
+2025-08-09 03:16:43,596 - INFO - ------------------------------------------------------------
+2025-08-09 03:16:43,596 - INFO - 
+🎯 experiment 7/9 - seed: 42
+2025-08-09 03:16:43,596 - INFO - 🔄 prepare FixMatch data...
+2025-08-09 03:16:44,430 - INFO - labeled data: 500 (1.0%)
+2025-08-09 03:16:44,431 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-09 03:16:44,431 - INFO - validation data: 5000 (10.0%)
+2025-08-09 03:16:44,431 - INFO - test data: 10000
+2025-08-09 03:16:44,431 - INFO - labeled batch size: 64
+2025-08-09 03:16:44,431 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-09 03:16:44,431 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-09 03:16:44,488 - INFO -     model parameters: 11,173,962
+2025-08-09 03:16:44,489 - INFO - 🏋️  start FixMatch training...
+2025-08-09 03:16:44,498 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-09 03:16:44,498 - INFO - Start FixMatch training, 280 epochs
+2025-08-09 03:16:44,498 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-09 03:16:44,498 - INFO - ------------------------------------------------------------
+2025-08-09 03:17:11,523 - INFO - Epoch    1/280 | Total Loss: 2.3374 | Sup Loss: 2.3374 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 14.34% | Val Acc: 9.64% | Mask: 0.0% | LR: 0.00214 | Time: 27.02s
+2025-08-09 03:25:46,702 - INFO - Epoch   20/280 | Total Loss: 0.4181 | Sup Loss: 0.0547 | Unsup Loss: 0.3635 | λ_u: 1.000 | Train Acc: 98.43% | Val Acc: 26.02% | Mask: 43.1% | LR: 0.02999 | Time: 27.16s
+2025-08-09 03:34:49,467 - INFO - Epoch   40/280 | Total Loss: 0.3612 | Sup Loss: 0.0230 | Unsup Loss: 0.3383 | λ_u: 1.000 | Train Acc: 99.50% | Val Acc: 40.16% | Mask: 54.2% | LR: 0.02973 | Time: 27.12s
+2025-08-09 03:43:52,168 - INFO - Epoch   60/280 | Total Loss: 0.3234 | Sup Loss: 0.0118 | Unsup Loss: 0.3116 | λ_u: 1.000 | Train Acc: 99.71% | Val Acc: 44.26% | Mask: 60.4% | LR: 0.02916 | Time: 27.12s
+2025-08-09 03:52:54,585 - INFO - Epoch   80/280 | Total Loss: 0.2934 | Sup Loss: 0.0108 | Unsup Loss: 0.2826 | λ_u: 1.000 | Train Acc: 99.68% | Val Acc: 60.32% | Mask: 66.7% | LR: 0.02827 | Time: 27.10s
+2025-08-09 04:01:57,074 - INFO - Epoch  100/280 | Total Loss: 0.2724 | Sup Loss: 0.0065 | Unsup Loss: 0.2658 | λ_u: 1.000 | Train Acc: 99.78% | Val Acc: 69.98% | Mask: 72.2% | LR: 0.02709 | Time: 27.09s
+2025-08-09 04:10:59,611 - INFO - Epoch  120/280 | Total Loss: 0.2440 | Sup Loss: 0.0039 | Unsup Loss: 0.2401 | λ_u: 1.000 | Train Acc: 99.89% | Val Acc: 72.88% | Mask: 76.5% | LR: 0.02561 | Time: 27.18s
+2025-08-09 04:20:02,055 - INFO - Epoch  140/280 | Total Loss: 0.2229 | Sup Loss: 0.0022 | Unsup Loss: 0.2208 | λ_u: 1.000 | Train Acc: 99.95% | Val Acc: 78.10% | Mask: 80.0% | LR: 0.02386 | Time: 27.12s
+2025-08-09 04:29:04,355 - INFO - Epoch  160/280 | Total Loss: 0.2116 | Sup Loss: 0.0017 | Unsup Loss: 0.2099 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 84.08% | Mask: 81.9% | LR: 0.02186 | Time: 27.07s
+2025-08-09 04:38:06,641 - INFO - Epoch  180/280 | Total Loss: 0.2068 | Sup Loss: 0.0015 | Unsup Loss: 0.2053 | λ_u: 1.000 | Train Acc: 99.97% | Val Acc: 85.20% | Mask: 84.3% | LR: 0.01962 | Time: 27.08s
+2025-08-09 04:47:09,037 - INFO - Epoch  200/280 | Total Loss: 0.1928 | Sup Loss: 0.0012 | Unsup Loss: 0.1916 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 87.44% | Mask: 86.0% | LR: 0.01718 | Time: 27.07s
+2025-08-09 04:56:11,568 - INFO - Epoch  220/280 | Total Loss: 0.1854 | Sup Loss: 0.0006 | Unsup Loss: 0.1847 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 85.90% | Mask: 87.6% | LR: 0.01455 | Time: 27.20s
+2025-08-09 05:05:13,775 - INFO - Epoch  240/280 | Total Loss: 0.1669 | Sup Loss: 0.0004 | Unsup Loss: 0.1665 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 88.58% | Mask: 89.2% | LR: 0.01177 | Time: 27.11s
+2025-08-09 05:14:16,204 - INFO - Epoch  260/280 | Total Loss: 0.1570 | Sup Loss: 0.0003 | Unsup Loss: 0.1567 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.18% | Mask: 91.0% | LR: 0.00886 | Time: 27.09s
+2025-08-09 05:23:18,691 - INFO - Epoch  280/280 | Total Loss: 0.1472 | Sup Loss: 0.0002 | Unsup Loss: 0.1470 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 90.42% | Mask: 92.2% | LR: 0.00585 | Time: 27.11s
+2025-08-09 05:23:18,693 - INFO - ------------------------------------------------------------
+2025-08-09 05:23:18,693 - INFO - FixMatch training completed! Best validation accuracy: 90.48%
+2025-08-09 05:23:19,520 - INFO - ✅ final test accuracy: 90.26%
+2025-08-09 05:23:19,826 - INFO - 
+🎯 experiment 8/9 - seed: 123
+2025-08-09 05:23:19,826 - INFO - 🔄 prepare FixMatch data...
+2025-08-09 05:23:20,663 - INFO - labeled data: 500 (1.0%)
+2025-08-09 05:23:20,663 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-09 05:23:20,663 - INFO - validation data: 5000 (10.0%)
+2025-08-09 05:23:20,663 - INFO - test data: 10000
+2025-08-09 05:23:20,663 - INFO - labeled batch size: 64
+2025-08-09 05:23:20,663 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-09 05:23:20,666 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-09 05:23:20,724 - INFO -     model parameters: 11,173,962
+2025-08-09 05:23:20,724 - INFO - 🏋️  start FixMatch training...
+2025-08-09 05:23:20,733 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-09 05:23:20,733 - INFO - Start FixMatch training, 280 epochs
+2025-08-09 05:23:20,733 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-09 05:23:20,733 - INFO - ------------------------------------------------------------
+2025-08-09 05:23:47,921 - INFO - Epoch    1/280 | Total Loss: 2.2708 | Sup Loss: 2.2708 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 16.51% | Val Acc: 11.02% | Mask: 0.0% | LR: 0.00214 | Time: 27.19s
+2025-08-09 05:32:22,964 - INFO - Epoch   20/280 | Total Loss: 0.4170 | Sup Loss: 0.0551 | Unsup Loss: 0.3618 | λ_u: 1.000 | Train Acc: 98.33% | Val Acc: 22.10% | Mask: 43.3% | LR: 0.02999 | Time: 27.15s
+2025-08-09 05:41:25,205 - INFO - Epoch   40/280 | Total Loss: 0.3720 | Sup Loss: 0.0248 | Unsup Loss: 0.3472 | λ_u: 1.000 | Train Acc: 99.26% | Val Acc: 30.48% | Mask: 55.3% | LR: 0.02973 | Time: 27.18s
+2025-08-09 05:50:27,469 - INFO - Epoch   60/280 | Total Loss: 0.3286 | Sup Loss: 0.0148 | Unsup Loss: 0.3138 | λ_u: 1.000 | Train Acc: 99.49% | Val Acc: 48.66% | Mask: 61.9% | LR: 0.02916 | Time: 27.08s
+2025-08-09 05:59:29,499 - INFO - Epoch   80/280 | Total Loss: 0.2958 | Sup Loss: 0.0087 | Unsup Loss: 0.2871 | λ_u: 1.000 | Train Acc: 99.78% | Val Acc: 53.72% | Mask: 68.7% | LR: 0.02827 | Time: 27.07s
+2025-08-09 06:08:31,368 - INFO - Epoch  100/280 | Total Loss: 0.2622 | Sup Loss: 0.0078 | Unsup Loss: 0.2544 | λ_u: 1.000 | Train Acc: 99.79% | Val Acc: 70.40% | Mask: 74.0% | LR: 0.02709 | Time: 27.14s
+2025-08-09 06:17:33,888 - INFO - Epoch  120/280 | Total Loss: 0.2423 | Sup Loss: 0.0043 | Unsup Loss: 0.2380 | λ_u: 1.000 | Train Acc: 99.94% | Val Acc: 76.40% | Mask: 77.7% | LR: 0.02561 | Time: 27.20s
+2025-08-09 06:26:35,598 - INFO - Epoch  140/280 | Total Loss: 0.2227 | Sup Loss: 0.0024 | Unsup Loss: 0.2203 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 83.42% | Mask: 81.8% | LR: 0.02386 | Time: 27.06s
+2025-08-09 06:35:37,552 - INFO - Epoch  160/280 | Total Loss: 0.2123 | Sup Loss: 0.0014 | Unsup Loss: 0.2109 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 84.18% | Mask: 84.0% | LR: 0.02186 | Time: 27.05s
+2025-08-09 06:44:39,479 - INFO - Epoch  180/280 | Total Loss: 0.1984 | Sup Loss: 0.0011 | Unsup Loss: 0.1973 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 86.66% | Mask: 85.2% | LR: 0.01962 | Time: 27.10s
+2025-08-09 06:53:41,398 - INFO - Epoch  200/280 | Total Loss: 0.1905 | Sup Loss: 0.0013 | Unsup Loss: 0.1892 | λ_u: 1.000 | Train Acc: 99.95% | Val Acc: 88.10% | Mask: 86.5% | LR: 0.01718 | Time: 27.11s
+2025-08-09 07:02:43,214 - INFO - Epoch  220/280 | Total Loss: 0.1810 | Sup Loss: 0.0008 | Unsup Loss: 0.1803 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.42% | Mask: 88.5% | LR: 0.01455 | Time: 27.14s
+2025-08-09 07:11:45,053 - INFO - Epoch  240/280 | Total Loss: 0.1715 | Sup Loss: 0.0006 | Unsup Loss: 0.1709 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 90.08% | Mask: 90.0% | LR: 0.01177 | Time: 27.07s
+2025-08-09 07:20:47,044 - INFO - Epoch  260/280 | Total Loss: 0.1604 | Sup Loss: 0.0003 | Unsup Loss: 0.1601 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.20% | Mask: 91.4% | LR: 0.00886 | Time: 27.11s
+2025-08-09 07:29:49,014 - INFO - Epoch  280/280 | Total Loss: 0.1438 | Sup Loss: 0.0002 | Unsup Loss: 0.1436 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 91.20% | Mask: 92.8% | LR: 0.00585 | Time: 27.06s
+2025-08-09 07:29:49,015 - INFO - ------------------------------------------------------------
+2025-08-09 07:29:49,015 - INFO - FixMatch training completed! Best validation accuracy: 91.20%
+2025-08-09 07:29:49,844 - INFO - ✅ final test accuracy: 91.46%
+2025-08-09 07:29:50,232 - INFO - 
+🎯 experiment 9/9 - seed: 456
+2025-08-09 07:29:50,233 - INFO - 🔄 prepare FixMatch data...
+2025-08-09 07:29:51,076 - INFO - labeled data: 500 (1.0%)
+2025-08-09 07:29:51,076 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-09 07:29:51,076 - INFO - validation data: 5000 (10.0%)
+2025-08-09 07:29:51,076 - INFO - test data: 10000
+2025-08-09 07:29:51,076 - INFO - labeled batch size: 64
+2025-08-09 07:29:51,076 - INFO - unlabeled batch size: 448 (mu=7)
+2025-08-09 07:29:51,077 - INFO - 🏗️  create ModifiedResNet18...
+2025-08-09 07:29:51,135 - INFO -     model parameters: 11,173,962
+2025-08-09 07:29:51,135 - INFO - 🏋️  start FixMatch training...
+2025-08-09 07:29:51,144 - INFO - ✅ EMA enabled with decay rate: 0.999
+2025-08-09 07:29:51,144 - INFO - Start FixMatch training, 280 epochs
+2025-08-09 07:29:51,144 - INFO - Confidence threshold: 0.95, λ_u: 1.0
+2025-08-09 07:29:51,144 - INFO - ------------------------------------------------------------
+2025-08-09 07:30:18,179 - INFO - Epoch    1/280 | Total Loss: 2.2841 | Sup Loss: 2.2841 | Unsup Loss: 0.0000 | λ_u: 1.000 | Train Acc: 14.85% | Val Acc: 8.98% | Mask: 0.0% | LR: 0.00214 | Time: 27.03s
+2025-08-09 07:38:54,132 - INFO - Epoch   20/280 | Total Loss: 0.4171 | Sup Loss: 0.0513 | Unsup Loss: 0.3658 | λ_u: 1.000 | Train Acc: 98.53% | Val Acc: 20.52% | Mask: 44.9% | LR: 0.02999 | Time: 27.19s
+2025-08-09 07:47:56,986 - INFO - Epoch   40/280 | Total Loss: 0.3545 | Sup Loss: 0.0200 | Unsup Loss: 0.3345 | λ_u: 1.000 | Train Acc: 99.41% | Val Acc: 35.60% | Mask: 55.7% | LR: 0.02973 | Time: 27.10s
+2025-08-09 07:56:59,595 - INFO - Epoch   60/280 | Total Loss: 0.3166 | Sup Loss: 0.0101 | Unsup Loss: 0.3064 | λ_u: 1.000 | Train Acc: 99.78% | Val Acc: 42.22% | Mask: 64.1% | LR: 0.02916 | Time: 27.09s
+2025-08-09 08:06:02,492 - INFO - Epoch   80/280 | Total Loss: 0.2866 | Sup Loss: 0.0138 | Unsup Loss: 0.2728 | λ_u: 1.000 | Train Acc: 99.60% | Val Acc: 55.88% | Mask: 69.6% | LR: 0.02827 | Time: 27.14s
+2025-08-09 08:15:05,302 - INFO - Epoch  100/280 | Total Loss: 0.2563 | Sup Loss: 0.0037 | Unsup Loss: 0.2526 | λ_u: 1.000 | Train Acc: 99.94% | Val Acc: 74.12% | Mask: 75.8% | LR: 0.02709 | Time: 27.17s
+2025-08-09 08:24:08,254 - INFO - Epoch  120/280 | Total Loss: 0.2376 | Sup Loss: 0.0028 | Unsup Loss: 0.2347 | λ_u: 1.000 | Train Acc: 99.92% | Val Acc: 79.02% | Mask: 79.4% | LR: 0.02561 | Time: 27.17s
+2025-08-09 08:33:11,262 - INFO - Epoch  140/280 | Total Loss: 0.2255 | Sup Loss: 0.0031 | Unsup Loss: 0.2224 | λ_u: 1.000 | Train Acc: 99.89% | Val Acc: 84.62% | Mask: 81.9% | LR: 0.02386 | Time: 27.10s
+2025-08-09 08:42:14,542 - INFO - Epoch  160/280 | Total Loss: 0.2132 | Sup Loss: 0.0015 | Unsup Loss: 0.2117 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 85.34% | Mask: 84.3% | LR: 0.02186 | Time: 27.16s
+2025-08-09 08:51:17,642 - INFO - Epoch  180/280 | Total Loss: 0.1969 | Sup Loss: 0.0012 | Unsup Loss: 0.1957 | λ_u: 1.000 | Train Acc: 99.98% | Val Acc: 88.12% | Mask: 85.3% | LR: 0.01962 | Time: 27.16s
+2025-08-09 09:00:20,817 - INFO - Epoch  200/280 | Total Loss: 0.1894 | Sup Loss: 0.0009 | Unsup Loss: 0.1885 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.36% | Mask: 87.0% | LR: 0.01718 | Time: 27.20s
+2025-08-09 09:09:24,422 - INFO - Epoch  220/280 | Total Loss: 0.1790 | Sup Loss: 0.0007 | Unsup Loss: 0.1783 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 89.72% | Mask: 88.5% | LR: 0.01455 | Time: 27.25s
+2025-08-09 09:18:27,892 - INFO - Epoch  240/280 | Total Loss: 0.1701 | Sup Loss: 0.0004 | Unsup Loss: 0.1697 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 90.96% | Mask: 90.2% | LR: 0.01177 | Time: 27.19s
+2025-08-09 09:27:31,723 - INFO - Epoch  260/280 | Total Loss: 0.1589 | Sup Loss: 0.0003 | Unsup Loss: 0.1587 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 90.86% | Mask: 91.5% | LR: 0.00886 | Time: 27.17s
+2025-08-09 09:36:34,980 - INFO - Epoch  280/280 | Total Loss: 0.1448 | Sup Loss: 0.0001 | Unsup Loss: 0.1447 | λ_u: 1.000 | Train Acc: 100.00% | Val Acc: 92.18% | Mask: 93.3% | LR: 0.00585 | Time: 27.13s
+2025-08-09 09:36:34,982 - INFO - ------------------------------------------------------------
+2025-08-09 09:36:34,982 - INFO - FixMatch training completed! Best validation accuracy: 92.40%
+2025-08-09 09:36:35,810 - INFO - ✅ final test accuracy: 91.15%
+2025-08-09 09:36:36,184 - INFO - 
+📈 1.0% average result: 90.96% ± 0.51%
+2025-08-09 09:36:36,184 - INFO - 
+================================================================================
+2025-08-09 09:36:36,184 - INFO - 📊 Phase 3 FixMatch final results summary
+2025-08-09 09:36:36,184 - INFO - ================================================================================
+2025-08-09 09:36:36,184 - INFO - 
+Labeled Ratio   | Mean Accuracy | Std    | 95% CI  
+2025-08-09 09:36:36,184 - INFO - --------------------------------------------------
+2025-08-09 09:36:36,184 - INFO - 10.0%           |      92.66% |  0.20% | ±0.23%
+2025-08-09 09:36:36,184 - INFO - 5.0%            |      92.08% |  0.29% | ±0.33%
+2025-08-09 09:36:36,184 - INFO - 1.0%            |      90.96% |  0.51% | ±0.58%
+2025-08-09 09:36:36,257 - INFO - 📈 visualization results generated
+2025-08-09 09:36:36,258 - INFO - 
+💾 results saved to: ./results/phase3_fixmatch_results_20250808_153102/
+2025-08-09 09:36:36,260 - INFO - 
+🎉 Phase 3 FixMatch experiment completed!
+2025-08-09 09:36:36,260 - INFO - 
+📝 key findings:
+2025-08-09 09:36:36,260 - INFO - • 10.0% labeled data: 92.66% ± 0.20%
+2025-08-09 09:36:36,260 - INFO - • 5.0% labeled data: 92.08% ± 0.29%
+2025-08-09 09:36:36,260 - INFO - • 1.0% labeled data: 90.96% ± 0.51%

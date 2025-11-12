@@ -1,0 +1,344 @@
+Using device: cuda
+🚀 Phase 1: CIFAR-10 supervised learning baseline experiment
+================================================================================
+experiment configuration:
+   dataset: CIFAR-10
+   model: Modified ResNet-18
+   labeled ratio: ['100% (fully supervised)', '10.0%', '5.0%', '1.0%']
+   random seeds: [42, 123, 456]
+   training epochs: 100
+================================================================================
+
+📊 labeled ratio: 100% (fully supervised)
+------------------------------------------------------------
+
+🎯 experiment 1/12 - seed: 42
+🔄 prepare data...
+100.0%
+training data: 45000 (90.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.4642 | Train Acc: 46.45% | Val Acc: 52.32% | LR: 0.001000 | Time: 11.14s
+Epoch  10/100 | Train Loss: 0.5623 | Train Acc: 80.72% | Val Acc: 78.62% | LR: 0.000980 | Time: 10.43s
+Epoch  20/100 | Train Loss: 0.4107 | Train Acc: 85.87% | Val Acc: 83.56% | LR: 0.000914 | Time: 10.45s
+Epoch  30/100 | Train Loss: 0.3437 | Train Acc: 88.22% | Val Acc: 83.02% | LR: 0.000806 | Time: 10.45s
+Epoch  40/100 | Train Loss: 0.2843 | Train Acc: 90.15% | Val Acc: 85.90% | LR: 0.000669 | Time: 10.46s
+Epoch  50/100 | Train Loss: 0.2344 | Train Acc: 91.82% | Val Acc: 87.86% | LR: 0.000516 | Time: 10.46s
+Epoch  60/100 | Train Loss: 0.1822 | Train Acc: 93.74% | Val Acc: 88.80% | LR: 0.000361 | Time: 10.45s
+Epoch  70/100 | Train Loss: 0.1228 | Train Acc: 95.80% | Val Acc: 90.02% | LR: 0.000219 | Time: 10.46s
+Epoch  80/100 | Train Loss: 0.0783 | Train Acc: 97.34% | Val Acc: 90.70% | LR: 0.000105 | Time: 10.48s
+Epoch  90/100 | Train Loss: 0.0499 | Train Acc: 98.33% | Val Acc: 91.44% | LR: 0.000030 | Time: 10.46s
+Epoch 100/100 | Train Loss: 0.0437 | Train Acc: 98.65% | Val Acc: 91.52% | LR: 0.000000 | Time: 10.49s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 91.92%
+✅ final test accuracy: 92.96%
+
+🎯 experiment 2/12 - seed: 123
+🔄 prepare data...
+training data: 45000 (90.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.4703 | Train Acc: 46.13% | Val Acc: 53.46% | LR: 0.001000 | Time: 10.53s
+Epoch  10/100 | Train Loss: 0.5614 | Train Acc: 80.74% | Val Acc: 78.56% | LR: 0.000980 | Time: 10.50s
+Epoch  20/100 | Train Loss: 0.4153 | Train Acc: 85.74% | Val Acc: 81.06% | LR: 0.000914 | Time: 10.50s
+Epoch  30/100 | Train Loss: 0.3467 | Train Acc: 88.09% | Val Acc: 85.00% | LR: 0.000806 | Time: 10.48s
+Epoch  40/100 | Train Loss: 0.2823 | Train Acc: 90.35% | Val Acc: 86.82% | LR: 0.000669 | Time: 10.48s
+Epoch  50/100 | Train Loss: 0.2273 | Train Acc: 92.27% | Val Acc: 87.48% | LR: 0.000516 | Time: 10.47s
+Epoch  60/100 | Train Loss: 0.1740 | Train Acc: 94.04% | Val Acc: 89.12% | LR: 0.000361 | Time: 10.47s
+Epoch  70/100 | Train Loss: 0.1243 | Train Acc: 95.73% | Val Acc: 90.04% | LR: 0.000219 | Time: 10.52s
+Epoch  80/100 | Train Loss: 0.0760 | Train Acc: 97.48% | Val Acc: 91.36% | LR: 0.000105 | Time: 10.49s
+Epoch  90/100 | Train Loss: 0.0490 | Train Acc: 98.42% | Val Acc: 91.38% | LR: 0.000030 | Time: 10.49s
+Epoch 100/100 | Train Loss: 0.0448 | Train Acc: 98.63% | Val Acc: 91.18% | LR: 0.000000 | Time: 10.49s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 91.66%
+✅ final test accuracy: 92.72%
+
+🎯 experiment 3/12 - seed: 456
+🔄 prepare data...
+training data: 45000 (90.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.4784 | Train Acc: 45.86% | Val Acc: 54.22% | LR: 0.001000 | Time: 10.45s
+Epoch  10/100 | Train Loss: 0.5600 | Train Acc: 80.92% | Val Acc: 76.38% | LR: 0.000980 | Time: 10.44s
+Epoch  20/100 | Train Loss: 0.4158 | Train Acc: 85.84% | Val Acc: 80.90% | LR: 0.000914 | Time: 10.44s
+Epoch  30/100 | Train Loss: 0.3409 | Train Acc: 88.29% | Val Acc: 84.84% | LR: 0.000806 | Time: 10.43s
+Epoch  40/100 | Train Loss: 0.2832 | Train Acc: 90.40% | Val Acc: 86.10% | LR: 0.000669 | Time: 10.45s
+Epoch  50/100 | Train Loss: 0.2290 | Train Acc: 92.21% | Val Acc: 87.52% | LR: 0.000516 | Time: 10.46s
+Epoch  60/100 | Train Loss: 0.1728 | Train Acc: 93.91% | Val Acc: 88.56% | LR: 0.000361 | Time: 10.45s
+Epoch  70/100 | Train Loss: 0.1247 | Train Acc: 95.72% | Val Acc: 90.86% | LR: 0.000219 | Time: 10.43s
+Epoch  80/100 | Train Loss: 0.0798 | Train Acc: 97.36% | Val Acc: 91.62% | LR: 0.000105 | Time: 10.45s
+Epoch  90/100 | Train Loss: 0.0540 | Train Acc: 98.26% | Val Acc: 91.86% | LR: 0.000030 | Time: 10.46s
+Epoch 100/100 | Train Loss: 0.0454 | Train Acc: 98.60% | Val Acc: 91.64% | LR: 0.000000 | Time: 10.47s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 92.02%
+✅ final test accuracy: 92.71%
+
+📈 100% (fully supervised) average result: 92.80% ± 0.12%
+
+📊 labeled ratio: 10.0%
+------------------------------------------------------------
+
+🎯 experiment 4/12 - seed: 42
+🔄 prepare data...
+labeled data: 5000 (10.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.9016 | Train Acc: 29.84% | Val Acc: 25.88% | LR: 0.001000 | Time: 1.83s
+Epoch  10/100 | Train Loss: 1.2259 | Train Acc: 55.72% | Val Acc: 46.70% | LR: 0.000980 | Time: 1.78s
+Epoch  20/100 | Train Loss: 0.9689 | Train Acc: 65.88% | Val Acc: 54.34% | LR: 0.000914 | Time: 1.78s
+Epoch  30/100 | Train Loss: 0.7646 | Train Acc: 72.36% | Val Acc: 56.42% | LR: 0.000806 | Time: 1.79s
+Epoch  40/100 | Train Loss: 0.6417 | Train Acc: 77.58% | Val Acc: 66.18% | LR: 0.000669 | Time: 1.78s
+Epoch  50/100 | Train Loss: 0.4592 | Train Acc: 84.48% | Val Acc: 69.68% | LR: 0.000516 | Time: 1.78s
+Epoch  60/100 | Train Loss: 0.3062 | Train Acc: 89.44% | Val Acc: 73.74% | LR: 0.000361 | Time: 1.78s
+Epoch  70/100 | Train Loss: 0.2279 | Train Acc: 92.28% | Val Acc: 74.14% | LR: 0.000219 | Time: 1.78s
+Epoch  80/100 | Train Loss: 0.0877 | Train Acc: 97.58% | Val Acc: 75.60% | LR: 0.000105 | Time: 1.78s
+Epoch  90/100 | Train Loss: 0.0642 | Train Acc: 98.06% | Val Acc: 76.18% | LR: 0.000030 | Time: 1.78s
+Early stop trigger! Verification accuracy is 15 epochs without improvement
+------------------------------------------------------------
+Training completed! Best validation accuracy: 76.40%
+✅ final test accuracy: 77.01%
+
+🎯 experiment 5/12 - seed: 123
+🔄 prepare data...
+labeled data: 5000 (10.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.9432 | Train Acc: 28.58% | Val Acc: 27.60% | LR: 0.001000 | Time: 1.79s
+Epoch  10/100 | Train Loss: 1.3076 | Train Acc: 52.42% | Val Acc: 46.12% | LR: 0.000980 | Time: 1.77s
+Epoch  20/100 | Train Loss: 1.0758 | Train Acc: 61.68% | Val Acc: 58.32% | LR: 0.000914 | Time: 1.78s
+Epoch  30/100 | Train Loss: 0.8734 | Train Acc: 69.50% | Val Acc: 64.10% | LR: 0.000806 | Time: 1.78s
+Epoch  40/100 | Train Loss: 0.6554 | Train Acc: 76.84% | Val Acc: 66.00% | LR: 0.000669 | Time: 1.78s
+Epoch  50/100 | Train Loss: 0.4760 | Train Acc: 83.12% | Val Acc: 68.38% | LR: 0.000516 | Time: 1.78s
+Epoch  60/100 | Train Loss: 0.3101 | Train Acc: 89.28% | Val Acc: 71.08% | LR: 0.000361 | Time: 1.77s
+Epoch  70/100 | Train Loss: 0.2456 | Train Acc: 93.14% | Val Acc: 73.74% | LR: 0.000219 | Time: 1.78s
+Epoch  80/100 | Train Loss: 0.1550 | Train Acc: 95.70% | Val Acc: 74.96% | LR: 0.000105 | Time: 1.78s
+Epoch  90/100 | Train Loss: 0.1238 | Train Acc: 97.12% | Val Acc: 76.08% | LR: 0.000030 | Time: 1.78s
+Epoch 100/100 | Train Loss: 0.0639 | Train Acc: 98.30% | Val Acc: 75.84% | LR: 0.000000 | Time: 1.78s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 76.32%
+✅ final test accuracy: 77.22%
+
+🎯 experiment 6/12 - seed: 456
+🔄 prepare data...
+labeled data: 5000 (10.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 1.9285 | Train Acc: 28.12% | Val Acc: 28.62% | LR: 0.001000 | Time: 1.78s
+Epoch  10/100 | Train Loss: 1.2108 | Train Acc: 55.24% | Val Acc: 51.24% | LR: 0.000980 | Time: 1.78s
+Epoch  20/100 | Train Loss: 1.1271 | Train Acc: 60.40% | Val Acc: 57.58% | LR: 0.000914 | Time: 1.79s
+Epoch  30/100 | Train Loss: 0.7875 | Train Acc: 71.98% | Val Acc: 66.90% | LR: 0.000806 | Time: 1.78s
+Epoch  40/100 | Train Loss: 0.6410 | Train Acc: 78.10% | Val Acc: 65.00% | LR: 0.000669 | Time: 1.78s
+Epoch  50/100 | Train Loss: 0.4871 | Train Acc: 83.38% | Val Acc: 69.42% | LR: 0.000516 | Time: 1.78s
+Epoch  60/100 | Train Loss: 0.4347 | Train Acc: 85.40% | Val Acc: 72.62% | LR: 0.000361 | Time: 1.78s
+Epoch  70/100 | Train Loss: 0.2175 | Train Acc: 93.16% | Val Acc: 73.74% | LR: 0.000219 | Time: 1.78s
+Epoch  80/100 | Train Loss: 0.1506 | Train Acc: 95.28% | Val Acc: 74.56% | LR: 0.000105 | Time: 1.78s
+Epoch  90/100 | Train Loss: 0.0831 | Train Acc: 97.68% | Val Acc: 75.22% | LR: 0.000030 | Time: 1.79s
+Early stop trigger! Verification accuracy is 15 epochs without improvement
+------------------------------------------------------------
+Training completed! Best validation accuracy: 76.64%
+✅ final test accuracy: 77.85%
+
+📈 10.0% average result: 77.36% ± 0.36%
+
+📊 labeled ratio: 5.0%
+------------------------------------------------------------
+
+🎯 experiment 7/12 - seed: 42
+🔄 prepare data...
+labeled data: 2500 (5.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.1098 | Train Acc: 22.88% | Val Acc: 17.06% | LR: 0.001000 | Time: 1.26s
+Epoch  10/100 | Train Loss: 1.2890 | Train Acc: 52.32% | Val Acc: 41.64% | LR: 0.000980 | Time: 1.24s
+Epoch  20/100 | Train Loss: 0.9858 | Train Acc: 64.16% | Val Acc: 48.90% | LR: 0.000914 | Time: 1.24s
+Epoch  30/100 | Train Loss: 0.6671 | Train Acc: 76.16% | Val Acc: 54.80% | LR: 0.000806 | Time: 1.23s
+Epoch  40/100 | Train Loss: 0.4590 | Train Acc: 84.04% | Val Acc: 56.00% | LR: 0.000669 | Time: 1.24s
+Epoch  50/100 | Train Loss: 0.2746 | Train Acc: 90.64% | Val Acc: 62.56% | LR: 0.000516 | Time: 1.24s
+Epoch  60/100 | Train Loss: 0.1814 | Train Acc: 94.00% | Val Acc: 60.12% | LR: 0.000361 | Time: 1.24s
+Epoch  70/100 | Train Loss: 0.0546 | Train Acc: 98.44% | Val Acc: 66.80% | LR: 0.000219 | Time: 1.24s
+Epoch  80/100 | Train Loss: 0.0295 | Train Acc: 99.20% | Val Acc: 67.04% | LR: 0.000105 | Time: 1.24s
+Epoch  90/100 | Train Loss: 0.0118 | Train Acc: 99.80% | Val Acc: 67.46% | LR: 0.000030 | Time: 1.24s
+Epoch 100/100 | Train Loss: 0.0110 | Train Acc: 99.92% | Val Acc: 67.52% | LR: 0.000000 | Time: 1.24s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 68.68%
+✅ final test accuracy: 69.12%
+
+🎯 experiment 8/12 - seed: 123
+🔄 prepare data...
+labeled data: 2500 (5.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.1384 | Train Acc: 21.68% | Val Acc: 19.74% | LR: 0.001000 | Time: 1.24s
+Epoch  10/100 | Train Loss: 1.3226 | Train Acc: 53.24% | Val Acc: 45.18% | LR: 0.000980 | Time: 1.23s
+Epoch  20/100 | Train Loss: 0.9635 | Train Acc: 65.36% | Val Acc: 53.46% | LR: 0.000914 | Time: 1.24s
+Epoch  30/100 | Train Loss: 0.7299 | Train Acc: 73.52% | Val Acc: 57.12% | LR: 0.000806 | Time: 1.24s
+Epoch  40/100 | Train Loss: 0.5220 | Train Acc: 82.32% | Val Acc: 58.78% | LR: 0.000669 | Time: 1.24s
+Epoch  50/100 | Train Loss: 0.3027 | Train Acc: 89.60% | Val Acc: 60.24% | LR: 0.000516 | Time: 1.24s
+Epoch  60/100 | Train Loss: 0.1561 | Train Acc: 95.36% | Val Acc: 62.50% | LR: 0.000361 | Time: 1.24s
+Epoch  70/100 | Train Loss: 0.0675 | Train Acc: 97.80% | Val Acc: 64.16% | LR: 0.000219 | Time: 1.24s
+Epoch  80/100 | Train Loss: 0.0292 | Train Acc: 99.24% | Val Acc: 66.38% | LR: 0.000105 | Time: 1.23s
+Epoch  90/100 | Train Loss: 0.0180 | Train Acc: 99.40% | Val Acc: 65.50% | LR: 0.000030 | Time: 1.24s
+Early stop trigger! Verification accuracy is 15 epochs without improvement
+------------------------------------------------------------
+Training completed! Best validation accuracy: 66.84%
+✅ final test accuracy: 68.22%
+
+🎯 experiment 9/12 - seed: 456
+🔄 prepare data...
+labeled data: 2500 (5.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.1222 | Train Acc: 22.80% | Val Acc: 26.88% | LR: 0.001000 | Time: 1.25s
+Epoch  10/100 | Train Loss: 1.2174 | Train Acc: 55.36% | Val Acc: 46.70% | LR: 0.000980 | Time: 1.24s
+Epoch  20/100 | Train Loss: 0.8669 | Train Acc: 68.40% | Val Acc: 50.18% | LR: 0.000914 | Time: 1.24s
+Epoch  30/100 | Train Loss: 0.6261 | Train Acc: 78.16% | Val Acc: 55.00% | LR: 0.000806 | Time: 1.23s
+Epoch  40/100 | Train Loss: 0.4283 | Train Acc: 85.36% | Val Acc: 55.74% | LR: 0.000669 | Time: 1.23s
+Epoch  50/100 | Train Loss: 0.2850 | Train Acc: 89.96% | Val Acc: 58.50% | LR: 0.000516 | Time: 1.23s
+Epoch  60/100 | Train Loss: 0.1516 | Train Acc: 94.60% | Val Acc: 60.64% | LR: 0.000361 | Time: 1.24s
+Epoch  70/100 | Train Loss: 0.0642 | Train Acc: 97.84% | Val Acc: 63.48% | LR: 0.000219 | Time: 1.24s
+Epoch  80/100 | Train Loss: 0.0232 | Train Acc: 99.36% | Val Acc: 65.86% | LR: 0.000105 | Time: 1.24s
+Epoch  90/100 | Train Loss: 0.0134 | Train Acc: 99.72% | Val Acc: 64.80% | LR: 0.000030 | Time: 1.23s
+Epoch 100/100 | Train Loss: 0.0124 | Train Acc: 99.84% | Val Acc: 65.14% | LR: 0.000000 | Time: 1.24s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 65.94%
+✅ final test accuracy: 68.05%
+
+📈 5.0% average result: 68.46% ± 0.47%
+
+📊 labeled ratio: 1.0%
+------------------------------------------------------------
+
+🎯 experiment 10/12 - seed: 42
+🔄 prepare data...
+labeled data: 500 (1.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.4167 | Train Acc: 13.00% | Val Acc: 11.84% | LR: 0.001000 | Time: 0.81s
+Epoch  10/100 | Train Loss: 1.1952 | Train Acc: 57.00% | Val Acc: 31.02% | LR: 0.000980 | Time: 0.81s
+Epoch  20/100 | Train Loss: 0.7899 | Train Acc: 71.20% | Val Acc: 34.48% | LR: 0.000914 | Time: 0.81s
+Epoch  30/100 | Train Loss: 0.3104 | Train Acc: 89.20% | Val Acc: 32.94% | LR: 0.000806 | Time: 0.81s
+Epoch  40/100 | Train Loss: 0.1544 | Train Acc: 94.80% | Val Acc: 34.94% | LR: 0.000669 | Time: 0.81s
+Epoch  50/100 | Train Loss: 0.1073 | Train Acc: 97.00% | Val Acc: 36.32% | LR: 0.000516 | Time: 0.81s
+Epoch  60/100 | Train Loss: 0.0580 | Train Acc: 98.40% | Val Acc: 35.86% | LR: 0.000361 | Time: 0.81s
+Epoch  70/100 | Train Loss: 0.0122 | Train Acc: 100.00% | Val Acc: 37.58% | LR: 0.000219 | Time: 0.81s
+Epoch  80/100 | Train Loss: 0.0109 | Train Acc: 100.00% | Val Acc: 38.26% | LR: 0.000105 | Time: 0.81s
+Epoch  90/100 | Train Loss: 0.0033 | Train Acc: 100.00% | Val Acc: 38.30% | LR: 0.000030 | Time: 0.81s
+Epoch 100/100 | Train Loss: 0.0052 | Train Acc: 100.00% | Val Acc: 37.94% | LR: 0.000000 | Time: 0.81s
+------------------------------------------------------------
+Training completed! Best validation accuracy: 39.48%
+✅ final test accuracy: 39.68%
+
+🎯 experiment 11/12 - seed: 123
+🔄 prepare data...
+labeled data: 500 (1.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.5420 | Train Acc: 13.00% | Val Acc: 11.16% | LR: 0.001000 | Time: 0.81s
+Epoch  10/100 | Train Loss: 1.3962 | Train Acc: 48.00% | Val Acc: 28.64% | LR: 0.000980 | Time: 0.81s
+Epoch  20/100 | Train Loss: 0.7651 | Train Acc: 72.20% | Val Acc: 32.82% | LR: 0.000914 | Time: 0.81s
+Epoch  30/100 | Train Loss: 0.3980 | Train Acc: 85.80% | Val Acc: 37.12% | LR: 0.000806 | Time: 0.81s
+Epoch  40/100 | Train Loss: 0.2623 | Train Acc: 91.80% | Val Acc: 37.42% | LR: 0.000669 | Time: 0.81s
+Epoch  50/100 | Train Loss: 0.1020 | Train Acc: 96.80% | Val Acc: 38.20% | LR: 0.000516 | Time: 0.81s
+Early stop trigger! Verification accuracy is 15 epochs without improvement
+------------------------------------------------------------
+Training completed! Best validation accuracy: 40.10%
+✅ final test accuracy: 40.91%
+
+🎯 experiment 12/12 - seed: 456
+🔄 prepare data...
+labeled data: 500 (1.0%)
+validation data: 5000 (10.0%)
+test data: 10000
+🏗️  create ModifiedResNet18...
+    model parameters: 11,173,962
+🏋️  start training...
+start training, 100 epochs
+------------------------------------------------------------
+Epoch   1/100 | Train Loss: 2.4841 | Train Acc: 14.80% | Val Acc: 14.48% | LR: 0.001000 | Time: 0.81s
+Epoch  10/100 | Train Loss: 1.2044 | Train Acc: 55.40% | Val Acc: 30.00% | LR: 0.000980 | Time: 0.81s
+Epoch  20/100 | Train Loss: 0.7473 | Train Acc: 71.80% | Val Acc: 34.84% | LR: 0.000914 | Time: 0.81s
+Epoch  30/100 | Train Loss: 0.2877 | Train Acc: 91.40% | Val Acc: 35.92% | LR: 0.000806 | Time: 0.80s
+Epoch  40/100 | Train Loss: 0.1191 | Train Acc: 97.00% | Val Acc: 37.32% | LR: 0.000669 | Time: 0.80s
+Early stop trigger! Verification accuracy is 15 epochs without improvement
+------------------------------------------------------------
+Training completed! Best validation accuracy: 38.20%
+✅ final test accuracy: 37.43%
+
+📈 1.0% average result: 39.34% ± 1.44%
+
+================================================================================
+📊 Phase 1 final results summary
+================================================================================
+
+Labeled Ratio        | Mean Accuracy | Std    | 95% CI  
+-------------------------------------------------------
+100% (fully supervised) |      92.80% |  0.12% | ±0.13%
+10.0%                |      77.36% |  0.36% | ±0.40%
+5.0%                 |      68.46% |  0.47% | ±0.53%
+1.0%                 |      39.34% |  1.44% | ±1.63%
+📈 visualization results generated
+
+💾 results saved to: ./results/phase1_cifar10_results_20250702_193908/
+
+🎉 Phase 1 experiment completed!
+
+📝 key findings:
+• fully supervised baseline accuracy: 92.80%
+• 10.0% labeled data: 77.36% (maintain 83.4% performance)
+• 5.0% labeled data: 68.46% (maintain 73.8% performance)
+• 1.0% labeled data: 39.34% (maintain 42.4% performance)

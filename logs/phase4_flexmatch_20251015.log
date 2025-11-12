@@ -1,0 +1,699 @@
+2025-10-14 16:50:25,822 - INFO - ================================================================================
+2025-10-14 16:50:25,822 - INFO - phase4_flexmatch Experiment
+2025-10-14 16:50:25,822 - INFO - ================================================================================
+2025-10-14 16:50:25,822 - INFO - Log file: ./logs/phase4_flexmatch_20251014_165025.log
+2025-10-14 16:50:25,822 - INFO - Parameters:
+2025-10-14 16:50:25,822 - INFO -   Labeled ratios: [0.1, 0.05, 0.01]
+2025-10-14 16:50:25,822 - INFO -   Seeds: [42, 123, 456]
+2025-10-14 16:50:25,822 - INFO -   Epochs: 280
+2025-10-14 16:50:25,822 - INFO -   Save results: True
+2025-10-14 16:50:25,822 - INFO -   Log file: ./logs/phase4_flexmatch_20251014_165025.log
+2025-10-14 16:50:25,822 - INFO - 🚀 Phase 4: CIFAR-10 FlexMatch experiment
+2025-10-14 16:50:25,822 - INFO - ================================================================================
+2025-10-14 16:50:25,822 - INFO - Configuration:
+2025-10-14 16:50:25,822 - INFO -    Dataset: CIFAR-10
+2025-10-14 16:50:25,822 - INFO -    Model: Modified ResNet-18 (same as baseline)
+2025-10-14 16:50:25,822 - INFO -    Algorithm: FlexMatch (curriculum pseudo-labeling)
+2025-10-14 16:50:25,822 - INFO -    Labeled ratios: ['10.0%', '5.0%', '1.0%']
+2025-10-14 16:50:25,822 - INFO -    Random seeds: [42, 123, 456]
+2025-10-14 16:50:25,822 - INFO -    Training epochs: 280
+2025-10-14 16:50:25,822 - INFO - ================================================================================
+2025-10-14 16:50:25,822 - INFO - 
+📊 Labeled ratio: 10.0%
+2025-10-14 16:50:25,822 - INFO - ------------------------------------------------------------
+2025-10-14 16:50:25,822 - INFO - 
+🎯 Experiment 1/9 - seed: 42
+2025-10-14 16:50:25,823 - INFO - 🔄 Preparing data...
+2025-10-14 16:50:26,663 - INFO - labeled data: 5000 (10.0%)
+2025-10-14 16:50:26,663 - INFO - unlabeled data: 40000 (80.0%)
+2025-10-14 16:50:26,663 - INFO - validation data: 5000 (10.0%)
+2025-10-14 16:50:26,663 - INFO - test data: 10000
+2025-10-14 16:50:26,663 - INFO - 🏗️  Creating model...
+2025-10-14 16:50:26,721 - INFO -     Model parameters: 11,173,962
+2025-10-14 16:50:26,721 - INFO - 🏋️  Training...
+2025-10-14 16:50:26,837 - INFO - Start FlexMatch training, 280 epochs
+2025-10-14 16:50:26,837 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-14 16:50:26,837 - INFO - Unlabeled samples: 40000
+2025-10-14 16:50:26,837 - INFO - Total steps: 25200
+2025-10-14 16:50:26,837 - INFO - ------------------------------------------------------------
+2025-10-14 16:50:51,782 - INFO - Epoch    1/280 | Iter      90/25200 | Loss: 2.2101 | Lx: 2.2011 | Lu: 0.0089 | Train Acc: 26.11% | Val Acc: 12.06% | Mask: 1.1% | Unused: 40000/40000 | LR: 0.03000
+2025-10-14 16:54:33,744 - INFO - Epoch   10/280 | Iter     900/25200 | Loss: 2.0518 | Lx: 0.9560 | Lu: 1.0959 | Train Acc: 65.05% | Val Acc: 15.24% | Mask: 100.0% | Unused: 32179/40000 | LR: 0.02996
+2025-10-14 16:58:40,307 - INFO - Epoch   20/280 | Iter    1800/25200 | Loss: 1.3246 | Lx: 0.4432 | Lu: 0.8814 | Train Acc: 84.53% | Val Acc: 17.94% | Mask: 100.0% | Unused: 14312/40000 | LR: 0.02986
+2025-10-14 17:02:46,840 - INFO - Epoch   30/280 | Iter    2700/25200 | Loss: 0.9225 | Lx: 0.2040 | Lu: 0.7185 | Train Acc: 92.95% | Val Acc: 58.30% | Mask: 96.4% | Unused: 5233/40000 | LR: 0.02968
+2025-10-14 17:06:53,410 - INFO - Epoch   40/280 | Iter    3600/25200 | Loss: 0.5504 | Lx: 0.1224 | Lu: 0.4280 | Train Acc: 95.83% | Val Acc: 73.86% | Mask: 80.2% | Unused: 1414/40000 | LR: 0.02942
+2025-10-14 17:10:59,909 - INFO - Epoch   50/280 | Iter    4500/25200 | Loss: 0.4456 | Lx: 0.0882 | Lu: 0.3575 | Train Acc: 96.96% | Val Acc: 75.56% | Mask: 77.1% | Unused: 348/40000 | LR: 0.02910
+2025-10-14 17:15:06,404 - INFO - Epoch   60/280 | Iter    5400/25200 | Loss: 0.4090 | Lx: 0.0721 | Lu: 0.3368 | Train Acc: 97.81% | Val Acc: 83.70% | Mask: 79.0% | Unused: 93/40000 | LR: 0.02871
+2025-10-14 17:19:12,950 - INFO - Epoch   70/280 | Iter    6300/25200 | Loss: 0.3838 | Lx: 0.0352 | Lu: 0.3486 | Train Acc: 98.96% | Val Acc: 82.00% | Mask: 83.3% | Unused: 30/40000 | LR: 0.02825
+2025-10-14 17:23:19,404 - INFO - Epoch   80/280 | Iter    7200/25200 | Loss: 0.3852 | Lx: 0.0381 | Lu: 0.3471 | Train Acc: 98.78% | Val Acc: 82.92% | Mask: 84.3% | Unused: 11/40000 | LR: 0.02772
+2025-10-14 17:27:25,976 - INFO - Epoch   90/280 | Iter    8100/25200 | Loss: 0.3528 | Lx: 0.0355 | Lu: 0.3174 | Train Acc: 98.87% | Val Acc: 85.76% | Mask: 83.7% | Unused: 4/40000 | LR: 0.02712
+2025-10-14 17:31:32,718 - INFO - Epoch  100/280 | Iter    9000/25200 | Loss: 0.3421 | Lx: 0.0209 | Lu: 0.3211 | Train Acc: 99.31% | Val Acc: 83.86% | Mask: 86.3% | Unused: 2/40000 | LR: 0.02646
+2025-10-14 17:35:39,224 - INFO - Epoch  110/280 | Iter    9900/25200 | Loss: 0.3042 | Lx: 0.0114 | Lu: 0.2928 | Train Acc: 99.64% | Val Acc: 88.56% | Mask: 86.5% | Unused: 0/40000 | LR: 0.02573
+2025-10-14 17:39:45,861 - INFO - Epoch  120/280 | Iter   10800/25200 | Loss: 0.3189 | Lx: 0.0287 | Lu: 0.2902 | Train Acc: 99.10% | Val Acc: 87.58% | Mask: 85.2% | Unused: 0/40000 | LR: 0.02494
+2025-10-14 17:43:52,644 - INFO - Epoch  130/280 | Iter   11700/25200 | Loss: 0.3044 | Lx: 0.0139 | Lu: 0.2905 | Train Acc: 99.64% | Val Acc: 88.80% | Mask: 87.9% | Unused: 0/40000 | LR: 0.02410
+2025-10-14 17:47:59,395 - INFO - Epoch  140/280 | Iter   12600/25200 | Loss: 0.3100 | Lx: 0.0182 | Lu: 0.2918 | Train Acc: 99.46% | Val Acc: 88.42% | Mask: 88.5% | Unused: 0/40000 | LR: 0.02319
+2025-10-14 17:52:05,922 - INFO - Epoch  150/280 | Iter   13500/25200 | Loss: 0.2811 | Lx: 0.0091 | Lu: 0.2720 | Train Acc: 99.74% | Val Acc: 89.78% | Mask: 88.9% | Unused: 0/40000 | LR: 0.02223
+2025-10-14 17:56:12,344 - INFO - Epoch  160/280 | Iter   14400/25200 | Loss: 0.2687 | Lx: 0.0049 | Lu: 0.2638 | Train Acc: 99.90% | Val Acc: 89.08% | Mask: 91.1% | Unused: 0/40000 | LR: 0.02121
+2025-10-14 18:00:18,916 - INFO - Epoch  170/280 | Iter   15300/25200 | Loss: 0.2559 | Lx: 0.0071 | Lu: 0.2488 | Train Acc: 99.77% | Val Acc: 90.30% | Mask: 89.2% | Unused: 0/40000 | LR: 0.02015
+2025-10-14 18:04:25,561 - INFO - Epoch  180/280 | Iter   16200/25200 | Loss: 0.2685 | Lx: 0.0086 | Lu: 0.2599 | Train Acc: 99.76% | Val Acc: 90.72% | Mask: 91.4% | Unused: 0/40000 | LR: 0.01903
+2025-10-14 18:08:32,157 - INFO - Epoch  190/280 | Iter   17100/25200 | Loss: 0.2533 | Lx: 0.0074 | Lu: 0.2458 | Train Acc: 99.79% | Val Acc: 91.50% | Mask: 91.2% | Unused: 0/40000 | LR: 0.01787
+2025-10-14 18:12:38,588 - INFO - Epoch  200/280 | Iter   18000/25200 | Loss: 0.2564 | Lx: 0.0090 | Lu: 0.2474 | Train Acc: 99.76% | Val Acc: 91.64% | Mask: 91.9% | Unused: 0/40000 | LR: 0.01667
+2025-10-14 18:16:45,317 - INFO - Epoch  210/280 | Iter   18900/25200 | Loss: 0.2349 | Lx: 0.0053 | Lu: 0.2297 | Train Acc: 99.84% | Val Acc: 92.08% | Mask: 92.5% | Unused: 0/40000 | LR: 0.01542
+2025-10-14 18:20:51,716 - INFO - Epoch  220/280 | Iter   19800/25200 | Loss: 0.2217 | Lx: 0.0023 | Lu: 0.2194 | Train Acc: 99.98% | Val Acc: 92.54% | Mask: 93.2% | Unused: 0/40000 | LR: 0.01414
+2025-10-14 18:24:58,220 - INFO - Epoch  230/280 | Iter   20700/25200 | Loss: 0.2116 | Lx: 0.0017 | Lu: 0.2099 | Train Acc: 99.98% | Val Acc: 92.64% | Mask: 93.4% | Unused: 0/40000 | LR: 0.01283
+2025-10-14 18:29:04,774 - INFO - Epoch  240/280 | Iter   21600/25200 | Loss: 0.2049 | Lx: 0.0015 | Lu: 0.2034 | Train Acc: 99.98% | Val Acc: 92.38% | Mask: 94.1% | Unused: 0/40000 | LR: 0.01148
+2025-10-14 18:33:11,042 - INFO - Epoch  250/280 | Iter   22500/25200 | Loss: 0.1971 | Lx: 0.0021 | Lu: 0.1950 | Train Acc: 99.98% | Val Acc: 92.44% | Mask: 94.9% | Unused: 0/40000 | LR: 0.01011
+2025-10-14 18:37:17,489 - INFO - Epoch  260/280 | Iter   23400/25200 | Loss: 0.1898 | Lx: 0.0018 | Lu: 0.1880 | Train Acc: 99.98% | Val Acc: 93.18% | Mask: 95.0% | Unused: 0/40000 | LR: 0.00871
+2025-10-14 18:41:23,780 - INFO - Epoch  270/280 | Iter   24300/25200 | Loss: 0.1763 | Lx: 0.0011 | Lu: 0.1752 | Train Acc: 99.98% | Val Acc: 92.64% | Mask: 95.7% | Unused: 0/40000 | LR: 0.00729
+2025-10-14 18:45:30,352 - INFO - Epoch  280/280 | Iter   25200/25200 | Loss: 0.1752 | Lx: 0.0012 | Lu: 0.1739 | Train Acc: 99.98% | Val Acc: 93.12% | Mask: 96.3% | Unused: 0/40000 | LR: 0.00585
+2025-10-14 18:45:30,354 - INFO - ------------------------------------------------------------
+2025-10-14 18:45:30,354 - INFO - Training completed! Best val accuracy: 93.62%
+2025-10-14 18:45:30,355 - INFO - 
+Final learning status:
+2025-10-14 18:45:30,355 - INFO -   Class 0: 4023 samples
+2025-10-14 18:45:30,355 - INFO -   Class 1: 4000 samples
+2025-10-14 18:45:30,355 - INFO -   Class 2: 3987 samples
+2025-10-14 18:45:30,355 - INFO -   Class 3: 4026 samples
+2025-10-14 18:45:30,355 - INFO -   Class 4: 4009 samples
+2025-10-14 18:45:30,355 - INFO -   Class 5: 3979 samples
+2025-10-14 18:45:30,355 - INFO -   Class 6: 4003 samples
+2025-10-14 18:45:30,355 - INFO -   Class 7: 3981 samples
+2025-10-14 18:45:30,355 - INFO -   Class 8: 4006 samples
+2025-10-14 18:45:30,355 - INFO -   Class 9: 3986 samples
+2025-10-14 18:45:30,355 - INFO -   Unused: 0 samples
+2025-10-14 18:45:31,187 - INFO - ✅ Test accuracy: 93.48%
+2025-10-14 18:45:31,567 - INFO - 
+🎯 Experiment 2/9 - seed: 123
+2025-10-14 18:45:31,567 - INFO - 🔄 Preparing data...
+2025-10-14 18:45:32,382 - INFO - labeled data: 5000 (10.0%)
+2025-10-14 18:45:32,382 - INFO - unlabeled data: 40000 (80.0%)
+2025-10-14 18:45:32,382 - INFO - validation data: 5000 (10.0%)
+2025-10-14 18:45:32,382 - INFO - test data: 10000
+2025-10-14 18:45:32,383 - INFO - 🏗️  Creating model...
+2025-10-14 18:45:32,441 - INFO -     Model parameters: 11,173,962
+2025-10-14 18:45:32,441 - INFO - 🏋️  Training...
+2025-10-14 18:45:32,450 - INFO - Start FlexMatch training, 280 epochs
+2025-10-14 18:45:32,450 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-14 18:45:32,450 - INFO - Unlabeled samples: 40000
+2025-10-14 18:45:32,450 - INFO - Total steps: 25200
+2025-10-14 18:45:32,450 - INFO - ------------------------------------------------------------
+2025-10-14 18:45:57,055 - INFO - Epoch    1/280 | Iter      90/25200 | Loss: 2.4878 | Lx: 2.4701 | Lu: 0.0177 | Train Acc: 21.44% | Val Acc: 10.10% | Mask: 1.6% | Unused: 40000/40000 | LR: 0.03000
+2025-10-14 18:49:39,149 - INFO - Epoch   10/280 | Iter     900/25200 | Loss: 2.4542 | Lx: 1.3126 | Lu: 1.1416 | Train Acc: 51.77% | Val Acc: 17.04% | Mask: 100.0% | Unused: 36263/40000 | LR: 0.02996
+2025-10-14 18:53:45,801 - INFO - Epoch   20/280 | Iter    1800/25200 | Loss: 1.6128 | Lx: 0.6343 | Lu: 0.9785 | Train Acc: 77.29% | Val Acc: 33.52% | Mask: 100.0% | Unused: 20882/40000 | LR: 0.02986
+2025-10-14 18:57:52,393 - INFO - Epoch   30/280 | Iter    2700/25200 | Loss: 1.1729 | Lx: 0.3176 | Lu: 0.8554 | Train Acc: 88.92% | Val Acc: 48.68% | Mask: 100.0% | Unused: 9062/40000 | LR: 0.02968
+2025-10-14 19:01:59,087 - INFO - Epoch   40/280 | Iter    3600/25200 | Loss: 0.6747 | Lx: 0.1698 | Lu: 0.5049 | Train Acc: 94.13% | Val Acc: 67.96% | Mask: 82.9% | Unused: 2884/40000 | LR: 0.02942
+2025-10-14 19:06:05,624 - INFO - Epoch   50/280 | Iter    4500/25200 | Loss: 0.5077 | Lx: 0.0903 | Lu: 0.4174 | Train Acc: 96.84% | Val Acc: 69.08% | Mask: 79.9% | Unused: 673/40000 | LR: 0.02910
+2025-10-14 19:10:12,621 - INFO - Epoch   60/280 | Iter    5400/25200 | Loss: 0.4167 | Lx: 0.0578 | Lu: 0.3589 | Train Acc: 98.04% | Val Acc: 76.52% | Mask: 79.6% | Unused: 160/40000 | LR: 0.02871
+2025-10-14 19:14:19,534 - INFO - Epoch   70/280 | Iter    6300/25200 | Loss: 0.4117 | Lx: 0.0605 | Lu: 0.3511 | Train Acc: 97.92% | Val Acc: 80.18% | Mask: 79.5% | Unused: 58/40000 | LR: 0.02825
+2025-10-14 19:18:26,409 - INFO - Epoch   80/280 | Iter    7200/25200 | Loss: 0.3804 | Lx: 0.0493 | Lu: 0.3311 | Train Acc: 98.45% | Val Acc: 81.54% | Mask: 81.5% | Unused: 19/40000 | LR: 0.02772
+2025-10-14 19:22:33,127 - INFO - Epoch   90/280 | Iter    8100/25200 | Loss: 0.3849 | Lx: 0.0445 | Lu: 0.3404 | Train Acc: 98.49% | Val Acc: 82.80% | Mask: 83.3% | Unused: 6/40000 | LR: 0.02712
+2025-10-14 19:26:39,772 - INFO - Epoch  100/280 | Iter    9000/25200 | Loss: 0.3636 | Lx: 0.0345 | Lu: 0.3291 | Train Acc: 98.85% | Val Acc: 86.14% | Mask: 85.1% | Unused: 4/40000 | LR: 0.02646
+2025-10-14 19:30:46,500 - INFO - Epoch  110/280 | Iter    9900/25200 | Loss: 0.3439 | Lx: 0.0235 | Lu: 0.3204 | Train Acc: 99.29% | Val Acc: 85.60% | Mask: 86.4% | Unused: 0/40000 | LR: 0.02573
+2025-10-14 19:34:53,215 - INFO - Epoch  120/280 | Iter   10800/25200 | Loss: 0.3234 | Lx: 0.0165 | Lu: 0.3069 | Train Acc: 99.53% | Val Acc: 86.86% | Mask: 86.9% | Unused: 0/40000 | LR: 0.02494
+2025-10-14 19:38:59,791 - INFO - Epoch  130/280 | Iter   11700/25200 | Loss: 0.3045 | Lx: 0.0145 | Lu: 0.2899 | Train Acc: 99.50% | Val Acc: 88.56% | Mask: 87.5% | Unused: 0/40000 | LR: 0.02410
+2025-10-14 19:43:06,327 - INFO - Epoch  140/280 | Iter   12600/25200 | Loss: 0.3265 | Lx: 0.0244 | Lu: 0.3021 | Train Acc: 99.17% | Val Acc: 89.32% | Mask: 87.9% | Unused: 0/40000 | LR: 0.02319
+2025-10-14 19:47:12,841 - INFO - Epoch  150/280 | Iter   13500/25200 | Loss: 0.3077 | Lx: 0.0152 | Lu: 0.2925 | Train Acc: 99.53% | Val Acc: 90.10% | Mask: 89.4% | Unused: 0/40000 | LR: 0.02223
+2025-10-14 19:51:19,325 - INFO - Epoch  160/280 | Iter   14400/25200 | Loss: 0.2849 | Lx: 0.0160 | Lu: 0.2689 | Train Acc: 99.50% | Val Acc: 90.72% | Mask: 88.8% | Unused: 0/40000 | LR: 0.02121
+2025-10-14 19:55:25,934 - INFO - Epoch  170/280 | Iter   15300/25200 | Loss: 0.3095 | Lx: 0.0268 | Lu: 0.2826 | Train Acc: 99.11% | Val Acc: 90.62% | Mask: 88.9% | Unused: 0/40000 | LR: 0.02015
+2025-10-14 19:59:32,756 - INFO - Epoch  180/280 | Iter   16200/25200 | Loss: 0.2720 | Lx: 0.0121 | Lu: 0.2599 | Train Acc: 99.64% | Val Acc: 90.80% | Mask: 89.7% | Unused: 0/40000 | LR: 0.01903
+2025-10-14 20:03:39,218 - INFO - Epoch  190/280 | Iter   17100/25200 | Loss: 0.2428 | Lx: 0.0044 | Lu: 0.2384 | Train Acc: 99.90% | Val Acc: 91.06% | Mask: 91.2% | Unused: 0/40000 | LR: 0.01787
+2025-10-14 20:07:45,990 - INFO - Epoch  200/280 | Iter   18000/25200 | Loss: 0.2452 | Lx: 0.0078 | Lu: 0.2374 | Train Acc: 99.77% | Val Acc: 91.50% | Mask: 91.1% | Unused: 0/40000 | LR: 0.01667
+2025-10-14 20:11:52,749 - INFO - Epoch  210/280 | Iter   18900/25200 | Loss: 0.2399 | Lx: 0.0054 | Lu: 0.2345 | Train Acc: 99.84% | Val Acc: 91.18% | Mask: 92.9% | Unused: 0/40000 | LR: 0.01542
+2025-10-14 20:15:59,299 - INFO - Epoch  220/280 | Iter   19800/25200 | Loss: 0.2352 | Lx: 0.0045 | Lu: 0.2307 | Train Acc: 99.88% | Val Acc: 92.24% | Mask: 93.2% | Unused: 0/40000 | LR: 0.01414
+2025-10-14 20:20:05,955 - INFO - Epoch  230/280 | Iter   20700/25200 | Loss: 0.2149 | Lx: 0.0027 | Lu: 0.2122 | Train Acc: 99.95% | Val Acc: 92.36% | Mask: 93.7% | Unused: 0/40000 | LR: 0.01283
+2025-10-14 20:24:12,586 - INFO - Epoch  240/280 | Iter   21600/25200 | Loss: 0.2106 | Lx: 0.0023 | Lu: 0.2082 | Train Acc: 99.98% | Val Acc: 92.30% | Mask: 94.0% | Unused: 0/40000 | LR: 0.01148
+2025-10-14 20:28:19,080 - INFO - Epoch  250/280 | Iter   22500/25200 | Loss: 0.2044 | Lx: 0.0034 | Lu: 0.2010 | Train Acc: 99.91% | Val Acc: 92.66% | Mask: 94.5% | Unused: 0/40000 | LR: 0.01011
+2025-10-14 20:32:25,674 - INFO - Epoch  260/280 | Iter   23400/25200 | Loss: 0.1952 | Lx: 0.0017 | Lu: 0.1935 | Train Acc: 99.98% | Val Acc: 93.18% | Mask: 95.3% | Unused: 0/40000 | LR: 0.00871
+2025-10-14 20:36:32,375 - INFO - Epoch  270/280 | Iter   24300/25200 | Loss: 0.1811 | Lx: 0.0012 | Lu: 0.1798 | Train Acc: 99.98% | Val Acc: 93.32% | Mask: 95.9% | Unused: 0/40000 | LR: 0.00729
+2025-10-14 20:40:39,212 - INFO - Epoch  280/280 | Iter   25200/25200 | Loss: 0.1720 | Lx: 0.0010 | Lu: 0.1710 | Train Acc: 99.98% | Val Acc: 93.22% | Mask: 96.4% | Unused: 0/40000 | LR: 0.00585
+2025-10-14 20:40:39,214 - INFO - ------------------------------------------------------------
+2025-10-14 20:40:39,214 - INFO - Training completed! Best val accuracy: 93.72%
+2025-10-14 20:40:39,215 - INFO - 
+Final learning status:
+2025-10-14 20:40:39,215 - INFO -   Class 0: 3980 samples
+2025-10-14 20:40:39,215 - INFO -   Class 1: 4031 samples
+2025-10-14 20:40:39,215 - INFO -   Class 2: 3971 samples
+2025-10-14 20:40:39,215 - INFO -   Class 3: 3995 samples
+2025-10-14 20:40:39,215 - INFO -   Class 4: 4013 samples
+2025-10-14 20:40:39,215 - INFO -   Class 5: 3971 samples
+2025-10-14 20:40:39,215 - INFO -   Class 6: 4027 samples
+2025-10-14 20:40:39,215 - INFO -   Class 7: 4037 samples
+2025-10-14 20:40:39,215 - INFO -   Class 8: 3994 samples
+2025-10-14 20:40:39,215 - INFO -   Class 9: 3981 samples
+2025-10-14 20:40:39,215 - INFO -   Unused: 0 samples
+2025-10-14 20:40:40,047 - INFO - ✅ Test accuracy: 92.64%
+2025-10-14 20:40:40,389 - INFO - 
+🎯 Experiment 3/9 - seed: 456
+2025-10-14 20:40:40,389 - INFO - 🔄 Preparing data...
+2025-10-14 20:40:41,171 - INFO - labeled data: 5000 (10.0%)
+2025-10-14 20:40:41,171 - INFO - unlabeled data: 40000 (80.0%)
+2025-10-14 20:40:41,171 - INFO - validation data: 5000 (10.0%)
+2025-10-14 20:40:41,171 - INFO - test data: 10000
+2025-10-14 20:40:41,172 - INFO - 🏗️  Creating model...
+2025-10-14 20:40:41,229 - INFO -     Model parameters: 11,173,962
+2025-10-14 20:40:41,229 - INFO - 🏋️  Training...
+2025-10-14 20:40:41,238 - INFO - Start FlexMatch training, 280 epochs
+2025-10-14 20:40:41,238 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-14 20:40:41,238 - INFO - Unlabeled samples: 40000
+2025-10-14 20:40:41,238 - INFO - Total steps: 25200
+2025-10-14 20:40:41,238 - INFO - ------------------------------------------------------------
+2025-10-14 20:41:05,866 - INFO - Epoch    1/280 | Iter      90/25200 | Loss: 2.2860 | Lx: 2.2817 | Lu: 0.0043 | Train Acc: 23.56% | Val Acc: 9.22% | Mask: 0.6% | Unused: 40000/40000 | LR: 0.03000
+2025-10-14 20:44:47,882 - INFO - Epoch   10/280 | Iter     900/25200 | Loss: 2.1481 | Lx: 1.0416 | Lu: 1.1066 | Train Acc: 61.81% | Val Acc: 21.52% | Mask: 100.0% | Unused: 33100/40000 | LR: 0.02996
+2025-10-14 20:48:54,283 - INFO - Epoch   20/280 | Iter    1800/25200 | Loss: 1.3818 | Lx: 0.4651 | Lu: 0.9167 | Train Acc: 83.70% | Val Acc: 35.00% | Mask: 100.0% | Unused: 15882/40000 | LR: 0.02986
+2025-10-14 20:53:00,792 - INFO - Epoch   30/280 | Iter    2700/25200 | Loss: 0.9972 | Lx: 0.2318 | Lu: 0.7654 | Train Acc: 91.49% | Val Acc: 54.52% | Mask: 98.4% | Unused: 5949/40000 | LR: 0.02968
+2025-10-14 20:57:07,193 - INFO - Epoch   40/280 | Iter    3600/25200 | Loss: 0.5881 | Lx: 0.1262 | Lu: 0.4619 | Train Acc: 95.62% | Val Acc: 65.52% | Mask: 81.4% | Unused: 1607/40000 | LR: 0.02942
+2025-10-14 21:01:13,705 - INFO - Epoch   50/280 | Iter    4500/25200 | Loss: 0.4890 | Lx: 0.0807 | Lu: 0.4083 | Train Acc: 97.15% | Val Acc: 71.62% | Mask: 81.5% | Unused: 412/40000 | LR: 0.02910
+2025-10-14 21:05:20,096 - INFO - Epoch   60/280 | Iter    5400/25200 | Loss: 0.4495 | Lx: 0.0583 | Lu: 0.3913 | Train Acc: 98.06% | Val Acc: 81.02% | Mask: 83.0% | Unused: 100/40000 | LR: 0.02871
+2025-10-14 21:09:26,633 - INFO - Epoch   70/280 | Iter    6300/25200 | Loss: 0.4278 | Lx: 0.0571 | Lu: 0.3707 | Train Acc: 98.18% | Val Acc: 81.30% | Mask: 83.0% | Unused: 37/40000 | LR: 0.02825
+2025-10-14 21:13:33,234 - INFO - Epoch   80/280 | Iter    7200/25200 | Loss: 0.4005 | Lx: 0.0451 | Lu: 0.3554 | Train Acc: 98.61% | Val Acc: 84.08% | Mask: 83.6% | Unused: 14/40000 | LR: 0.02772
+2025-10-14 21:17:39,504 - INFO - Epoch   90/280 | Iter    8100/25200 | Loss: 0.3905 | Lx: 0.0485 | Lu: 0.3419 | Train Acc: 98.44% | Val Acc: 85.94% | Mask: 83.8% | Unused: 3/40000 | LR: 0.02712
+2025-10-14 21:21:45,916 - INFO - Epoch  100/280 | Iter    9000/25200 | Loss: 0.3579 | Lx: 0.0288 | Lu: 0.3290 | Train Acc: 99.06% | Val Acc: 84.90% | Mask: 86.3% | Unused: 1/40000 | LR: 0.02646
+2025-10-14 21:25:52,593 - INFO - Epoch  110/280 | Iter    9900/25200 | Loss: 0.3294 | Lx: 0.0159 | Lu: 0.3135 | Train Acc: 99.55% | Val Acc: 87.08% | Mask: 87.7% | Unused: 0/40000 | LR: 0.02573
+2025-10-14 21:29:59,081 - INFO - Epoch  120/280 | Iter   10800/25200 | Loss: 0.3272 | Lx: 0.0170 | Lu: 0.3103 | Train Acc: 99.41% | Val Acc: 86.04% | Mask: 87.9% | Unused: 0/40000 | LR: 0.02494
+2025-10-14 21:34:05,461 - INFO - Epoch  130/280 | Iter   11700/25200 | Loss: 0.3305 | Lx: 0.0283 | Lu: 0.3021 | Train Acc: 99.03% | Val Acc: 88.00% | Mask: 87.5% | Unused: 0/40000 | LR: 0.02410
+2025-10-14 21:38:11,743 - INFO - Epoch  140/280 | Iter   12600/25200 | Loss: 0.2970 | Lx: 0.0112 | Lu: 0.2859 | Train Acc: 99.69% | Val Acc: 88.60% | Mask: 89.2% | Unused: 0/40000 | LR: 0.02319
+2025-10-14 21:42:18,043 - INFO - Epoch  150/280 | Iter   13500/25200 | Loss: 0.2904 | Lx: 0.0127 | Lu: 0.2777 | Train Acc: 99.60% | Val Acc: 87.22% | Mask: 89.7% | Unused: 0/40000 | LR: 0.02223
+2025-10-14 21:46:24,501 - INFO - Epoch  160/280 | Iter   14400/25200 | Loss: 0.2792 | Lx: 0.0061 | Lu: 0.2730 | Train Acc: 99.84% | Val Acc: 87.94% | Mask: 91.0% | Unused: 0/40000 | LR: 0.02121
+2025-10-14 21:50:30,924 - INFO - Epoch  170/280 | Iter   15300/25200 | Loss: 0.2753 | Lx: 0.0101 | Lu: 0.2652 | Train Acc: 99.65% | Val Acc: 90.64% | Mask: 90.6% | Unused: 0/40000 | LR: 0.02015
+2025-10-14 21:54:37,228 - INFO - Epoch  180/280 | Iter   16200/25200 | Loss: 0.2610 | Lx: 0.0066 | Lu: 0.2544 | Train Acc: 99.79% | Val Acc: 90.54% | Mask: 91.4% | Unused: 0/40000 | LR: 0.01903
+2025-10-14 21:58:43,604 - INFO - Epoch  190/280 | Iter   17100/25200 | Loss: 0.2571 | Lx: 0.0103 | Lu: 0.2468 | Train Acc: 99.70% | Val Acc: 89.98% | Mask: 91.6% | Unused: 0/40000 | LR: 0.01787
+2025-10-14 22:02:49,975 - INFO - Epoch  200/280 | Iter   18000/25200 | Loss: 0.2415 | Lx: 0.0059 | Lu: 0.2357 | Train Acc: 99.81% | Val Acc: 91.38% | Mask: 92.1% | Unused: 0/40000 | LR: 0.01667
+2025-10-14 22:06:56,507 - INFO - Epoch  210/280 | Iter   18900/25200 | Loss: 0.2340 | Lx: 0.0035 | Lu: 0.2305 | Train Acc: 99.91% | Val Acc: 91.78% | Mask: 93.2% | Unused: 0/40000 | LR: 0.01542
+2025-10-14 22:11:02,898 - INFO - Epoch  220/280 | Iter   19800/25200 | Loss: 0.2291 | Lx: 0.0031 | Lu: 0.2261 | Train Acc: 99.91% | Val Acc: 91.32% | Mask: 93.6% | Unused: 0/40000 | LR: 0.01414
+2025-10-14 22:15:09,371 - INFO - Epoch  230/280 | Iter   20700/25200 | Loss: 0.2239 | Lx: 0.0044 | Lu: 0.2195 | Train Acc: 99.90% | Val Acc: 92.28% | Mask: 93.9% | Unused: 0/40000 | LR: 0.01283
+2025-10-14 22:19:15,686 - INFO - Epoch  240/280 | Iter   21600/25200 | Loss: 0.2095 | Lx: 0.0018 | Lu: 0.2076 | Train Acc: 99.97% | Val Acc: 92.10% | Mask: 94.8% | Unused: 0/40000 | LR: 0.01148
+2025-10-14 22:23:22,034 - INFO - Epoch  250/280 | Iter   22500/25200 | Loss: 0.2041 | Lx: 0.0028 | Lu: 0.2013 | Train Acc: 99.91% | Val Acc: 91.98% | Mask: 95.0% | Unused: 0/40000 | LR: 0.01011
+2025-10-14 22:27:28,545 - INFO - Epoch  260/280 | Iter   23400/25200 | Loss: 0.1890 | Lx: 0.0018 | Lu: 0.1872 | Train Acc: 99.98% | Val Acc: 92.66% | Mask: 95.7% | Unused: 0/40000 | LR: 0.00871
+2025-10-14 22:31:35,047 - INFO - Epoch  270/280 | Iter   24300/25200 | Loss: 0.1876 | Lx: 0.0013 | Lu: 0.1864 | Train Acc: 100.00% | Val Acc: 92.38% | Mask: 96.4% | Unused: 0/40000 | LR: 0.00729
+2025-10-14 22:35:41,593 - INFO - Epoch  280/280 | Iter   25200/25200 | Loss: 0.1712 | Lx: 0.0011 | Lu: 0.1702 | Train Acc: 99.98% | Val Acc: 93.14% | Mask: 96.8% | Unused: 0/40000 | LR: 0.00585
+2025-10-14 22:35:41,595 - INFO - ------------------------------------------------------------
+2025-10-14 22:35:41,595 - INFO - Training completed! Best val accuracy: 93.24%
+2025-10-14 22:35:41,596 - INFO - 
+Final learning status:
+2025-10-14 22:35:41,596 - INFO -   Class 0: 4035 samples
+2025-10-14 22:35:41,596 - INFO -   Class 1: 4001 samples
+2025-10-14 22:35:41,596 - INFO -   Class 2: 3951 samples
+2025-10-14 22:35:41,596 - INFO -   Class 3: 3987 samples
+2025-10-14 22:35:41,596 - INFO -   Class 4: 4006 samples
+2025-10-14 22:35:41,596 - INFO -   Class 5: 3959 samples
+2025-10-14 22:35:41,596 - INFO -   Class 6: 4047 samples
+2025-10-14 22:35:41,596 - INFO -   Class 7: 3969 samples
+2025-10-14 22:35:41,596 - INFO -   Class 8: 4013 samples
+2025-10-14 22:35:41,596 - INFO -   Class 9: 4032 samples
+2025-10-14 22:35:41,596 - INFO -   Unused: 0 samples
+2025-10-14 22:35:42,421 - INFO - ✅ Test accuracy: 92.99%
+2025-10-14 22:35:42,801 - INFO - 
+📈 10.0% result: 93.04% ± 0.34%
+2025-10-14 22:35:42,802 - INFO - 
+📊 Labeled ratio: 5.0%
+2025-10-14 22:35:42,802 - INFO - ------------------------------------------------------------
+2025-10-14 22:35:42,802 - INFO - 
+🎯 Experiment 4/9 - seed: 42
+2025-10-14 22:35:42,802 - INFO - 🔄 Preparing data...
+2025-10-14 22:35:43,601 - INFO - labeled data: 2500 (5.0%)
+2025-10-14 22:35:43,601 - INFO - unlabeled data: 42500 (85.0%)
+2025-10-14 22:35:43,601 - INFO - validation data: 5000 (10.0%)
+2025-10-14 22:35:43,601 - INFO - test data: 10000
+2025-10-14 22:35:43,601 - INFO - 🏗️  Creating model...
+2025-10-14 22:35:43,659 - INFO -     Model parameters: 11,173,962
+2025-10-14 22:35:43,659 - INFO - 🏋️  Training...
+2025-10-14 22:35:43,667 - INFO - Start FlexMatch training, 280 epochs
+2025-10-14 22:35:43,667 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-14 22:35:43,667 - INFO - Unlabeled samples: 42500
+2025-10-14 22:35:43,667 - INFO - Total steps: 26600
+2025-10-14 22:35:43,667 - INFO - ------------------------------------------------------------
+2025-10-14 22:36:09,762 - INFO - Epoch    1/280 | Iter      95/26600 | Loss: 2.4354 | Lx: 2.4218 | Lu: 0.0136 | Train Acc: 23.59% | Val Acc: 9.10% | Mask: 1.6% | Unused: 42500/42500 | LR: 0.03000
+2025-10-14 22:40:05,312 - INFO - Epoch   10/280 | Iter     950/26600 | Loss: 2.0038 | Lx: 0.8537 | Lu: 1.1501 | Train Acc: 69.31% | Val Acc: 14.66% | Mask: 100.0% | Unused: 34066/42500 | LR: 0.02996
+2025-10-14 22:44:26,937 - INFO - Epoch   20/280 | Iter    1900/26600 | Loss: 1.1835 | Lx: 0.2139 | Lu: 0.9695 | Train Acc: 92.30% | Val Acc: 27.90% | Mask: 100.0% | Unused: 10218/42500 | LR: 0.02986
+2025-10-14 22:48:48,443 - INFO - Epoch   30/280 | Iter    2850/26600 | Loss: 0.5536 | Lx: 0.0715 | Lu: 0.4821 | Train Acc: 97.48% | Val Acc: 43.00% | Mask: 76.7% | Unused: 1532/42500 | LR: 0.02968
+2025-10-14 22:53:10,018 - INFO - Epoch   40/280 | Iter    3800/26600 | Loss: 0.4900 | Lx: 0.0516 | Lu: 0.4384 | Train Acc: 98.45% | Val Acc: 46.50% | Mask: 78.9% | Unused: 205/42500 | LR: 0.02942
+2025-10-14 22:57:31,408 - INFO - Epoch   50/280 | Iter    4750/26600 | Loss: 0.4521 | Lx: 0.0448 | Lu: 0.4073 | Train Acc: 98.47% | Val Acc: 64.34% | Mask: 79.5% | Unused: 35/42500 | LR: 0.02910
+2025-10-14 23:01:52,692 - INFO - Epoch   60/280 | Iter    5700/26600 | Loss: 0.4052 | Lx: 0.0120 | Lu: 0.3931 | Train Acc: 99.69% | Val Acc: 67.06% | Mask: 84.8% | Unused: 6/42500 | LR: 0.02871
+2025-10-14 23:06:13,800 - INFO - Epoch   70/280 | Iter    6650/26600 | Loss: 0.3781 | Lx: 0.0189 | Lu: 0.3592 | Train Acc: 99.34% | Val Acc: 67.72% | Mask: 82.7% | Unused: 2/42500 | LR: 0.02825
+2025-10-14 23:10:35,308 - INFO - Epoch   80/280 | Iter    7600/26600 | Loss: 0.4340 | Lx: 0.0586 | Lu: 0.3754 | Train Acc: 97.93% | Val Acc: 82.38% | Mask: 81.4% | Unused: 0/42500 | LR: 0.02772
+2025-10-14 23:14:57,077 - INFO - Epoch   90/280 | Iter    8550/26600 | Loss: 0.3386 | Lx: 0.0159 | Lu: 0.3227 | Train Acc: 99.44% | Val Acc: 79.00% | Mask: 85.2% | Unused: 0/42500 | LR: 0.02712
+2025-10-14 23:19:18,513 - INFO - Epoch  100/280 | Iter    9500/26600 | Loss: 0.3074 | Lx: 0.0095 | Lu: 0.2979 | Train Acc: 99.79% | Val Acc: 81.66% | Mask: 86.2% | Unused: 0/42500 | LR: 0.02646
+2025-10-14 23:23:39,848 - INFO - Epoch  110/280 | Iter   10450/26600 | Loss: 0.3005 | Lx: 0.0065 | Lu: 0.2940 | Train Acc: 99.84% | Val Acc: 83.50% | Mask: 87.8% | Unused: 0/42500 | LR: 0.02573
+2025-10-14 23:28:01,297 - INFO - Epoch  120/280 | Iter   11400/26600 | Loss: 0.3187 | Lx: 0.0178 | Lu: 0.3009 | Train Acc: 99.42% | Val Acc: 86.26% | Mask: 86.1% | Unused: 0/42500 | LR: 0.02494
+2025-10-14 23:32:22,671 - INFO - Epoch  130/280 | Iter   12350/26600 | Loss: 0.2793 | Lx: 0.0059 | Lu: 0.2735 | Train Acc: 99.90% | Val Acc: 86.42% | Mask: 88.8% | Unused: 0/42500 | LR: 0.02410
+2025-10-14 23:36:43,857 - INFO - Epoch  140/280 | Iter   13300/26600 | Loss: 0.2814 | Lx: 0.0036 | Lu: 0.2778 | Train Acc: 99.90% | Val Acc: 86.74% | Mask: 89.3% | Unused: 0/42500 | LR: 0.02319
+2025-10-14 23:41:05,194 - INFO - Epoch  150/280 | Iter   14250/26600 | Loss: 0.2845 | Lx: 0.0098 | Lu: 0.2747 | Train Acc: 99.72% | Val Acc: 88.36% | Mask: 89.1% | Unused: 0/42500 | LR: 0.02223
+2025-10-14 23:45:26,557 - INFO - Epoch  160/280 | Iter   15200/26600 | Loss: 0.2611 | Lx: 0.0071 | Lu: 0.2540 | Train Acc: 99.84% | Val Acc: 87.38% | Mask: 90.1% | Unused: 0/42500 | LR: 0.02121
+2025-10-14 23:49:47,827 - INFO - Epoch  170/280 | Iter   16150/26600 | Loss: 0.2482 | Lx: 0.0061 | Lu: 0.2421 | Train Acc: 99.87% | Val Acc: 88.74% | Mask: 90.7% | Unused: 0/42500 | LR: 0.02015
+2025-10-14 23:54:09,168 - INFO - Epoch  180/280 | Iter   17100/26600 | Loss: 0.2510 | Lx: 0.0055 | Lu: 0.2455 | Train Acc: 99.88% | Val Acc: 89.86% | Mask: 91.4% | Unused: 0/42500 | LR: 0.01903
+2025-10-14 23:58:30,482 - INFO - Epoch  190/280 | Iter   18050/26600 | Loss: 0.2303 | Lx: 0.0016 | Lu: 0.2287 | Train Acc: 99.97% | Val Acc: 90.30% | Mask: 92.1% | Unused: 0/42500 | LR: 0.01787
+2025-10-15 00:02:51,692 - INFO - Epoch  200/280 | Iter   19000/26600 | Loss: 0.2232 | Lx: 0.0015 | Lu: 0.2217 | Train Acc: 100.00% | Val Acc: 90.88% | Mask: 92.6% | Unused: 0/42500 | LR: 0.01667
+2025-10-15 00:07:13,027 - INFO - Epoch  210/280 | Iter   19950/26600 | Loss: 0.2229 | Lx: 0.0019 | Lu: 0.2211 | Train Acc: 99.97% | Val Acc: 91.16% | Mask: 93.5% | Unused: 0/42500 | LR: 0.01542
+2025-10-15 00:11:34,652 - INFO - Epoch  220/280 | Iter   20900/26600 | Loss: 0.2197 | Lx: 0.0032 | Lu: 0.2165 | Train Acc: 99.90% | Val Acc: 91.34% | Mask: 93.8% | Unused: 0/42500 | LR: 0.01414
+2025-10-15 00:15:56,108 - INFO - Epoch  230/280 | Iter   21850/26600 | Loss: 0.2133 | Lx: 0.0014 | Lu: 0.2120 | Train Acc: 100.00% | Val Acc: 92.20% | Mask: 94.2% | Unused: 0/42500 | LR: 0.01283
+2025-10-15 00:20:17,543 - INFO - Epoch  240/280 | Iter   22800/26600 | Loss: 0.2008 | Lx: 0.0016 | Lu: 0.1992 | Train Acc: 99.97% | Val Acc: 91.90% | Mask: 94.8% | Unused: 0/42500 | LR: 0.01148
+2025-10-15 00:24:38,938 - INFO - Epoch  250/280 | Iter   23750/26600 | Loss: 0.1913 | Lx: 0.0012 | Lu: 0.1901 | Train Acc: 100.00% | Val Acc: 92.60% | Mask: 95.4% | Unused: 0/42500 | LR: 0.01011
+2025-10-15 00:29:00,584 - INFO - Epoch  260/280 | Iter   24700/26600 | Loss: 0.1878 | Lx: 0.0012 | Lu: 0.1866 | Train Acc: 99.98% | Val Acc: 92.42% | Mask: 96.0% | Unused: 0/42500 | LR: 0.00871
+2025-10-15 00:33:27,055 - INFO - Epoch  270/280 | Iter   25650/26600 | Loss: 0.1720 | Lx: 0.0010 | Lu: 0.1710 | Train Acc: 99.98% | Val Acc: 92.80% | Mask: 96.6% | Unused: 0/42500 | LR: 0.00729
+
+
+------------5%
+2025-10-15 12:41:25,674 - INFO - ================================================================================
+2025-10-15 12:41:25,674 - INFO - phase4_flexmatch Experiment
+2025-10-15 12:41:25,674 - INFO - ================================================================================
+2025-10-15 12:41:25,674 - INFO - Log file: ./logs/phase4_flexmatch_20251015_124125.log
+2025-10-15 12:41:25,674 - INFO - Parameters:
+2025-10-15 12:41:25,674 - INFO -   Labeled ratios: [0.05]
+2025-10-15 12:41:25,674 - INFO -   Seeds: [42, 123, 456]
+2025-10-15 12:41:25,674 - INFO -   Epochs: 280
+2025-10-15 12:41:25,674 - INFO -   Save results: True
+2025-10-15 12:41:25,674 - INFO -   Log file: ./logs/phase4_flexmatch_20251015_124125.log
+2025-10-15 12:41:25,674 - INFO - 🚀 Phase 4: CIFAR-10 FlexMatch experiment
+2025-10-15 12:41:25,674 - INFO - ================================================================================
+2025-10-15 12:41:25,674 - INFO - Configuration:
+2025-10-15 12:41:25,674 - INFO -    Dataset: CIFAR-10
+2025-10-15 12:41:25,674 - INFO -    Model: Modified ResNet-18 (same as baseline)
+2025-10-15 12:41:25,674 - INFO -    Algorithm: FlexMatch (curriculum pseudo-labeling)
+2025-10-15 12:41:25,674 - INFO -    Labeled ratios: ['5.0%']
+2025-10-15 12:41:25,674 - INFO -    Random seeds: [42, 123, 456]
+2025-10-15 12:41:25,674 - INFO -    Training epochs: 280
+2025-10-15 12:41:25,674 - INFO - ================================================================================
+2025-10-15 12:41:25,674 - INFO - 
+📊 Labeled ratio: 5.0%
+2025-10-15 12:41:25,674 - INFO - ------------------------------------------------------------
+2025-10-15 12:41:25,674 - INFO - 
+🎯 Experiment 1/3 - seed: 42
+2025-10-15 12:41:25,675 - INFO - 🔄 Preparing data...
+2025-10-15 12:41:26,500 - INFO - labeled data: 2500 (5.0%)
+2025-10-15 12:41:26,500 - INFO - unlabeled data: 42500 (85.0%)
+2025-10-15 12:41:26,500 - INFO - validation data: 5000 (10.0%)
+2025-10-15 12:41:26,500 - INFO - test data: 10000
+2025-10-15 12:41:26,500 - INFO - 🏗️  Creating model...
+2025-10-15 12:41:26,558 - INFO -     Model parameters: 11,173,962
+2025-10-15 12:41:26,558 - INFO - 🏋️  Training...
+2025-10-15 12:41:26,675 - INFO - Start FlexMatch training, 280 epochs
+2025-10-15 12:41:26,675 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-15 12:41:26,675 - INFO - Unlabeled samples: 42500
+2025-10-15 12:41:26,675 - INFO - Total steps: 26600
+2025-10-15 12:41:26,675 - INFO - ------------------------------------------------------------
+2025-10-15 12:41:52,972 - INFO - Epoch    1/280 | Iter      95/26600 | Loss: 2.2160 | Lx: 2.2138 | Lu: 0.0022 | Train Acc: 25.30% | Val Acc: 9.10% | Mask: 0.3% | Unused: 42500/42500 | LR: 0.03000
+2025-10-15 12:45:47,883 - INFO - Epoch   10/280 | Iter     950/26600 | Loss: 2.1707 | Lx: 0.9874 | Lu: 1.1834 | Train Acc: 63.67% | Val Acc: 16.90% | Mask: 100.0% | Unused: 36315/42500 | LR: 0.02996
+2025-10-15 12:50:09,039 - INFO - Epoch   20/280 | Iter    1900/26600 | Loss: 1.2299 | Lx: 0.2449 | Lu: 0.9850 | Train Acc: 91.56% | Val Acc: 47.20% | Mask: 100.0% | Unused: 11874/42500 | LR: 0.02986
+2025-10-15 12:54:30,236 - INFO - Epoch   30/280 | Iter    2850/26600 | Loss: 0.5715 | Lx: 0.0935 | Lu: 0.4780 | Train Acc: 96.74% | Val Acc: 63.56% | Mask: 75.7% | Unused: 1853/42500 | LR: 0.02968
+2025-10-15 12:58:51,291 - INFO - Epoch   40/280 | Iter    3800/26600 | Loss: 0.4859 | Lx: 0.0507 | Lu: 0.4353 | Train Acc: 98.26% | Val Acc: 64.80% | Mask: 77.8% | Unused: 322/42500 | LR: 0.02942
+2025-10-15 13:03:12,590 - INFO - Epoch   50/280 | Iter    4750/26600 | Loss: 0.4480 | Lx: 0.0621 | Lu: 0.3859 | Train Acc: 98.11% | Val Acc: 70.02% | Mask: 77.0% | Unused: 66/42500 | LR: 0.02910
+2025-10-15 13:07:33,788 - INFO - Epoch   60/280 | Iter    5700/26600 | Loss: 0.3936 | Lx: 0.0295 | Lu: 0.3642 | Train Acc: 99.01% | Val Acc: 69.76% | Mask: 80.0% | Unused: 11/42500 | LR: 0.02871
+2025-10-15 13:11:54,868 - INFO - Epoch   70/280 | Iter    6650/26600 | Loss: 0.3660 | Lx: 0.0190 | Lu: 0.3470 | Train Acc: 99.39% | Val Acc: 77.82% | Mask: 81.8% | Unused: 6/42500 | LR: 0.02825
+2025-10-15 13:16:15,904 - INFO - Epoch   80/280 | Iter    7600/26600 | Loss: 0.3397 | Lx: 0.0104 | Lu: 0.3293 | Train Acc: 99.69% | Val Acc: 73.58% | Mask: 84.0% | Unused: 2/42500 | LR: 0.02772
+2025-10-15 13:20:37,152 - INFO - Epoch   90/280 | Iter    8550/26600 | Loss: 0.3142 | Lx: 0.0070 | Lu: 0.3072 | Train Acc: 99.84% | Val Acc: 78.20% | Mask: 84.8% | Unused: 1/42500 | LR: 0.02712
+2025-10-15 13:24:58,397 - INFO - Epoch  100/280 | Iter    9500/26600 | Loss: 0.3119 | Lx: 0.0096 | Lu: 0.3023 | Train Acc: 99.69% | Val Acc: 83.32% | Mask: 84.9% | Unused: 0/42500 | LR: 0.02646
+2025-10-15 13:29:19,701 - INFO - Epoch  110/280 | Iter   10450/26600 | Loss: 0.3253 | Lx: 0.0224 | Lu: 0.3028 | Train Acc: 99.19% | Val Acc: 82.36% | Mask: 85.0% | Unused: 0/42500 | LR: 0.02573
+2025-10-15 13:33:41,187 - INFO - Epoch  120/280 | Iter   11400/26600 | Loss: 0.2923 | Lx: 0.0098 | Lu: 0.2825 | Train Acc: 99.67% | Val Acc: 83.82% | Mask: 86.4% | Unused: 0/42500 | LR: 0.02494
+2025-10-15 13:38:02,555 - INFO - Epoch  130/280 | Iter   12350/26600 | Loss: 0.2867 | Lx: 0.0093 | Lu: 0.2774 | Train Acc: 99.79% | Val Acc: 82.80% | Mask: 88.0% | Unused: 0/42500 | LR: 0.02410
+2025-10-15 13:42:23,905 - INFO - Epoch  140/280 | Iter   13300/26600 | Loss: 0.2620 | Lx: 0.0028 | Lu: 0.2592 | Train Acc: 99.97% | Val Acc: 86.14% | Mask: 89.4% | Unused: 0/42500 | LR: 0.02319
+2025-10-15 13:46:45,220 - INFO - Epoch  150/280 | Iter   14250/26600 | Loss: 0.2811 | Lx: 0.0079 | Lu: 0.2731 | Train Acc: 99.80% | Val Acc: 86.84% | Mask: 89.6% | Unused: 0/42500 | LR: 0.02223
+2025-10-15 13:51:06,420 - INFO - Epoch  160/280 | Iter   15200/26600 | Loss: 0.3127 | Lx: 0.0277 | Lu: 0.2850 | Train Acc: 99.11% | Val Acc: 88.10% | Mask: 88.6% | Unused: 0/42500 | LR: 0.02121
+2025-10-15 13:55:27,944 - INFO - Epoch  170/280 | Iter   16150/26600 | Loss: 0.2480 | Lx: 0.0030 | Lu: 0.2450 | Train Acc: 99.93% | Val Acc: 88.74% | Mask: 90.8% | Unused: 0/42500 | LR: 0.02015
+2025-10-15 13:59:49,505 - INFO - Epoch  180/280 | Iter   17100/26600 | Loss: 0.2402 | Lx: 0.0026 | Lu: 0.2377 | Train Acc: 99.95% | Val Acc: 90.14% | Mask: 91.2% | Unused: 0/42500 | LR: 0.01903
+2025-10-15 14:04:10,864 - INFO - Epoch  190/280 | Iter   18050/26600 | Loss: 0.2350 | Lx: 0.0034 | Lu: 0.2316 | Train Acc: 99.93% | Val Acc: 90.14% | Mask: 91.1% | Unused: 0/42500 | LR: 0.01787
+2025-10-15 14:08:32,220 - INFO - Epoch  200/280 | Iter   19000/26600 | Loss: 0.2256 | Lx: 0.0016 | Lu: 0.2240 | Train Acc: 99.98% | Val Acc: 90.16% | Mask: 92.3% | Unused: 0/42500 | LR: 0.01667
+2025-10-15 14:12:53,678 - INFO - Epoch  210/280 | Iter   19950/26600 | Loss: 0.2281 | Lx: 0.0036 | Lu: 0.2245 | Train Acc: 99.92% | Val Acc: 90.54% | Mask: 93.0% | Unused: 0/42500 | LR: 0.01542
+2025-10-15 14:17:15,274 - INFO - Epoch  220/280 | Iter   20900/26600 | Loss: 0.2125 | Lx: 0.0023 | Lu: 0.2103 | Train Acc: 99.95% | Val Acc: 90.82% | Mask: 93.4% | Unused: 0/42500 | LR: 0.01414
+2025-10-15 14:21:36,761 - INFO - Epoch  230/280 | Iter   21850/26600 | Loss: 0.2034 | Lx: 0.0015 | Lu: 0.2019 | Train Acc: 99.97% | Val Acc: 90.84% | Mask: 93.9% | Unused: 0/42500 | LR: 0.01283
+2025-10-15 14:25:58,248 - INFO - Epoch  240/280 | Iter   22800/26600 | Loss: 0.1996 | Lx: 0.0010 | Lu: 0.1986 | Train Acc: 100.00% | Val Acc: 91.56% | Mask: 94.4% | Unused: 0/42500 | LR: 0.01148
+2025-10-15 14:30:19,746 - INFO - Epoch  250/280 | Iter   23750/26600 | Loss: 0.1919 | Lx: 0.0008 | Lu: 0.1911 | Train Acc: 100.00% | Val Acc: 92.36% | Mask: 95.1% | Unused: 0/42500 | LR: 0.01011
+2025-10-15 14:34:41,349 - INFO - Epoch  260/280 | Iter   24700/26600 | Loss: 0.1809 | Lx: 0.0009 | Lu: 0.1800 | Train Acc: 100.00% | Val Acc: 91.42% | Mask: 95.1% | Unused: 0/42500 | LR: 0.00871
+2025-10-15 14:39:02,826 - INFO - Epoch  270/280 | Iter   25650/26600 | Loss: 0.1756 | Lx: 0.0007 | Lu: 0.1750 | Train Acc: 99.98% | Val Acc: 92.00% | Mask: 95.9% | Unused: 0/42500 | LR: 0.00729
+2025-10-15 14:43:24,330 - INFO - Epoch  280/280 | Iter   26600/26600 | Loss: 0.1609 | Lx: 0.0005 | Lu: 0.1603 | Train Acc: 99.98% | Val Acc: 92.40% | Mask: 96.5% | Unused: 0/42500 | LR: 0.00585
+2025-10-15 14:43:24,332 - INFO - ------------------------------------------------------------
+2025-10-15 14:43:24,332 - INFO - Training completed! Best val accuracy: 92.68%
+2025-10-15 14:43:24,332 - INFO - 
+Final learning status:
+2025-10-15 14:43:24,333 - INFO -   Class 0: 4308 samples
+2025-10-15 14:43:24,333 - INFO -   Class 1: 4249 samples
+2025-10-15 14:43:24,333 - INFO -   Class 2: 4246 samples
+2025-10-15 14:43:24,333 - INFO -   Class 3: 4263 samples
+2025-10-15 14:43:24,333 - INFO -   Class 4: 4239 samples
+2025-10-15 14:43:24,333 - INFO -   Class 5: 4193 samples
+2025-10-15 14:43:24,333 - INFO -   Class 6: 4238 samples
+2025-10-15 14:43:24,333 - INFO -   Class 7: 4247 samples
+2025-10-15 14:43:24,333 - INFO -   Class 8: 4247 samples
+2025-10-15 14:43:24,333 - INFO -   Class 9: 4270 samples
+2025-10-15 14:43:24,333 - INFO -   Unused: 0 samples
+2025-10-15 14:43:25,167 - INFO - ✅ Test accuracy: 92.69%
+2025-10-15 14:43:25,554 - INFO - 
+🎯 Experiment 2/3 - seed: 123
+2025-10-15 14:43:25,554 - INFO - 🔄 Preparing data...
+2025-10-15 14:43:26,397 - INFO - labeled data: 2500 (5.0%)
+2025-10-15 14:43:26,397 - INFO - unlabeled data: 42500 (85.0%)
+2025-10-15 14:43:26,397 - INFO - validation data: 5000 (10.0%)
+2025-10-15 14:43:26,397 - INFO - test data: 10000
+2025-10-15 14:43:26,398 - INFO - 🏗️  Creating model...
+2025-10-15 14:43:26,455 - INFO -     Model parameters: 11,173,962
+2025-10-15 14:43:26,455 - INFO - 🏋️  Training...
+2025-10-15 14:43:26,464 - INFO - Start FlexMatch training, 280 epochs
+2025-10-15 14:43:26,464 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-15 14:43:26,464 - INFO - Unlabeled samples: 42500
+2025-10-15 14:43:26,464 - INFO - Total steps: 26600
+2025-10-15 14:43:26,464 - INFO - ------------------------------------------------------------
+2025-10-15 14:43:52,555 - INFO - Epoch    1/280 | Iter      95/26600 | Loss: 2.1621 | Lx: 2.1584 | Lu: 0.0036 | Train Acc: 25.08% | Val Acc: 9.88% | Mask: 0.4% | Unused: 42500/42500 | LR: 0.03000
+2025-10-15 14:47:47,886 - INFO - Epoch   10/280 | Iter     950/26600 | Loss: 1.9432 | Lx: 0.8421 | Lu: 1.1010 | Train Acc: 68.59% | Val Acc: 16.46% | Mask: 100.0% | Unused: 31321/42500 | LR: 0.02996
+2025-10-15 14:52:09,145 - INFO - Epoch   20/280 | Iter    1900/26600 | Loss: 1.1307 | Lx: 0.2093 | Lu: 0.9215 | Train Acc: 92.43% | Val Acc: 41.48% | Mask: 100.0% | Unused: 9293/42500 | LR: 0.02986
+2025-10-15 14:56:30,375 - INFO - Epoch   30/280 | Iter    2850/26600 | Loss: 0.5408 | Lx: 0.0716 | Lu: 0.4692 | Train Acc: 97.71% | Val Acc: 57.04% | Mask: 78.1% | Unused: 1363/42500 | LR: 0.02968
+2025-10-15 15:00:51,698 - INFO - Epoch   40/280 | Iter    3800/26600 | Loss: 0.4665 | Lx: 0.0664 | Lu: 0.4001 | Train Acc: 97.93% | Val Acc: 59.32% | Mask: 75.1% | Unused: 240/42500 | LR: 0.02942
+2025-10-15 15:05:13,096 - INFO - Epoch   50/280 | Iter    4750/26600 | Loss: 0.4303 | Lx: 0.0336 | Lu: 0.3967 | Train Acc: 98.82% | Val Acc: 69.54% | Mask: 82.4% | Unused: 48/42500 | LR: 0.02910
+2025-10-15 15:09:34,872 - INFO - Epoch   60/280 | Iter    5700/26600 | Loss: 0.3826 | Lx: 0.0267 | Lu: 0.3559 | Train Acc: 99.26% | Val Acc: 71.42% | Mask: 80.8% | Unused: 12/42500 | LR: 0.02871
+2025-10-15 15:13:56,481 - INFO - Epoch   70/280 | Iter    6650/26600 | Loss: 0.3590 | Lx: 0.0128 | Lu: 0.3462 | Train Acc: 99.64% | Val Acc: 77.48% | Mask: 84.5% | Unused: 6/42500 | LR: 0.02825
+2025-10-15 15:18:17,630 - INFO - Epoch   80/280 | Iter    7600/26600 | Loss: 0.3258 | Lx: 0.0076 | Lu: 0.3182 | Train Acc: 99.85% | Val Acc: 78.16% | Mask: 85.2% | Unused: 2/42500 | LR: 0.02772
+2025-10-15 15:22:39,076 - INFO - Epoch   90/280 | Iter    8550/26600 | Loss: 0.3388 | Lx: 0.0072 | Lu: 0.3316 | Train Acc: 99.80% | Val Acc: 83.36% | Mask: 87.5% | Unused: 0/42500 | LR: 0.02712
+2025-10-15 15:27:00,214 - INFO - Epoch  100/280 | Iter    9500/26600 | Loss: 0.3244 | Lx: 0.0169 | Lu: 0.3075 | Train Acc: 99.44% | Val Acc: 81.84% | Mask: 84.9% | Unused: 0/42500 | LR: 0.02646
+2025-10-15 15:31:21,273 - INFO - Epoch  110/280 | Iter   10450/26600 | Loss: 0.3090 | Lx: 0.0084 | Lu: 0.3006 | Train Acc: 99.77% | Val Acc: 85.76% | Mask: 87.2% | Unused: 0/42500 | LR: 0.02573
+2025-10-15 15:35:42,715 - INFO - Epoch  120/280 | Iter   11400/26600 | Loss: 0.2911 | Lx: 0.0051 | Lu: 0.2860 | Train Acc: 99.84% | Val Acc: 86.98% | Mask: 88.5% | Unused: 0/42500 | LR: 0.02494
+2025-10-15 15:40:04,244 - INFO - Epoch  130/280 | Iter   12350/26600 | Loss: 0.2672 | Lx: 0.0049 | Lu: 0.2623 | Train Acc: 99.90% | Val Acc: 87.02% | Mask: 88.4% | Unused: 0/42500 | LR: 0.02410
+2025-10-15 15:44:25,769 - INFO - Epoch  140/280 | Iter   13300/26600 | Loss: 0.2667 | Lx: 0.0043 | Lu: 0.2624 | Train Acc: 99.90% | Val Acc: 86.98% | Mask: 88.7% | Unused: 0/42500 | LR: 0.02319
+2025-10-15 15:48:47,213 - INFO - Epoch  150/280 | Iter   14250/26600 | Loss: 0.3349 | Lx: 0.0359 | Lu: 0.2989 | Train Acc: 98.75% | Val Acc: 89.36% | Mask: 86.1% | Unused: 0/42500 | LR: 0.02223
+2025-10-15 15:53:08,546 - INFO - Epoch  160/280 | Iter   15200/26600 | Loss: 0.2697 | Lx: 0.0076 | Lu: 0.2621 | Train Acc: 99.75% | Val Acc: 89.04% | Mask: 90.1% | Unused: 0/42500 | LR: 0.02121
+2025-10-15 15:57:30,011 - INFO - Epoch  170/280 | Iter   16150/26600 | Loss: 0.2557 | Lx: 0.0068 | Lu: 0.2489 | Train Acc: 99.80% | Val Acc: 90.16% | Mask: 90.0% | Unused: 0/42500 | LR: 0.02015
+2025-10-15 16:01:51,608 - INFO - Epoch  180/280 | Iter   17100/26600 | Loss: 0.2529 | Lx: 0.0065 | Lu: 0.2465 | Train Acc: 99.74% | Val Acc: 90.06% | Mask: 90.4% | Unused: 0/42500 | LR: 0.01903
+2025-10-15 16:06:13,273 - INFO - Epoch  190/280 | Iter   18050/26600 | Loss: 0.2313 | Lx: 0.0024 | Lu: 0.2289 | Train Acc: 99.98% | Val Acc: 90.04% | Mask: 91.6% | Unused: 0/42500 | LR: 0.01787
+2025-10-15 16:10:34,918 - INFO - Epoch  200/280 | Iter   19000/26600 | Loss: 0.2267 | Lx: 0.0034 | Lu: 0.2233 | Train Acc: 99.93% | Val Acc: 90.90% | Mask: 91.6% | Unused: 0/42500 | LR: 0.01667
+2025-10-15 16:14:56,527 - INFO - Epoch  210/280 | Iter   19950/26600 | Loss: 0.2230 | Lx: 0.0017 | Lu: 0.2213 | Train Acc: 99.97% | Val Acc: 90.84% | Mask: 93.2% | Unused: 0/42500 | LR: 0.01542
+2025-10-15 16:19:17,868 - INFO - Epoch  220/280 | Iter   20900/26600 | Loss: 0.2107 | Lx: 0.0020 | Lu: 0.2088 | Train Acc: 99.98% | Val Acc: 91.30% | Mask: 93.3% | Unused: 0/42500 | LR: 0.01414
+2025-10-15 16:23:39,282 - INFO - Epoch  230/280 | Iter   21850/26600 | Loss: 0.2118 | Lx: 0.0067 | Lu: 0.2052 | Train Acc: 99.82% | Val Acc: 91.90% | Mask: 92.6% | Unused: 0/42500 | LR: 0.01283
+2025-10-15 16:28:00,647 - INFO - Epoch  240/280 | Iter   22800/26600 | Loss: 0.1972 | Lx: 0.0028 | Lu: 0.1943 | Train Acc: 99.93% | Val Acc: 92.20% | Mask: 94.1% | Unused: 0/42500 | LR: 0.01148
+2025-10-15 16:32:22,088 - INFO - Epoch  250/280 | Iter   23750/26600 | Loss: 0.1929 | Lx: 0.0012 | Lu: 0.1917 | Train Acc: 99.98% | Val Acc: 92.46% | Mask: 94.5% | Unused: 0/42500 | LR: 0.01011
+2025-10-15 16:36:43,804 - INFO - Epoch  260/280 | Iter   24700/26600 | Loss: 0.1792 | Lx: 0.0009 | Lu: 0.1783 | Train Acc: 100.00% | Val Acc: 92.34% | Mask: 95.2% | Unused: 0/42500 | LR: 0.00871
+2025-10-15 16:41:05,210 - INFO - Epoch  270/280 | Iter   25650/26600 | Loss: 0.1728 | Lx: 0.0005 | Lu: 0.1723 | Train Acc: 100.00% | Val Acc: 92.50% | Mask: 95.8% | Unused: 0/42500 | LR: 0.00729
+2025-10-15 16:45:26,602 - INFO - Epoch  280/280 | Iter   26600/26600 | Loss: 0.1580 | Lx: 0.0004 | Lu: 0.1576 | Train Acc: 100.00% | Val Acc: 92.56% | Mask: 96.4% | Unused: 0/42500 | LR: 0.00585
+2025-10-15 16:45:26,604 - INFO - ------------------------------------------------------------
+2025-10-15 16:45:26,604 - INFO - Training completed! Best val accuracy: 93.14%
+2025-10-15 16:45:26,605 - INFO - 
+Final learning status:
+2025-10-15 16:45:26,605 - INFO -   Class 0: 4194 samples
+2025-10-15 16:45:26,605 - INFO -   Class 1: 4269 samples
+2025-10-15 16:45:26,605 - INFO -   Class 2: 4242 samples
+2025-10-15 16:45:26,605 - INFO -   Class 3: 4192 samples
+2025-10-15 16:45:26,605 - INFO -   Class 4: 4286 samples
+2025-10-15 16:45:26,605 - INFO -   Class 5: 4261 samples
+2025-10-15 16:45:26,605 - INFO -   Class 6: 4274 samples
+2025-10-15 16:45:26,605 - INFO -   Class 7: 4287 samples
+2025-10-15 16:45:26,605 - INFO -   Class 8: 4240 samples
+2025-10-15 16:45:26,605 - INFO -   Class 9: 4255 samples
+2025-10-15 16:45:26,605 - INFO -   Unused: 0 samples
+2025-10-15 16:45:27,441 - INFO - ✅ Test accuracy: 93.07%
+2025-10-15 16:45:27,816 - INFO - 
+🎯 Experiment 3/3 - seed: 456
+2025-10-15 16:45:27,816 - INFO - 🔄 Preparing data...
+2025-10-15 16:45:28,667 - INFO - labeled data: 2500 (5.0%)
+2025-10-15 16:45:28,667 - INFO - unlabeled data: 42500 (85.0%)
+2025-10-15 16:45:28,667 - INFO - validation data: 5000 (10.0%)
+2025-10-15 16:45:28,667 - INFO - test data: 10000
+2025-10-15 16:45:28,668 - INFO - 🏗️  Creating model...
+2025-10-15 16:45:28,725 - INFO -     Model parameters: 11,173,962
+2025-10-15 16:45:28,725 - INFO - 🏋️  Training...
+2025-10-15 16:45:28,734 - INFO - Start FlexMatch training, 280 epochs
+2025-10-15 16:45:28,734 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-15 16:45:28,734 - INFO - Unlabeled samples: 42500
+2025-10-15 16:45:28,734 - INFO - Total steps: 26600
+2025-10-15 16:45:28,734 - INFO - ------------------------------------------------------------
+2025-10-15 16:45:54,992 - INFO - Epoch    1/280 | Iter      95/26600 | Loss: 2.2728 | Lx: 2.2688 | Lu: 0.0040 | Train Acc: 24.16% | Val Acc: 9.32% | Mask: 0.5% | Unused: 42500/42500 | LR: 0.03000
+2025-10-15 16:49:50,617 - INFO - Epoch   10/280 | Iter     950/26600 | Loss: 1.7884 | Lx: 0.6891 | Lu: 1.0993 | Train Acc: 75.66% | Val Acc: 14.34% | Mask: 100.0% | Unused: 30165/42500 | LR: 0.02996
+2025-10-15 16:54:12,472 - INFO - Epoch   20/280 | Iter    1900/26600 | Loss: 1.0741 | Lx: 0.1654 | Lu: 0.9087 | Train Acc: 94.47% | Val Acc: 50.86% | Mask: 99.9% | Unused: 8060/42500 | LR: 0.02986
+2025-10-15 16:58:34,359 - INFO - Epoch   30/280 | Iter    2850/26600 | Loss: 0.5635 | Lx: 0.0668 | Lu: 0.4967 | Train Acc: 97.76% | Val Acc: 64.88% | Mask: 79.8% | Unused: 1145/42500 | LR: 0.02968
+2025-10-15 17:02:56,311 - INFO - Epoch   40/280 | Iter    3800/26600 | Loss: 0.4775 | Lx: 0.0537 | Lu: 0.4238 | Train Acc: 98.21% | Val Acc: 66.66% | Mask: 79.1% | Unused: 198/42500 | LR: 0.02942
+2025-10-15 17:07:18,216 - INFO - Epoch   50/280 | Iter    4750/26600 | Loss: 0.4206 | Lx: 0.0208 | Lu: 0.3998 | Train Acc: 99.38% | Val Acc: 73.98% | Mask: 82.7% | Unused: 48/42500 | LR: 0.02910
+2025-10-15 17:11:40,114 - INFO - Epoch   60/280 | Iter    5700/26600 | Loss: 0.3908 | Lx: 0.0146 | Lu: 0.3762 | Train Acc: 99.64% | Val Acc: 75.84% | Mask: 85.7% | Unused: 16/42500 | LR: 0.02871
+2025-10-15 17:16:02,031 - INFO - Epoch   70/280 | Iter    6650/26600 | Loss: 0.3504 | Lx: 0.0069 | Lu: 0.3435 | Train Acc: 99.92% | Val Acc: 77.58% | Mask: 86.0% | Unused: 7/42500 | LR: 0.02825
+2025-10-15 17:20:23,907 - INFO - Epoch   80/280 | Iter    7600/26600 | Loss: 0.3738 | Lx: 0.0316 | Lu: 0.3423 | Train Acc: 99.03% | Val Acc: 81.72% | Mask: 83.7% | Unused: 0/42500 | LR: 0.02772
+2025-10-15 17:24:46,033 - INFO - Epoch   90/280 | Iter    8550/26600 | Loss: 0.3548 | Lx: 0.0175 | Lu: 0.3373 | Train Acc: 99.36% | Val Acc: 81.98% | Mask: 86.0% | Unused: 0/42500 | LR: 0.02712
+2025-10-15 17:29:08,144 - INFO - Epoch  100/280 | Iter    9500/26600 | Loss: 0.3479 | Lx: 0.0189 | Lu: 0.3290 | Train Acc: 99.34% | Val Acc: 83.10% | Mask: 86.9% | Unused: 0/42500 | LR: 0.02646
+2025-10-15 17:33:30,271 - INFO - Epoch  110/280 | Iter   10450/26600 | Loss: 0.3235 | Lx: 0.0080 | Lu: 0.3155 | Train Acc: 99.80% | Val Acc: 87.10% | Mask: 88.6% | Unused: 0/42500 | LR: 0.02573
+2025-10-15 17:37:52,267 - INFO - Epoch  120/280 | Iter   11400/26600 | Loss: 0.2993 | Lx: 0.0083 | Lu: 0.2911 | Train Acc: 99.82% | Val Acc: 86.72% | Mask: 89.1% | Unused: 0/42500 | LR: 0.02494
+2025-10-15 17:42:14,347 - INFO - Epoch  130/280 | Iter   12350/26600 | Loss: 0.2827 | Lx: 0.0049 | Lu: 0.2778 | Train Acc: 99.88% | Val Acc: 86.96% | Mask: 89.9% | Unused: 0/42500 | LR: 0.02410
+2025-10-15 17:46:36,465 - INFO - Epoch  140/280 | Iter   13300/26600 | Loss: 0.2717 | Lx: 0.0048 | Lu: 0.2669 | Train Acc: 99.87% | Val Acc: 88.56% | Mask: 90.0% | Unused: 0/42500 | LR: 0.02319
+2025-10-15 17:50:58,418 - INFO - Epoch  150/280 | Iter   14250/26600 | Loss: 0.2784 | Lx: 0.0080 | Lu: 0.2704 | Train Acc: 99.74% | Val Acc: 90.30% | Mask: 90.0% | Unused: 0/42500 | LR: 0.02223
+2025-10-15 17:55:20,383 - INFO - Epoch  160/280 | Iter   15200/26600 | Loss: 0.2576 | Lx: 0.0023 | Lu: 0.2553 | Train Acc: 99.98% | Val Acc: 89.86% | Mask: 91.4% | Unused: 0/42500 | LR: 0.02121
+2025-10-15 17:59:42,732 - INFO - Epoch  170/280 | Iter   16150/26600 | Loss: 0.2706 | Lx: 0.0160 | Lu: 0.2546 | Train Acc: 99.56% | Val Acc: 89.98% | Mask: 90.6% | Unused: 0/42500 | LR: 0.02015
+2025-10-15 18:04:05,181 - INFO - Epoch  180/280 | Iter   17100/26600 | Loss: 0.2861 | Lx: 0.0175 | Lu: 0.2685 | Train Acc: 99.42% | Val Acc: 89.76% | Mask: 89.2% | Unused: 0/42500 | LR: 0.01903
+2025-10-15 18:08:27,285 - INFO - Epoch  190/280 | Iter   18050/26600 | Loss: 0.2251 | Lx: 0.0017 | Lu: 0.2234 | Train Acc: 99.98% | Val Acc: 91.26% | Mask: 92.5% | Unused: 0/42500 | LR: 0.01787
+2025-10-15 18:12:49,475 - INFO - Epoch  200/280 | Iter   19000/26600 | Loss: 0.2190 | Lx: 0.0015 | Lu: 0.2176 | Train Acc: 100.00% | Val Acc: 91.22% | Mask: 92.6% | Unused: 0/42500 | LR: 0.01667
+2025-10-15 18:17:11,636 - INFO - Epoch  210/280 | Iter   19950/26600 | Loss: 0.2155 | Lx: 0.0033 | Lu: 0.2121 | Train Acc: 99.93% | Val Acc: 91.68% | Mask: 93.1% | Unused: 0/42500 | LR: 0.01542
+2025-10-15 18:21:34,090 - INFO - Epoch  220/280 | Iter   20900/26600 | Loss: 0.2169 | Lx: 0.0031 | Lu: 0.2138 | Train Acc: 99.93% | Val Acc: 91.38% | Mask: 93.6% | Unused: 0/42500 | LR: 0.01414
+2025-10-15 18:25:56,414 - INFO - Epoch  230/280 | Iter   21850/26600 | Loss: 0.2077 | Lx: 0.0029 | Lu: 0.2047 | Train Acc: 99.90% | Val Acc: 91.90% | Mask: 94.2% | Unused: 0/42500 | LR: 0.01283
+2025-10-15 18:30:18,859 - INFO - Epoch  240/280 | Iter   22800/26600 | Loss: 0.1969 | Lx: 0.0010 | Lu: 0.1959 | Train Acc: 100.00% | Val Acc: 92.60% | Mask: 94.7% | Unused: 0/42500 | LR: 0.01148
+2025-10-15 18:34:41,217 - INFO - Epoch  250/280 | Iter   23750/26600 | Loss: 0.1894 | Lx: 0.0006 | Lu: 0.1888 | Train Acc: 100.00% | Val Acc: 92.54% | Mask: 95.2% | Unused: 0/42500 | LR: 0.01011
+2025-10-15 18:39:03,428 - INFO - Epoch  260/280 | Iter   24700/26600 | Loss: 0.1759 | Lx: 0.0008 | Lu: 0.1751 | Train Acc: 100.00% | Val Acc: 93.32% | Mask: 95.6% | Unused: 0/42500 | LR: 0.00871
+2025-10-15 18:43:25,716 - INFO - Epoch  270/280 | Iter   25650/26600 | Loss: 0.1715 | Lx: 0.0007 | Lu: 0.1708 | Train Acc: 100.00% | Val Acc: 93.14% | Mask: 96.1% | Unused: 0/42500 | LR: 0.00729
+2025-10-15 18:47:47,710 - INFO - Epoch  280/280 | Iter   26600/26600 | Loss: 0.1560 | Lx: 0.0004 | Lu: 0.1556 | Train Acc: 100.00% | Val Acc: 93.42% | Mask: 96.7% | Unused: 0/42500 | LR: 0.00585
+2025-10-15 18:47:47,712 - INFO - ------------------------------------------------------------
+2025-10-15 18:47:47,712 - INFO - Training completed! Best val accuracy: 93.46%
+2025-10-15 18:47:47,713 - INFO - 
+Final learning status:
+2025-10-15 18:47:47,713 - INFO -   Class 0: 4302 samples
+2025-10-15 18:47:47,713 - INFO -   Class 1: 4245 samples
+2025-10-15 18:47:47,713 - INFO -   Class 2: 4185 samples
+2025-10-15 18:47:47,713 - INFO -   Class 3: 4218 samples
+2025-10-15 18:47:47,713 - INFO -   Class 4: 4270 samples
+2025-10-15 18:47:47,713 - INFO -   Class 5: 4185 samples
+2025-10-15 18:47:47,713 - INFO -   Class 6: 4279 samples
+2025-10-15 18:47:47,713 - INFO -   Class 7: 4259 samples
+2025-10-15 18:47:47,713 - INFO -   Class 8: 4264 samples
+2025-10-15 18:47:47,713 - INFO -   Class 9: 4293 samples
+2025-10-15 18:47:47,713 - INFO -   Unused: 0 samples
+2025-10-15 18:47:48,543 - INFO - ✅ Test accuracy: 92.99%
+2025-10-15 18:47:48,915 - INFO - 
+📈 5.0% result: 92.92% ± 0.16%
+2025-10-15 18:47:48,915 - INFO - 
+================================================================================
+2025-10-15 18:47:48,915 - INFO - 📊 Phase 4 FlexMatch Results
+2025-10-15 18:47:48,915 - INFO - ================================================================================
+2025-10-15 18:47:48,915 - INFO - 
+Labeled Ratio   | Mean Accuracy | Std    | 95% CI  
+2025-10-15 18:47:48,915 - INFO - --------------------------------------------------
+2025-10-15 18:47:48,915 - INFO - 5.0%            |      92.92% |  0.16% | ±0.19%
+2025-10-15 18:47:48,989 - INFO - 📈 visualization results generated
+2025-10-15 18:47:48,990 - INFO - 
+💾 Results saved to: ./results/phase4_flexmatch_results_20251015_124125/
+2025-10-15 18:47:48,991 - INFO - 
+🎉 Phase 4 completed!
+2025-10-15 18:47:48,991 - INFO - • 5.0% labeled: 92.92% ± 0.16%
+2025-10-15 19:57:02,033 - INFO - ================================================================================
+2025-10-15 19:57:02,033 - INFO - phase4_flexmatch Experiment
+2025-10-15 19:57:02,033 - INFO - ================================================================================
+2025-10-15 19:57:02,033 - INFO - Log file: ./logs/phase4_flexmatch_20251015_195702.log
+2025-10-15 19:57:02,033 - INFO - Parameters:
+2025-10-15 19:57:02,033 - INFO -   Labeled ratios: [0.01]
+2025-10-15 19:57:02,033 - INFO -   Seeds: [42, 123, 456]
+2025-10-15 19:57:02,033 - INFO -   Epochs: 280
+2025-10-15 19:57:02,033 - INFO -   Save results: True
+2025-10-15 19:57:02,033 - INFO -   Log file: ./logs/phase4_flexmatch_20251015_195702.log
+2025-10-15 19:57:02,033 - INFO - 🚀 Phase 4: CIFAR-10 FlexMatch experiment
+2025-10-15 19:57:02,033 - INFO - ================================================================================
+2025-10-15 19:57:02,033 - INFO - Configuration:
+2025-10-15 19:57:02,033 - INFO -    Dataset: CIFAR-10
+2025-10-15 19:57:02,033 - INFO -    Model: Modified ResNet-18 (same as baseline)
+2025-10-15 19:57:02,033 - INFO -    Algorithm: FlexMatch (curriculum pseudo-labeling)
+2025-10-15 19:57:02,033 - INFO -    Labeled ratios: ['1.0%']
+2025-10-15 19:57:02,033 - INFO -    Random seeds: [42, 123, 456]
+2025-10-15 19:57:02,033 - INFO -    Training epochs: 280
+2025-10-15 19:57:02,033 - INFO - ================================================================================
+2025-10-15 19:57:02,033 - INFO - 
+📊 Labeled ratio: 1.0%
+2025-10-15 19:57:02,033 - INFO - ------------------------------------------------------------
+2025-10-15 19:57:02,033 - INFO - 
+🎯 Experiment 1/3 - seed: 42
+2025-10-15 19:57:02,034 - INFO - 🔄 Preparing data...
+2025-10-15 19:57:02,859 - INFO - labeled data: 500 (1.0%)
+2025-10-15 19:57:02,859 - INFO - unlabeled data: 44500 (89.0%)
+2025-10-15 19:57:02,859 - INFO - validation data: 5000 (10.0%)
+2025-10-15 19:57:02,859 - INFO - test data: 10000
+2025-10-15 19:57:02,859 - INFO - 🏗️  Creating model...
+2025-10-15 19:57:02,917 - INFO -     Model parameters: 11,173,962
+2025-10-15 19:57:02,917 - INFO - 🏋️  Training...
+2025-10-15 19:57:03,034 - INFO - Start FlexMatch training, 280 epochs
+2025-10-15 19:57:03,034 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-15 19:57:03,034 - INFO - Unlabeled samples: 44500
+2025-10-15 19:57:03,034 - INFO - Total steps: 28000
+2025-10-15 19:57:03,034 - INFO - ------------------------------------------------------------
+2025-10-15 19:57:30,517 - INFO - Epoch    1/280 | Iter     100/28000 | Loss: 1.9982 | Lx: 1.9674 | Lu: 0.0308 | Train Acc: 33.81% | Val Acc: 9.64% | Mask: 2.2% | Unused: 44500/44500 | LR: 0.03000
+2025-10-15 20:01:35,818 - INFO - Epoch   10/280 | Iter    1000/28000 | Loss: 1.4547 | Lx: 0.1758 | Lu: 1.2789 | Train Acc: 95.41% | Val Acc: 11.60% | Mask: 100.0% | Unused: 10837/44500 | LR: 0.02996
+2025-10-15 20:06:08,218 - INFO - Epoch   20/280 | Iter    2000/28000 | Loss: 0.6945 | Lx: 0.0245 | Lu: 0.6700 | Train Acc: 99.23% | Val Acc: 47.36% | Mask: 76.0% | Unused: 1411/44500 | LR: 0.02986
+2025-10-15 20:10:40,978 - INFO - Epoch   30/280 | Iter    3000/28000 | Loss: 0.5700 | Lx: 0.0249 | Lu: 0.5451 | Train Acc: 99.19% | Val Acc: 38.14% | Mask: 72.5% | Unused: 238/44500 | LR: 0.02968
+2025-10-15 20:15:13,993 - INFO - Epoch   40/280 | Iter    4000/28000 | Loss: 0.5857 | Lx: 0.0209 | Lu: 0.5648 | Train Acc: 99.52% | Val Acc: 32.68% | Mask: 79.0% | Unused: 69/44500 | LR: 0.02942
+2025-10-15 20:19:46,710 - INFO - Epoch   50/280 | Iter    5000/28000 | Loss: 0.4927 | Lx: 0.0064 | Lu: 0.4863 | Train Acc: 99.81% | Val Acc: 35.34% | Mask: 80.1% | Unused: 19/44500 | LR: 0.02910
+2025-10-15 20:24:19,452 - INFO - Epoch   60/280 | Iter    6000/28000 | Loss: 0.4818 | Lx: 0.0151 | Lu: 0.4667 | Train Acc: 99.56% | Val Acc: 41.82% | Mask: 80.6% | Unused: 7/44500 | LR: 0.02871
+2025-10-15 20:28:52,149 - INFO - Epoch   70/280 | Iter    7000/28000 | Loss: 0.4676 | Lx: 0.0098 | Lu: 0.4578 | Train Acc: 99.67% | Val Acc: 57.78% | Mask: 83.9% | Unused: 3/44500 | LR: 0.02825
+2025-10-15 20:33:24,911 - INFO - Epoch   80/280 | Iter    8000/28000 | Loss: 0.3441 | Lx: 0.0031 | Lu: 0.3410 | Train Acc: 99.94% | Val Acc: 61.56% | Mask: 80.7% | Unused: 3/44500 | LR: 0.02772
+2025-10-15 20:37:57,820 - INFO - Epoch   90/280 | Iter    9000/28000 | Loss: 0.3165 | Lx: 0.0074 | Lu: 0.3091 | Train Acc: 99.86% | Val Acc: 67.86% | Mask: 82.2% | Unused: 1/44500 | LR: 0.02712
+2025-10-15 20:42:30,430 - INFO - Epoch  100/280 | Iter   10000/28000 | Loss: 0.3327 | Lx: 0.0074 | Lu: 0.3253 | Train Acc: 99.77% | Val Acc: 69.74% | Mask: 84.1% | Unused: 0/44500 | LR: 0.02646
+2025-10-15 20:47:03,252 - INFO - Epoch  110/280 | Iter   11000/28000 | Loss: 0.2999 | Lx: 0.0039 | Lu: 0.2960 | Train Acc: 99.89% | Val Acc: 72.98% | Mask: 84.6% | Unused: 0/44500 | LR: 0.02573
+2025-10-15 20:51:36,747 - INFO - Epoch  120/280 | Iter   12000/28000 | Loss: 0.2885 | Lx: 0.0032 | Lu: 0.2853 | Train Acc: 99.92% | Val Acc: 78.92% | Mask: 85.8% | Unused: 0/44500 | LR: 0.02494
+2025-10-15 20:56:09,691 - INFO - Epoch  130/280 | Iter   13000/28000 | Loss: 0.2639 | Lx: 0.0024 | Lu: 0.2615 | Train Acc: 99.94% | Val Acc: 79.50% | Mask: 85.9% | Unused: 0/44500 | LR: 0.02410
+2025-10-15 21:00:42,766 - INFO - Epoch  140/280 | Iter   14000/28000 | Loss: 0.2644 | Lx: 0.0031 | Lu: 0.2613 | Train Acc: 99.92% | Val Acc: 83.40% | Mask: 86.7% | Unused: 0/44500 | LR: 0.02319
+2025-10-15 21:05:16,075 - INFO - Epoch  150/280 | Iter   15000/28000 | Loss: 0.2760 | Lx: 0.0057 | Lu: 0.2703 | Train Acc: 99.80% | Val Acc: 85.80% | Mask: 87.9% | Unused: 0/44500 | LR: 0.02223
+2025-10-15 21:09:48,844 - INFO - Epoch  160/280 | Iter   16000/28000 | Loss: 0.2489 | Lx: 0.0012 | Lu: 0.2477 | Train Acc: 99.98% | Val Acc: 85.60% | Mask: 89.2% | Unused: 0/44500 | LR: 0.02121
+2025-10-15 21:14:21,683 - INFO - Epoch  170/280 | Iter   17000/28000 | Loss: 0.2191 | Lx: 0.0006 | Lu: 0.2185 | Train Acc: 100.00% | Val Acc: 86.06% | Mask: 88.5% | Unused: 0/44500 | LR: 0.02015
+2025-10-15 21:18:54,649 - INFO - Epoch  180/280 | Iter   18000/28000 | Loss: 0.2292 | Lx: 0.0006 | Lu: 0.2285 | Train Acc: 100.00% | Val Acc: 86.44% | Mask: 90.1% | Unused: 0/44500 | LR: 0.01903
+2025-10-15 21:23:27,355 - INFO - Epoch  190/280 | Iter   19000/28000 | Loss: 0.2210 | Lx: 0.0010 | Lu: 0.2199 | Train Acc: 99.98% | Val Acc: 88.14% | Mask: 90.0% | Unused: 0/44500 | LR: 0.01787
+2025-10-15 21:28:00,193 - INFO - Epoch  200/280 | Iter   20000/28000 | Loss: 0.2149 | Lx: 0.0014 | Lu: 0.2136 | Train Acc: 99.97% | Val Acc: 88.08% | Mask: 90.8% | Unused: 0/44500 | LR: 0.01667
+2025-10-15 21:32:33,111 - INFO - Epoch  210/280 | Iter   21000/28000 | Loss: 0.2029 | Lx: 0.0006 | Lu: 0.2023 | Train Acc: 100.00% | Val Acc: 88.38% | Mask: 91.2% | Unused: 0/44500 | LR: 0.01542
+2025-10-15 21:37:06,282 - INFO - Epoch  220/280 | Iter   22000/28000 | Loss: 0.2007 | Lx: 0.0006 | Lu: 0.2000 | Train Acc: 99.98% | Val Acc: 89.32% | Mask: 92.0% | Unused: 0/44500 | LR: 0.01414
+2025-10-15 21:41:39,226 - INFO - Epoch  230/280 | Iter   23000/28000 | Loss: 0.1953 | Lx: 0.0005 | Lu: 0.1947 | Train Acc: 100.00% | Val Acc: 89.38% | Mask: 92.4% | Unused: 0/44500 | LR: 0.01283
+2025-10-15 21:46:12,092 - INFO - Epoch  240/280 | Iter   24000/28000 | Loss: 0.1887 | Lx: 0.0004 | Lu: 0.1882 | Train Acc: 100.00% | Val Acc: 90.28% | Mask: 93.3% | Unused: 0/44500 | LR: 0.01148
+2025-10-15 21:50:44,839 - INFO - Epoch  250/280 | Iter   25000/28000 | Loss: 0.1769 | Lx: 0.0003 | Lu: 0.1766 | Train Acc: 100.00% | Val Acc: 89.58% | Mask: 93.4% | Unused: 0/44500 | LR: 0.01011
+2025-10-15 21:55:17,631 - INFO - Epoch  260/280 | Iter   26000/28000 | Loss: 0.1722 | Lx: 0.0003 | Lu: 0.1720 | Train Acc: 100.00% | Val Acc: 90.36% | Mask: 94.4% | Unused: 0/44500 | LR: 0.00871
+2025-10-15 21:59:50,286 - INFO - Epoch  270/280 | Iter   27000/28000 | Loss: 0.1702 | Lx: 0.0002 | Lu: 0.1700 | Train Acc: 100.00% | Val Acc: 89.90% | Mask: 95.3% | Unused: 0/44500 | LR: 0.00729
+2025-10-15 22:04:23,088 - INFO - Epoch  280/280 | Iter   28000/28000 | Loss: 0.1528 | Lx: 0.0002 | Lu: 0.1526 | Train Acc: 100.00% | Val Acc: 91.22% | Mask: 95.5% | Unused: 0/44500 | LR: 0.00585
+2025-10-15 22:04:23,090 - INFO - ------------------------------------------------------------
+2025-10-15 22:04:23,090 - INFO - Training completed! Best val accuracy: 91.22%
+2025-10-15 22:04:23,091 - INFO - 
+Final learning status:
+2025-10-15 22:04:23,091 - INFO -   Class 0: 4506 samples
+2025-10-15 22:04:23,091 - INFO -   Class 1: 4474 samples
+2025-10-15 22:04:23,091 - INFO -   Class 2: 4403 samples
+2025-10-15 22:04:23,091 - INFO -   Class 3: 4425 samples
+2025-10-15 22:04:23,091 - INFO -   Class 4: 4438 samples
+2025-10-15 22:04:23,091 - INFO -   Class 5: 4379 samples
+2025-10-15 22:04:23,091 - INFO -   Class 6: 4439 samples
+2025-10-15 22:04:23,091 - INFO -   Class 7: 4495 samples
+2025-10-15 22:04:23,091 - INFO -   Class 8: 4476 samples
+2025-10-15 22:04:23,091 - INFO -   Class 9: 4465 samples
+2025-10-15 22:04:23,091 - INFO -   Unused: 0 samples
+2025-10-15 22:04:23,913 - INFO - ✅ Test accuracy: 90.54%
+2025-10-15 22:04:24,366 - INFO - 
+🎯 Experiment 2/3 - seed: 123
+2025-10-15 22:04:24,367 - INFO - 🔄 Preparing data...
+2025-10-15 22:04:25,214 - INFO - labeled data: 500 (1.0%)
+2025-10-15 22:04:25,214 - INFO - unlabeled data: 44500 (89.0%)
+2025-10-15 22:04:25,214 - INFO - validation data: 5000 (10.0%)
+2025-10-15 22:04:25,214 - INFO - test data: 10000
+2025-10-15 22:04:25,215 - INFO - 🏗️  Creating model...
+2025-10-15 22:04:25,272 - INFO -     Model parameters: 11,173,962
+2025-10-15 22:04:25,272 - INFO - 🏋️  Training...
+2025-10-15 22:04:25,281 - INFO - Start FlexMatch training, 280 epochs
+2025-10-15 22:04:25,282 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-15 22:04:25,282 - INFO - Unlabeled samples: 44500
+2025-10-15 22:04:25,282 - INFO - Total steps: 28000
+2025-10-15 22:04:25,282 - INFO - ------------------------------------------------------------
+2025-10-15 22:04:52,506 - INFO - Epoch    1/280 | Iter     100/28000 | Loss: 2.0819 | Lx: 2.0738 | Lu: 0.0081 | Train Acc: 31.22% | Val Acc: 9.56% | Mask: 0.8% | Unused: 44500/44500 | LR: 0.03000
+2025-10-15 22:08:57,985 - INFO - Epoch   10/280 | Iter    1000/28000 | Loss: 1.2972 | Lx: 0.0736 | Lu: 1.2237 | Train Acc: 97.83% | Val Acc: 18.12% | Mask: 100.0% | Unused: 10307/44500 | LR: 0.02996
+2025-10-15 22:13:30,953 - INFO - Epoch   20/280 | Iter    2000/28000 | Loss: 0.7129 | Lx: 0.0296 | Lu: 0.6833 | Train Acc: 99.02% | Val Acc: 43.48% | Mask: 77.2% | Unused: 1229/44500 | LR: 0.02986
+2025-10-15 22:18:03,683 - INFO - Epoch   30/280 | Iter    3000/28000 | Loss: 0.6199 | Lx: 0.0205 | Lu: 0.5994 | Train Acc: 99.45% | Val Acc: 46.28% | Mask: 78.4% | Unused: 249/44500 | LR: 0.02968
+2025-10-15 22:22:36,508 - INFO - Epoch   40/280 | Iter    4000/28000 | Loss: 0.5852 | Lx: 0.0182 | Lu: 0.5670 | Train Acc: 99.48% | Val Acc: 43.00% | Mask: 82.1% | Unused: 55/44500 | LR: 0.02942
+2025-10-15 22:27:09,233 - INFO - Epoch   50/280 | Iter    5000/28000 | Loss: 0.5291 | Lx: 0.0177 | Lu: 0.5114 | Train Acc: 99.50% | Val Acc: 44.00% | Mask: 82.0% | Unused: 21/44500 | LR: 0.02910
+2025-10-15 22:31:42,001 - INFO - Epoch   60/280 | Iter    6000/28000 | Loss: 0.4846 | Lx: 0.0073 | Lu: 0.4773 | Train Acc: 99.80% | Val Acc: 51.82% | Mask: 85.7% | Unused: 6/44500 | LR: 0.02871
+2025-10-15 22:36:14,998 - INFO - Epoch   70/280 | Iter    7000/28000 | Loss: 0.4213 | Lx: 0.0034 | Lu: 0.4179 | Train Acc: 99.94% | Val Acc: 60.82% | Mask: 86.2% | Unused: 2/44500 | LR: 0.02825
+2025-10-15 22:40:47,824 - INFO - Epoch   80/280 | Iter    8000/28000 | Loss: 0.3880 | Lx: 0.0038 | Lu: 0.3842 | Train Acc: 99.95% | Val Acc: 70.08% | Mask: 87.4% | Unused: 0/44500 | LR: 0.02772
+2025-10-15 22:45:20,480 - INFO - Epoch   90/280 | Iter    9000/28000 | Loss: 0.3241 | Lx: 0.0025 | Lu: 0.3217 | Train Acc: 99.97% | Val Acc: 75.68% | Mask: 85.4% | Unused: 0/44500 | LR: 0.02712
+2025-10-15 22:49:53,466 - INFO - Epoch  100/280 | Iter   10000/28000 | Loss: 0.3151 | Lx: 0.0019 | Lu: 0.3132 | Train Acc: 99.98% | Val Acc: 78.10% | Mask: 86.7% | Unused: 0/44500 | LR: 0.02646
+2025-10-15 22:54:26,063 - INFO - Epoch  110/280 | Iter   11000/28000 | Loss: 0.3072 | Lx: 0.0016 | Lu: 0.3056 | Train Acc: 99.98% | Val Acc: 78.22% | Mask: 88.1% | Unused: 0/44500 | LR: 0.02573
+2025-10-15 22:58:59,012 - INFO - Epoch  120/280 | Iter   12000/28000 | Loss: 0.2840 | Lx: 0.0019 | Lu: 0.2821 | Train Acc: 99.95% | Val Acc: 81.78% | Mask: 87.7% | Unused: 0/44500 | LR: 0.02494
+2025-10-15 23:03:31,772 - INFO - Epoch  130/280 | Iter   13000/28000 | Loss: 0.2592 | Lx: 0.0018 | Lu: 0.2574 | Train Acc: 99.97% | Val Acc: 83.14% | Mask: 86.9% | Unused: 0/44500 | LR: 0.02410
+2025-10-15 23:08:04,586 - INFO - Epoch  140/280 | Iter   14000/28000 | Loss: 0.2585 | Lx: 0.0012 | Lu: 0.2572 | Train Acc: 99.98% | Val Acc: 84.76% | Mask: 88.8% | Unused: 0/44500 | LR: 0.02319
+2025-10-15 23:12:37,353 - INFO - Epoch  150/280 | Iter   15000/28000 | Loss: 0.2512 | Lx: 0.0012 | Lu: 0.2500 | Train Acc: 100.00% | Val Acc: 86.78% | Mask: 88.9% | Unused: 0/44500 | LR: 0.02223
+2025-10-15 23:17:10,143 - INFO - Epoch  160/280 | Iter   16000/28000 | Loss: 0.2335 | Lx: 0.0011 | Lu: 0.2324 | Train Acc: 100.00% | Val Acc: 89.24% | Mask: 89.4% | Unused: 0/44500 | LR: 0.02121
+2025-10-15 23:21:42,830 - INFO - Epoch  170/280 | Iter   17000/28000 | Loss: 0.2337 | Lx: 0.0014 | Lu: 0.2324 | Train Acc: 99.98% | Val Acc: 87.64% | Mask: 90.1% | Unused: 0/44500 | LR: 0.02015
+2025-10-15 23:26:15,501 - INFO - Epoch  180/280 | Iter   18000/28000 | Loss: 0.2247 | Lx: 0.0008 | Lu: 0.2238 | Train Acc: 100.00% | Val Acc: 89.60% | Mask: 90.5% | Unused: 0/44500 | LR: 0.01903
+2025-10-15 23:30:48,133 - INFO - Epoch  190/280 | Iter   19000/28000 | Loss: 0.2158 | Lx: 0.0010 | Lu: 0.2148 | Train Acc: 100.00% | Val Acc: 88.94% | Mask: 90.6% | Unused: 0/44500 | LR: 0.01787
+2025-10-15 23:35:21,000 - INFO - Epoch  200/280 | Iter   20000/28000 | Loss: 0.2043 | Lx: 0.0006 | Lu: 0.2037 | Train Acc: 100.00% | Val Acc: 90.40% | Mask: 90.9% | Unused: 0/44500 | LR: 0.01667
+2025-10-15 23:39:53,769 - INFO - Epoch  210/280 | Iter   21000/28000 | Loss: 0.2041 | Lx: 0.0010 | Lu: 0.2030 | Train Acc: 99.98% | Val Acc: 90.88% | Mask: 91.3% | Unused: 0/44500 | LR: 0.01542
+2025-10-15 23:44:26,516 - INFO - Epoch  220/280 | Iter   22000/28000 | Loss: 0.1962 | Lx: 0.0006 | Lu: 0.1956 | Train Acc: 100.00% | Val Acc: 91.14% | Mask: 91.8% | Unused: 0/44500 | LR: 0.01414
+2025-10-15 23:48:59,335 - INFO - Epoch  230/280 | Iter   23000/28000 | Loss: 0.1874 | Lx: 0.0006 | Lu: 0.1869 | Train Acc: 100.00% | Val Acc: 90.82% | Mask: 92.7% | Unused: 0/44500 | LR: 0.01283
+2025-10-15 23:53:32,239 - INFO - Epoch  240/280 | Iter   24000/28000 | Loss: 0.1844 | Lx: 0.0004 | Lu: 0.1840 | Train Acc: 100.00% | Val Acc: 91.24% | Mask: 93.4% | Unused: 0/44500 | LR: 0.01148
+2025-10-15 23:58:04,968 - INFO - Epoch  250/280 | Iter   25000/28000 | Loss: 0.1759 | Lx: 0.0003 | Lu: 0.1756 | Train Acc: 100.00% | Val Acc: 90.32% | Mask: 94.0% | Unused: 0/44500 | LR: 0.01011
+2025-10-16 00:02:37,808 - INFO - Epoch  260/280 | Iter   26000/28000 | Loss: 0.1703 | Lx: 0.0003 | Lu: 0.1701 | Train Acc: 100.00% | Val Acc: 91.96% | Mask: 94.4% | Unused: 0/44500 | LR: 0.00871
+2025-10-16 00:07:10,733 - INFO - Epoch  270/280 | Iter   27000/28000 | Loss: 0.1643 | Lx: 0.0002 | Lu: 0.1641 | Train Acc: 100.00% | Val Acc: 91.84% | Mask: 95.1% | Unused: 0/44500 | LR: 0.00729
+2025-10-16 00:11:43,662 - INFO - Epoch  280/280 | Iter   28000/28000 | Loss: 0.1488 | Lx: 0.0001 | Lu: 0.1487 | Train Acc: 100.00% | Val Acc: 92.20% | Mask: 95.5% | Unused: 0/44500 | LR: 0.00585
+2025-10-16 00:11:43,664 - INFO - ------------------------------------------------------------
+2025-10-16 00:11:43,664 - INFO - Training completed! Best val accuracy: 92.58%
+2025-10-16 00:11:43,665 - INFO - 
+Final learning status:
+2025-10-16 00:11:43,665 - INFO -   Class 0: 4480 samples
+2025-10-16 00:11:43,665 - INFO -   Class 1: 4448 samples
+2025-10-16 00:11:43,665 - INFO -   Class 2: 4337 samples
+2025-10-16 00:11:43,665 - INFO -   Class 3: 4472 samples
+2025-10-16 00:11:43,665 - INFO -   Class 4: 4427 samples
+2025-10-16 00:11:43,665 - INFO -   Class 5: 4427 samples
+2025-10-16 00:11:43,665 - INFO -   Class 6: 4476 samples
+2025-10-16 00:11:43,665 - INFO -   Class 7: 4479 samples
+2025-10-16 00:11:43,665 - INFO -   Class 8: 4478 samples
+2025-10-16 00:11:43,665 - INFO -   Class 9: 4476 samples
+2025-10-16 00:11:43,665 - INFO -   Unused: 0 samples
+2025-10-16 00:11:44,490 - INFO - ✅ Test accuracy: 91.85%
+2025-10-16 00:11:44,858 - INFO - 
+🎯 Experiment 3/3 - seed: 456
+2025-10-16 00:11:44,859 - INFO - 🔄 Preparing data...
+2025-10-16 00:11:45,675 - INFO - labeled data: 500 (1.0%)
+2025-10-16 00:11:45,675 - INFO - unlabeled data: 44500 (89.0%)
+2025-10-16 00:11:45,675 - INFO - validation data: 5000 (10.0%)
+2025-10-16 00:11:45,675 - INFO - test data: 10000
+2025-10-16 00:11:45,677 - INFO - 🏗️  Creating model...
+2025-10-16 00:11:45,734 - INFO -     Model parameters: 11,173,962
+2025-10-16 00:11:45,734 - INFO - 🏋️  Training...
+2025-10-16 00:11:45,743 - INFO - Start FlexMatch training, 280 epochs
+2025-10-16 00:11:45,743 - INFO - Threshold: 0.95, λ_u: 1.0, mapping: convex
+2025-10-16 00:11:45,743 - INFO - Unlabeled samples: 44500
+2025-10-16 00:11:45,743 - INFO - Total steps: 28000
+2025-10-16 00:11:45,743 - INFO - ------------------------------------------------------------
+2025-10-16 00:12:12,966 - INFO - Epoch    1/280 | Iter     100/28000 | Loss: 1.9172 | Lx: 1.8987 | Lu: 0.0184 | Train Acc: 33.58% | Val Acc: 10.12% | Mask: 1.6% | Unused: 44500/44500 | LR: 0.03000
+2025-10-16 00:16:18,890 - INFO - Epoch   10/280 | Iter    1000/28000 | Loss: 1.3045 | Lx: 0.0563 | Lu: 1.2482 | Train Acc: 98.39% | Val Acc: 20.38% | Mask: 100.0% | Unused: 13632/44500 | LR: 0.02996
+2025-10-16 00:20:52,654 - INFO - Epoch   20/280 | Iter    2000/28000 | Loss: 0.7394 | Lx: 0.0263 | Lu: 0.7131 | Train Acc: 99.25% | Val Acc: 43.60% | Mask: 77.5% | Unused: 1677/44500 | LR: 0.02986
+2025-10-16 00:25:25,830 - INFO - Epoch   30/280 | Iter    3000/28000 | Loss: 0.7143 | Lx: 0.0184 | Lu: 0.6960 | Train Acc: 99.52% | Val Acc: 39.32% | Mask: 82.2% | Unused: 284/44500 | LR: 0.02968
+2025-10-16 00:29:58,997 - INFO - Epoch   40/280 | Iter    4000/28000 | Loss: 0.6031 | Lx: 0.0228 | Lu: 0.5803 | Train Acc: 99.36% | Val Acc: 28.92% | Mask: 78.9% | Unused: 60/44500 | LR: 0.02942
+2025-10-16 00:34:32,333 - INFO - Epoch   50/280 | Iter    5000/28000 | Loss: 0.5269 | Lx: 0.0097 | Lu: 0.5172 | Train Acc: 99.73% | Val Acc: 25.90% | Mask: 81.3% | Unused: 11/44500 | LR: 0.02910
+2025-10-16 00:39:05,466 - INFO - Epoch   60/280 | Iter    6000/28000 | Loss: 0.4931 | Lx: 0.0092 | Lu: 0.4839 | Train Acc: 99.77% | Val Acc: 40.30% | Mask: 83.9% | Unused: 4/44500 | LR: 0.02871
+2025-10-16 00:43:38,680 - INFO - Epoch   70/280 | Iter    7000/28000 | Loss: 0.4400 | Lx: 0.0107 | Lu: 0.4293 | Train Acc: 99.62% | Val Acc: 52.08% | Mask: 82.1% | Unused: 1/44500 | LR: 0.02825
+2025-10-16 00:48:11,970 - INFO - Epoch   80/280 | Iter    8000/28000 | Loss: 0.3796 | Lx: 0.0034 | Lu: 0.3762 | Train Acc: 99.95% | Val Acc: 53.74% | Mask: 83.9% | Unused: 1/44500 | LR: 0.02772
+2025-10-16 00:52:45,622 - INFO - Epoch   90/280 | Iter    9000/28000 | Loss: 0.3181 | Lx: 0.0027 | Lu: 0.3154 | Train Acc: 99.92% | Val Acc: 63.40% | Mask: 81.6% | Unused: 1/44500 | LR: 0.02712
+2025-10-16 00:57:19,001 - INFO - Epoch  100/280 | Iter   10000/28000 | Loss: 0.3066 | Lx: 0.0039 | Lu: 0.3027 | Train Acc: 99.92% | Val Acc: 73.38% | Mask: 82.8% | Unused: 0/44500 | LR: 0.02646
+2025-10-16 01:01:52,328 - INFO - Epoch  110/280 | Iter   11000/28000 | Loss: 0.3100 | Lx: 0.0030 | Lu: 0.3070 | Train Acc: 99.94% | Val Acc: 75.86% | Mask: 85.8% | Unused: 0/44500 | LR: 0.02573
+2025-10-16 01:06:25,562 - INFO - Epoch  120/280 | Iter   12000/28000 | Loss: 0.2894 | Lx: 0.0012 | Lu: 0.2883 | Train Acc: 100.00% | Val Acc: 80.92% | Mask: 85.6% | Unused: 0/44500 | LR: 0.02494
+2025-10-16 01:10:58,663 - INFO - Epoch  130/280 | Iter   13000/28000 | Loss: 0.2920 | Lx: 0.0050 | Lu: 0.2870 | Train Acc: 99.84% | Val Acc: 84.38% | Mask: 86.3% | Unused: 0/44500 | LR: 0.02410
+2025-10-16 01:15:31,817 - INFO - Epoch  140/280 | Iter   14000/28000 | Loss: 0.2600 | Lx: 0.0020 | Lu: 0.2581 | Train Acc: 99.98% | Val Acc: 84.34% | Mask: 85.9% | Unused: 0/44500 | LR: 0.02319
+2025-10-16 01:20:04,991 - INFO - Epoch  150/280 | Iter   15000/28000 | Loss: 0.2455 | Lx: 0.0012 | Lu: 0.2443 | Train Acc: 99.98% | Val Acc: 86.48% | Mask: 86.8% | Unused: 0/44500 | LR: 0.02223
+2025-10-16 01:24:38,125 - INFO - Epoch  160/280 | Iter   16000/28000 | Loss: 0.2418 | Lx: 0.0015 | Lu: 0.2403 | Train Acc: 99.95% | Val Acc: 86.94% | Mask: 87.3% | Unused: 0/44500 | LR: 0.02121
+2025-10-16 01:29:11,355 - INFO - Epoch  170/280 | Iter   17000/28000 | Loss: 0.2392 | Lx: 0.0014 | Lu: 0.2378 | Train Acc: 99.97% | Val Acc: 88.12% | Mask: 88.8% | Unused: 0/44500 | LR: 0.02015
+2025-10-16 01:33:44,561 - INFO - Epoch  180/280 | Iter   18000/28000 | Loss: 0.2280 | Lx: 0.0008 | Lu: 0.2272 | Train Acc: 99.98% | Val Acc: 88.74% | Mask: 89.1% | Unused: 0/44500 | LR: 0.01903
+2025-10-16 01:38:17,731 - INFO - Epoch  190/280 | Iter   19000/28000 | Loss: 0.2175 | Lx: 0.0006 | Lu: 0.2169 | Train Acc: 100.00% | Val Acc: 89.00% | Mask: 89.7% | Unused: 0/44500 | LR: 0.01787
+2025-10-16 01:42:50,787 - INFO - Epoch  200/280 | Iter   20000/28000 | Loss: 0.2102 | Lx: 0.0005 | Lu: 0.2096 | Train Acc: 100.00% | Val Acc: 89.26% | Mask: 90.2% | Unused: 0/44500 | LR: 0.01667
+2025-10-16 01:47:24,094 - INFO - Epoch  210/280 | Iter   21000/28000 | Loss: 0.2112 | Lx: 0.0006 | Lu: 0.2106 | Train Acc: 100.00% | Val Acc: 89.86% | Mask: 91.2% | Unused: 0/44500 | LR: 0.01542
+2025-10-16 01:51:57,405 - INFO - Epoch  220/280 | Iter   22000/28000 | Loss: 0.2061 | Lx: 0.0008 | Lu: 0.2054 | Train Acc: 99.98% | Val Acc: 90.68% | Mask: 91.8% | Unused: 0/44500 | LR: 0.01414
+2025-10-16 01:56:30,728 - INFO - Epoch  230/280 | Iter   23000/28000 | Loss: 0.1890 | Lx: 0.0004 | Lu: 0.1886 | Train Acc: 100.00% | Val Acc: 91.12% | Mask: 92.0% | Unused: 0/44500 | LR: 0.01283
+2025-10-16 02:01:04,025 - INFO - Epoch  240/280 | Iter   24000/28000 | Loss: 0.1856 | Lx: 0.0004 | Lu: 0.1852 | Train Acc: 100.00% | Val Acc: 91.30% | Mask: 92.9% | Unused: 0/44500 | LR: 0.01148
+2025-10-16 02:05:37,189 - INFO - Epoch  250/280 | Iter   25000/28000 | Loss: 0.1814 | Lx: 0.0003 | Lu: 0.1811 | Train Acc: 100.00% | Val Acc: 91.42% | Mask: 93.5% | Unused: 0/44500 | LR: 0.01011
+2025-10-16 02:10:10,424 - INFO - Epoch  260/280 | Iter   26000/28000 | Loss: 0.1711 | Lx: 0.0003 | Lu: 0.1708 | Train Acc: 100.00% | Val Acc: 90.48% | Mask: 94.2% | Unused: 0/44500 | LR: 0.00871
+2025-10-16 02:14:43,585 - INFO - Epoch  270/280 | Iter   27000/28000 | Loss: 0.1676 | Lx: 0.0002 | Lu: 0.1673 | Train Acc: 100.00% | Val Acc: 91.58% | Mask: 94.8% | Unused: 0/44500 | LR: 0.00729
+2025-10-16 02:19:16,623 - INFO - Epoch  280/280 | Iter   28000/28000 | Loss: 0.1559 | Lx: 0.0002 | Lu: 0.1558 | Train Acc: 100.00% | Val Acc: 91.94% | Mask: 95.1% | Unused: 0/44500 | LR: 0.00585
+2025-10-16 02:19:16,625 - INFO - ------------------------------------------------------------
+2025-10-16 02:19:16,625 - INFO - Training completed! Best val accuracy: 92.10%
+2025-10-16 02:19:16,625 - INFO - 
+Final learning status:
+2025-10-16 02:19:16,625 - INFO -   Class 0: 4496 samples
+2025-10-16 02:19:16,625 - INFO -   Class 1: 4438 samples
+2025-10-16 02:19:16,625 - INFO -   Class 2: 4417 samples
+2025-10-16 02:19:16,625 - INFO -   Class 3: 4431 samples
+2025-10-16 02:19:16,626 - INFO -   Class 4: 4440 samples
+2025-10-16 02:19:16,626 - INFO -   Class 5: 4428 samples
+2025-10-16 02:19:16,626 - INFO -   Class 6: 4452 samples
+2025-10-16 02:19:16,626 - INFO -   Class 7: 4448 samples
+2025-10-16 02:19:16,626 - INFO -   Class 8: 4492 samples
+2025-10-16 02:19:16,626 - INFO -   Class 9: 4458 samples
+2025-10-16 02:19:16,626 - INFO -   Unused: 0 samples
+2025-10-16 02:19:17,448 - INFO - ✅ Test accuracy: 91.23%
+2025-10-16 02:19:17,906 - INFO - 
+📈 1.0% result: 91.21% ± 0.54%
+2025-10-16 02:19:17,907 - INFO - 
+================================================================================
+2025-10-16 02:19:17,907 - INFO - 📊 Phase 4 FlexMatch Results
+2025-10-16 02:19:17,907 - INFO - ================================================================================
+2025-10-16 02:19:17,907 - INFO - 
+Labeled Ratio   | Mean Accuracy | Std    | 95% CI  
+2025-10-16 02:19:17,907 - INFO - --------------------------------------------------
+2025-10-16 02:19:17,907 - INFO - 1.0%            |      91.21% |  0.54% | ±0.61%
+2025-10-16 02:19:17,979 - INFO - 📈 visualization results generated
+2025-10-16 02:19:17,979 - INFO - 
+💾 Results saved to: ./results/phase4_flexmatch_results_20251015_195702/
+2025-10-16 02:19:17,980 - INFO - 
+🎉 Phase 4 completed!
+2025-10-15 18:47:48,915 - INFO - 📊 Phase 4 FlexMatch Results
+2025-10-15 18:47:48,915 - INFO - ================================================================================
+2025-10-15 18:47:48,915 - INFO - 
+Labeled Ratio   | Mean Accuracy | Std    | 95% CI  
+2025-10-15 18:47:48,915 - INFO - --------------------------------------------------
+2025-10-15 18:47:48,915 - INFO - 10.0%            |      93.04% |  0.34% | ±0.38%
+2025-10-15 18:47:48,915 - INFO - 5.0%            |      92.92% |  0.16% | ±0.19%
+2025-10-16 02:19:17,907 - INFO - 1.0%            |      91.21% |  0.54% | ±0.61%

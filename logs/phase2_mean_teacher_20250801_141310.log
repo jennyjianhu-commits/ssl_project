@@ -1,0 +1,325 @@
+2025-08-01 14:13:10,602 - INFO - ================================================================================
+2025-08-01 14:13:10,602 - INFO - phase2_mean_teacher Experiment
+2025-08-01 14:13:10,602 - INFO - ================================================================================
+2025-08-01 14:13:10,602 - INFO - Log file: ./logs/phase2_mean_teacher_20250801_141310.log
+2025-08-01 14:13:10,602 - INFO - Experiment parameters:
+2025-08-01 14:13:10,602 - INFO -   labeled ratios: [0.1, 0.05, 0.01]
+2025-08-01 14:13:10,602 - INFO -   random seeds: [42, 123, 456]
+2025-08-01 14:13:10,602 - INFO -   training epochs: 100
+2025-08-01 14:13:10,602 - INFO -   save results: True
+2025-08-01 14:13:10,602 - INFO -   log file: ./logs/phase2_mean_teacher_20250801_141310.log
+2025-08-01 14:13:10,602 - INFO - 🚀 Phase 2: CIFAR-10 Mean Teacher semi-supervised learning experiment
+2025-08-01 14:13:10,602 - INFO - ================================================================================
+2025-08-01 14:13:10,602 - INFO - experiment configuration:
+2025-08-01 14:13:10,602 - INFO -    dataset: CIFAR-10
+2025-08-01 14:13:10,602 - INFO -    model: Modified ResNet-18 (Student + Teacher)
+2025-08-01 14:13:10,602 - INFO -    method: Mean Teacher with EMA
+2025-08-01 14:13:10,602 - INFO -    labeled ratio: ['10.0%', '5.0%', '1.0%']
+2025-08-01 14:13:10,602 - INFO -    random seeds: [42, 123, 456]
+2025-08-01 14:13:10,602 - INFO -    training epochs: 100
+2025-08-01 14:13:10,602 - INFO - ================================================================================
+2025-08-01 14:13:10,602 - INFO - 
+📊 labeled ratio: 10.0%
+2025-08-01 14:13:10,602 - INFO - ------------------------------------------------------------
+2025-08-01 14:13:10,602 - INFO - 
+🎯 experiment 1/9 - seed: 42
+2025-08-01 14:13:10,603 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 14:13:11,419 - INFO - labeled data: 5000 (10.0%)
+2025-08-01 14:13:11,419 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-01 14:13:11,419 - INFO - validation data: 5000 (10.0%)
+2025-08-01 14:13:11,419 - INFO - test data: 10000
+2025-08-01 14:13:11,419 - INFO - 🏗️  create student and teacher models...
+2025-08-01 14:13:11,531 - INFO -     model parameters: 11,173,962
+2025-08-01 14:13:11,531 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 14:13:11,657 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 14:13:11,657 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 14:13:11,657 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 14:13:11,657 - INFO - Warmup epochs: 10
+2025-08-01 14:13:11,657 - INFO - Using mixed precision training
+2025-08-01 14:13:11,657 - INFO - ------------------------------------------------------------
+2025-08-01 14:13:38,198 - INFO - Epoch   1/100 | Total Loss: 1.7436 | Sup Loss: 1.7430 | Cons Loss: 0.0090 | Cons Weight: 0.07 | Train Acc: 35.46% | Student Val: 49.48% | Teacher Val: 50.64% | LR: 0.001000 | Time: 26.54s
+2025-08-01 14:17:34,975 - INFO - Epoch  10/100 | Total Loss: 0.6968 | Sup Loss: 0.6909 | Cons Loss: 0.0172 | Cons Weight: 0.35 | Train Acc: 76.72% | Student Val: 72.48% | Teacher Val: 78.24% | LR: 0.000900 | Time: 26.37s
+2025-08-01 14:21:58,511 - INFO - Epoch  20/100 | Total Loss: 0.4874 | Sup Loss: 0.4594 | Cons Loss: 0.0191 | Cons Weight: 1.46 | Train Acc: 84.84% | Student Val: 77.70% | Teacher Val: 84.56% | LR: 0.000981 | Time: 26.37s
+2025-08-01 14:26:21,618 - INFO - Epoch  30/100 | Total Loss: 0.3217 | Sup Loss: 0.2532 | Cons Loss: 0.0166 | Cons Weight: 4.14 | Train Acc: 91.71% | Student Val: 80.82% | Teacher Val: 85.50% | LR: 0.000905 | Time: 26.23s
+2025-08-01 14:30:44,729 - INFO - Epoch  40/100 | Total Loss: 0.3388 | Sup Loss: 0.2194 | Cons Loss: 0.0152 | Cons Weight: 7.85 | Train Acc: 93.49% | Student Val: 83.96% | Teacher Val: 86.74% | LR: 0.000780 | Time: 26.28s
+2025-08-01 14:35:07,461 - INFO - Epoch  50/100 | Total Loss: 0.3197 | Sup Loss: 0.1758 | Cons Loss: 0.0144 | Cons Weight: 9.98 | Train Acc: 94.78% | Student Val: 84.48% | Teacher Val: 87.40% | LR: 0.000621 | Time: 26.25s
+2025-08-01 14:39:30,223 - INFO - Epoch  60/100 | Total Loss: 0.2140 | Sup Loss: 0.0970 | Cons Loss: 0.0117 | Cons Weight: 10.00 | Train Acc: 97.32% | Student Val: 85.92% | Teacher Val: 87.88% | LR: 0.000448 | Time: 26.27s
+2025-08-01 14:43:53,096 - INFO - Epoch  70/100 | Total Loss: 0.1932 | Sup Loss: 0.0846 | Cons Loss: 0.0109 | Cons Weight: 10.00 | Train Acc: 97.92% | Student Val: 86.62% | Teacher Val: 87.62% | LR: 0.000282 | Time: 26.22s
+2025-08-01 14:48:16,333 - INFO - Epoch  80/100 | Total Loss: 0.1422 | Sup Loss: 0.0512 | Cons Loss: 0.0091 | Cons Weight: 10.00 | Train Acc: 98.92% | Student Val: 87.30% | Teacher Val: 87.88% | LR: 0.000141 | Time: 26.35s
+2025-08-01 14:52:38,926 - INFO - Epoch  90/100 | Total Loss: 0.1188 | Sup Loss: 0.0402 | Cons Loss: 0.0079 | Cons Weight: 10.00 | Train Acc: 99.20% | Student Val: 88.16% | Teacher Val: 88.12% | LR: 0.000044 | Time: 26.19s
+2025-08-01 14:57:01,579 - INFO - Epoch 100/100 | Total Loss: 0.1009 | Sup Loss: 0.0285 | Cons Loss: 0.0072 | Cons Weight: 10.00 | Train Acc: 99.47% | Student Val: 88.02% | Teacher Val: 88.14% | LR: 0.000002 | Time: 26.25s
+2025-08-01 14:57:01,580 - INFO - ------------------------------------------------------------
+2025-08-01 14:57:01,580 - INFO - Training completed! Best teacher validation accuracy: 88.40%
+2025-08-01 14:57:02,402 - INFO - ✅ final teacher test accuracy: 88.41%
+2025-08-01 14:57:02,761 - INFO - 
+🎯 experiment 2/9 - seed: 123
+2025-08-01 14:57:02,761 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 14:57:03,589 - INFO - labeled data: 5000 (10.0%)
+2025-08-01 14:57:03,589 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-01 14:57:03,589 - INFO - validation data: 5000 (10.0%)
+2025-08-01 14:57:03,589 - INFO - test data: 10000
+2025-08-01 14:57:03,590 - INFO - 🏗️  create student and teacher models...
+2025-08-01 14:57:03,708 - INFO -     model parameters: 11,173,962
+2025-08-01 14:57:03,708 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 14:57:03,717 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 14:57:03,717 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 14:57:03,717 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 14:57:03,717 - INFO - Warmup epochs: 10
+2025-08-01 14:57:03,717 - INFO - Using mixed precision training
+2025-08-01 14:57:03,717 - INFO - ------------------------------------------------------------
+2025-08-01 14:57:29,998 - INFO - Epoch   1/100 | Total Loss: 1.7708 | Sup Loss: 1.7702 | Cons Loss: 0.0084 | Cons Weight: 0.07 | Train Acc: 35.12% | Student Val: 48.60% | Teacher Val: 48.62% | LR: 0.001000 | Time: 26.28s
+2025-08-01 15:01:26,662 - INFO - Epoch  10/100 | Total Loss: 0.7541 | Sup Loss: 0.7481 | Cons Loss: 0.0172 | Cons Weight: 0.35 | Train Acc: 74.72% | Student Val: 73.70% | Teacher Val: 77.60% | LR: 0.000900 | Time: 26.32s
+2025-08-01 15:05:49,588 - INFO - Epoch  20/100 | Total Loss: 0.4849 | Sup Loss: 0.4585 | Cons Loss: 0.0180 | Cons Weight: 1.46 | Train Acc: 85.17% | Student Val: 80.60% | Teacher Val: 84.10% | LR: 0.000981 | Time: 26.31s
+2025-08-01 15:10:12,349 - INFO - Epoch  30/100 | Total Loss: 0.3631 | Sup Loss: 0.2934 | Cons Loss: 0.0168 | Cons Weight: 4.14 | Train Acc: 90.37% | Student Val: 81.26% | Teacher Val: 85.44% | LR: 0.000905 | Time: 26.36s
+2025-08-01 15:14:35,332 - INFO - Epoch  40/100 | Total Loss: 0.2822 | Sup Loss: 0.1716 | Cons Loss: 0.0141 | Cons Weight: 7.85 | Train Acc: 94.64% | Student Val: 84.10% | Teacher Val: 86.38% | LR: 0.000780 | Time: 26.34s
+2025-08-01 15:18:58,286 - INFO - Epoch  50/100 | Total Loss: 0.3033 | Sup Loss: 0.1684 | Cons Loss: 0.0135 | Cons Weight: 9.98 | Train Acc: 95.01% | Student Val: 84.62% | Teacher Val: 86.84% | LR: 0.000621 | Time: 26.29s
+2025-08-01 15:23:21,417 - INFO - Epoch  60/100 | Total Loss: 0.2474 | Sup Loss: 0.1215 | Cons Loss: 0.0126 | Cons Weight: 10.00 | Train Acc: 96.50% | Student Val: 86.16% | Teacher Val: 87.24% | LR: 0.000448 | Time: 26.29s
+2025-08-01 15:27:44,402 - INFO - Epoch  70/100 | Total Loss: 0.1905 | Sup Loss: 0.0815 | Cons Loss: 0.0109 | Cons Weight: 10.00 | Train Acc: 97.77% | Student Val: 86.84% | Teacher Val: 87.34% | LR: 0.000282 | Time: 26.30s
+2025-08-01 15:32:07,729 - INFO - Epoch  80/100 | Total Loss: 0.1454 | Sup Loss: 0.0540 | Cons Loss: 0.0091 | Cons Weight: 10.00 | Train Acc: 98.69% | Student Val: 87.34% | Teacher Val: 87.84% | LR: 0.000141 | Time: 26.33s
+2025-08-01 15:36:30,941 - INFO - Epoch  90/100 | Total Loss: 0.1180 | Sup Loss: 0.0387 | Cons Loss: 0.0079 | Cons Weight: 10.00 | Train Acc: 99.24% | Student Val: 88.02% | Teacher Val: 88.44% | LR: 0.000044 | Time: 26.37s
+2025-08-01 15:40:53,889 - INFO - Epoch 100/100 | Total Loss: 0.1091 | Sup Loss: 0.0356 | Cons Loss: 0.0074 | Cons Weight: 10.00 | Train Acc: 99.34% | Student Val: 88.46% | Teacher Val: 88.32% | LR: 0.000002 | Time: 26.28s
+2025-08-01 15:40:53,889 - INFO - ------------------------------------------------------------
+2025-08-01 15:40:53,889 - INFO - Training completed! Best teacher validation accuracy: 88.62%
+2025-08-01 15:40:54,707 - INFO - ✅ final teacher test accuracy: 88.53%
+2025-08-01 15:40:55,129 - INFO - 
+🎯 experiment 3/9 - seed: 456
+2025-08-01 15:40:55,129 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 15:40:55,910 - INFO - labeled data: 5000 (10.0%)
+2025-08-01 15:40:55,910 - INFO - unlabeled data: 40000 (80.0%)
+2025-08-01 15:40:55,910 - INFO - validation data: 5000 (10.0%)
+2025-08-01 15:40:55,910 - INFO - test data: 10000
+2025-08-01 15:40:55,912 - INFO - 🏗️  create student and teacher models...
+2025-08-01 15:40:56,046 - INFO -     model parameters: 11,173,962
+2025-08-01 15:40:56,047 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 15:40:56,059 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 15:40:56,059 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 15:40:56,059 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 15:40:56,059 - INFO - Warmup epochs: 10
+2025-08-01 15:40:56,059 - INFO - Using mixed precision training
+2025-08-01 15:40:56,059 - INFO - ------------------------------------------------------------
+2025-08-01 15:41:22,358 - INFO - Epoch   1/100 | Total Loss: 1.7281 | Sup Loss: 1.7275 | Cons Loss: 0.0089 | Cons Weight: 0.07 | Train Acc: 36.65% | Student Val: 42.04% | Teacher Val: 49.54% | LR: 0.001000 | Time: 26.30s
+2025-08-01 15:45:19,393 - INFO - Epoch  10/100 | Total Loss: 0.6825 | Sup Loss: 0.6763 | Cons Loss: 0.0180 | Cons Weight: 0.35 | Train Acc: 77.13% | Student Val: 73.94% | Teacher Val: 77.66% | LR: 0.000900 | Time: 26.38s
+2025-08-01 15:49:42,886 - INFO - Epoch  20/100 | Total Loss: 0.3996 | Sup Loss: 0.3744 | Cons Loss: 0.0173 | Cons Weight: 1.46 | Train Acc: 87.57% | Student Val: 79.60% | Teacher Val: 84.26% | LR: 0.000981 | Time: 26.38s
+2025-08-01 15:54:06,590 - INFO - Epoch  30/100 | Total Loss: 0.3425 | Sup Loss: 0.2720 | Cons Loss: 0.0170 | Cons Weight: 4.14 | Train Acc: 91.28% | Student Val: 82.44% | Teacher Val: 85.26% | LR: 0.000905 | Time: 26.40s
+2025-08-01 15:58:30,297 - INFO - Epoch  40/100 | Total Loss: 0.3056 | Sup Loss: 0.1880 | Cons Loss: 0.0150 | Cons Weight: 7.85 | Train Acc: 94.24% | Student Val: 83.28% | Teacher Val: 86.48% | LR: 0.000780 | Time: 26.38s
+2025-08-01 16:02:53,462 - INFO - Epoch  50/100 | Total Loss: 0.2515 | Sup Loss: 0.1247 | Cons Loss: 0.0127 | Cons Weight: 9.98 | Train Acc: 96.53% | Student Val: 84.16% | Teacher Val: 87.12% | LR: 0.000621 | Time: 26.23s
+2025-08-01 16:07:16,428 - INFO - Epoch  60/100 | Total Loss: 0.2498 | Sup Loss: 0.1262 | Cons Loss: 0.0124 | Cons Weight: 10.00 | Train Acc: 96.40% | Student Val: 85.46% | Teacher Val: 87.98% | LR: 0.000448 | Time: 26.32s
+2025-08-01 16:11:39,148 - INFO - Epoch  70/100 | Total Loss: 0.1818 | Sup Loss: 0.0757 | Cons Loss: 0.0106 | Cons Weight: 10.00 | Train Acc: 98.10% | Student Val: 87.16% | Teacher Val: 87.90% | LR: 0.000282 | Time: 26.28s
+2025-08-01 16:16:02,172 - INFO - Epoch  80/100 | Total Loss: 0.1398 | Sup Loss: 0.0500 | Cons Loss: 0.0090 | Cons Weight: 10.00 | Train Acc: 98.84% | Student Val: 87.66% | Teacher Val: 87.82% | LR: 0.000141 | Time: 26.30s
+2025-08-01 16:20:25,173 - INFO - Epoch  90/100 | Total Loss: 0.1115 | Sup Loss: 0.0350 | Cons Loss: 0.0076 | Cons Weight: 10.00 | Train Acc: 99.29% | Student Val: 88.26% | Teacher Val: 88.38% | LR: 0.000044 | Time: 26.31s
+2025-08-01 16:24:48,204 - INFO - Epoch 100/100 | Total Loss: 0.0998 | Sup Loss: 0.0297 | Cons Loss: 0.0070 | Cons Weight: 10.00 | Train Acc: 99.48% | Student Val: 88.60% | Teacher Val: 88.34% | LR: 0.000002 | Time: 26.29s
+2025-08-01 16:24:48,205 - INFO - ------------------------------------------------------------
+2025-08-01 16:24:48,205 - INFO - Training completed! Best teacher validation accuracy: 88.44%
+2025-08-01 16:24:49,025 - INFO - ✅ final teacher test accuracy: 88.63%
+2025-08-01 16:24:49,375 - INFO - 
+📈 10.0% average result: 88.52% ± 0.09%
+2025-08-01 16:24:49,375 - INFO - 
+📊 labeled ratio: 5.0%
+2025-08-01 16:24:49,375 - INFO - ------------------------------------------------------------
+2025-08-01 16:24:49,375 - INFO - 
+🎯 experiment 4/9 - seed: 42
+2025-08-01 16:24:49,375 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 16:24:50,196 - INFO - labeled data: 2500 (5.0%)
+2025-08-01 16:24:50,196 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-01 16:24:50,196 - INFO - validation data: 5000 (10.0%)
+2025-08-01 16:24:50,196 - INFO - test data: 10000
+2025-08-01 16:24:50,197 - INFO - 🏗️  create student and teacher models...
+2025-08-01 16:24:50,317 - INFO -     model parameters: 11,173,962
+2025-08-01 16:24:50,317 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 16:24:50,326 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 16:24:50,326 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 16:24:50,326 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 16:24:50,326 - INFO - Warmup epochs: 10
+2025-08-01 16:24:50,326 - INFO - Using mixed precision training
+2025-08-01 16:24:50,326 - INFO - ------------------------------------------------------------
+2025-08-01 16:25:18,088 - INFO - Epoch   1/100 | Total Loss: 1.5544 | Sup Loss: 1.5536 | Cons Loss: 0.0113 | Cons Weight: 0.07 | Train Acc: 43.41% | Student Val: 50.48% | Teacher Val: 55.18% | LR: 0.001000 | Time: 27.76s
+2025-08-01 16:29:28,235 - INFO - Epoch  10/100 | Total Loss: 0.3628 | Sup Loss: 0.3569 | Cons Loss: 0.0260 | Cons Weight: 0.22 | Train Acc: 88.21% | Student Val: 67.84% | Teacher Val: 77.10% | LR: 0.000900 | Time: 27.78s
+2025-08-01 16:34:06,276 - INFO - Epoch  20/100 | Total Loss: 0.2081 | Sup Loss: 0.1902 | Cons Loss: 0.0254 | Cons Weight: 0.70 | Train Acc: 93.90% | Student Val: 72.40% | Teacher Val: 81.48% | LR: 0.000981 | Time: 27.89s
+2025-08-01 16:38:45,017 - INFO - Epoch  30/100 | Total Loss: 0.1800 | Sup Loss: 0.1380 | Cons Loss: 0.0234 | Cons Weight: 1.80 | Train Acc: 95.70% | Student Val: 76.90% | Teacher Val: 82.18% | LR: 0.000905 | Time: 27.84s
+2025-08-01 16:43:23,177 - INFO - Epoch  40/100 | Total Loss: 0.1675 | Sup Loss: 0.0935 | Cons Loss: 0.0197 | Cons Weight: 3.75 | Train Acc: 97.21% | Student Val: 79.74% | Teacher Val: 83.60% | LR: 0.000780 | Time: 27.86s
+2025-08-01 16:48:01,563 - INFO - Epoch  50/100 | Total Loss: 0.1784 | Sup Loss: 0.0723 | Cons Loss: 0.0166 | Cons Weight: 6.38 | Train Acc: 97.96% | Student Val: 80.38% | Teacher Val: 84.58% | LR: 0.000621 | Time: 27.88s
+2025-08-01 16:52:39,898 - INFO - Epoch  60/100 | Total Loss: 0.1720 | Sup Loss: 0.0532 | Cons Loss: 0.0134 | Cons Weight: 8.84 | Train Acc: 98.69% | Student Val: 83.14% | Teacher Val: 85.40% | LR: 0.000448 | Time: 27.80s
+2025-08-01 16:57:17,814 - INFO - Epoch  70/100 | Total Loss: 0.1429 | Sup Loss: 0.0362 | Cons Loss: 0.0107 | Cons Weight: 9.99 | Train Acc: 99.19% | Student Val: 84.26% | Teacher Val: 85.58% | LR: 0.000282 | Time: 27.80s
+2025-08-01 17:01:55,807 - INFO - Epoch  80/100 | Total Loss: 0.1088 | Sup Loss: 0.0230 | Cons Loss: 0.0086 | Cons Weight: 10.00 | Train Acc: 99.56% | Student Val: 85.96% | Teacher Val: 86.04% | LR: 0.000141 | Time: 27.90s
+2025-08-01 17:06:33,710 - INFO - Epoch  90/100 | Total Loss: 0.0865 | Sup Loss: 0.0156 | Cons Loss: 0.0071 | Cons Weight: 10.00 | Train Acc: 99.76% | Student Val: 86.16% | Teacher Val: 85.88% | LR: 0.000044 | Time: 27.75s
+2025-08-01 17:11:11,721 - INFO - Epoch 100/100 | Total Loss: 0.0757 | Sup Loss: 0.0131 | Cons Loss: 0.0063 | Cons Weight: 10.00 | Train Acc: 99.82% | Student Val: 86.02% | Teacher Val: 86.20% | LR: 0.000002 | Time: 27.81s
+2025-08-01 17:11:11,721 - INFO - ------------------------------------------------------------
+2025-08-01 17:11:11,721 - INFO - Training completed! Best teacher validation accuracy: 86.56%
+2025-08-01 17:11:12,541 - INFO - ✅ final teacher test accuracy: 86.63%
+2025-08-01 17:11:12,880 - INFO - 
+🎯 experiment 5/9 - seed: 123
+2025-08-01 17:11:12,880 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 17:11:13,708 - INFO - labeled data: 2500 (5.0%)
+2025-08-01 17:11:13,708 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-01 17:11:13,708 - INFO - validation data: 5000 (10.0%)
+2025-08-01 17:11:13,708 - INFO - test data: 10000
+2025-08-01 17:11:13,709 - INFO - 🏗️  create student and teacher models...
+2025-08-01 17:11:13,831 - INFO -     model parameters: 11,173,962
+2025-08-01 17:11:13,831 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 17:11:13,842 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 17:11:13,842 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 17:11:13,842 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 17:11:13,842 - INFO - Warmup epochs: 10
+2025-08-01 17:11:13,843 - INFO - Using mixed precision training
+2025-08-01 17:11:13,843 - INFO - ------------------------------------------------------------
+2025-08-01 17:11:41,695 - INFO - Epoch   1/100 | Total Loss: 1.6495 | Sup Loss: 1.6489 | Cons Loss: 0.0099 | Cons Weight: 0.07 | Train Acc: 39.95% | Student Val: 52.80% | Teacher Val: 53.96% | LR: 0.001000 | Time: 27.85s
+2025-08-01 17:15:52,469 - INFO - Epoch  10/100 | Total Loss: 0.3593 | Sup Loss: 0.3535 | Cons Loss: 0.0259 | Cons Weight: 0.22 | Train Acc: 88.28% | Student Val: 67.54% | Teacher Val: 77.04% | LR: 0.000900 | Time: 27.88s
+2025-08-01 17:20:31,900 - INFO - Epoch  20/100 | Total Loss: 0.2149 | Sup Loss: 0.1963 | Cons Loss: 0.0264 | Cons Weight: 0.70 | Train Acc: 93.80% | Student Val: 74.04% | Teacher Val: 80.24% | LR: 0.000981 | Time: 27.96s
+2025-08-01 17:25:11,655 - INFO - Epoch  30/100 | Total Loss: 0.1817 | Sup Loss: 0.1384 | Cons Loss: 0.0241 | Cons Weight: 1.80 | Train Acc: 95.61% | Student Val: 75.52% | Teacher Val: 81.10% | LR: 0.000905 | Time: 27.98s
+2025-08-01 17:29:50,948 - INFO - Epoch  40/100 | Total Loss: 0.1677 | Sup Loss: 0.0923 | Cons Loss: 0.0201 | Cons Weight: 3.75 | Train Acc: 97.35% | Student Val: 76.96% | Teacher Val: 82.08% | LR: 0.000780 | Time: 27.90s
+2025-08-01 17:34:29,875 - INFO - Epoch  50/100 | Total Loss: 0.1871 | Sup Loss: 0.0761 | Cons Loss: 0.0174 | Cons Weight: 6.38 | Train Acc: 97.83% | Student Val: 78.56% | Teacher Val: 82.84% | LR: 0.000621 | Time: 27.89s
+2025-08-01 17:39:08,510 - INFO - Epoch  60/100 | Total Loss: 0.1758 | Sup Loss: 0.0542 | Cons Loss: 0.0138 | Cons Weight: 8.84 | Train Acc: 98.67% | Student Val: 81.90% | Teacher Val: 84.54% | LR: 0.000448 | Time: 27.80s
+2025-08-01 17:43:46,465 - INFO - Epoch  70/100 | Total Loss: 0.1529 | Sup Loss: 0.0391 | Cons Loss: 0.0114 | Cons Weight: 9.99 | Train Acc: 99.17% | Student Val: 84.04% | Teacher Val: 85.14% | LR: 0.000282 | Time: 27.80s
+2025-08-01 17:48:24,903 - INFO - Epoch  80/100 | Total Loss: 0.1142 | Sup Loss: 0.0221 | Cons Loss: 0.0092 | Cons Weight: 10.00 | Train Acc: 99.60% | Student Val: 85.18% | Teacher Val: 86.00% | LR: 0.000141 | Time: 27.83s
+2025-08-01 17:53:03,082 - INFO - Epoch  90/100 | Total Loss: 0.0869 | Sup Loss: 0.0155 | Cons Loss: 0.0071 | Cons Weight: 10.00 | Train Acc: 99.74% | Student Val: 85.98% | Teacher Val: 85.98% | LR: 0.000044 | Time: 27.80s
+2025-08-01 17:57:41,284 - INFO - Epoch 100/100 | Total Loss: 0.0799 | Sup Loss: 0.0138 | Cons Loss: 0.0066 | Cons Weight: 10.00 | Train Acc: 99.76% | Student Val: 86.10% | Teacher Val: 86.12% | LR: 0.000002 | Time: 27.82s
+2025-08-01 17:57:41,285 - INFO - ------------------------------------------------------------
+2025-08-01 17:57:41,285 - INFO - Training completed! Best teacher validation accuracy: 86.36%
+2025-08-01 17:57:42,107 - INFO - ✅ final teacher test accuracy: 86.53%
+2025-08-01 17:57:42,449 - INFO - 
+🎯 experiment 6/9 - seed: 456
+2025-08-01 17:57:42,449 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 17:57:43,288 - INFO - labeled data: 2500 (5.0%)
+2025-08-01 17:57:43,288 - INFO - unlabeled data: 42500 (85.0%)
+2025-08-01 17:57:43,288 - INFO - validation data: 5000 (10.0%)
+2025-08-01 17:57:43,288 - INFO - test data: 10000
+2025-08-01 17:57:43,288 - INFO - 🏗️  create student and teacher models...
+2025-08-01 17:57:43,407 - INFO -     model parameters: 11,173,962
+2025-08-01 17:57:43,407 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 17:57:43,416 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 17:57:43,416 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 17:57:43,416 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 17:57:43,416 - INFO - Warmup epochs: 10
+2025-08-01 17:57:43,416 - INFO - Using mixed precision training
+2025-08-01 17:57:43,416 - INFO - ------------------------------------------------------------
+2025-08-01 17:58:11,252 - INFO - Epoch   1/100 | Total Loss: 1.6051 | Sup Loss: 1.6044 | Cons Loss: 0.0106 | Cons Weight: 0.07 | Train Acc: 41.09% | Student Val: 48.84% | Teacher Val: 53.54% | LR: 0.001000 | Time: 27.84s
+2025-08-01 18:02:22,247 - INFO - Epoch  10/100 | Total Loss: 0.3491 | Sup Loss: 0.3431 | Cons Loss: 0.0267 | Cons Weight: 0.22 | Train Acc: 88.77% | Student Val: 67.20% | Teacher Val: 77.22% | LR: 0.000900 | Time: 27.93s
+2025-08-01 18:07:01,481 - INFO - Epoch  20/100 | Total Loss: 0.2033 | Sup Loss: 0.1850 | Cons Loss: 0.0261 | Cons Weight: 0.70 | Train Acc: 94.14% | Student Val: 73.66% | Teacher Val: 81.24% | LR: 0.000981 | Time: 27.93s
+2025-08-01 18:11:40,393 - INFO - Epoch  30/100 | Total Loss: 0.1691 | Sup Loss: 0.1264 | Cons Loss: 0.0237 | Cons Weight: 1.80 | Train Acc: 96.19% | Student Val: 75.94% | Teacher Val: 81.56% | LR: 0.000905 | Time: 27.84s
+2025-08-01 18:16:19,121 - INFO - Epoch  40/100 | Total Loss: 0.1662 | Sup Loss: 0.0897 | Cons Loss: 0.0204 | Cons Weight: 3.75 | Train Acc: 97.37% | Student Val: 76.68% | Teacher Val: 82.70% | LR: 0.000780 | Time: 27.88s
+2025-08-01 18:20:57,805 - INFO - Epoch  50/100 | Total Loss: 0.1786 | Sup Loss: 0.0713 | Cons Loss: 0.0168 | Cons Weight: 6.38 | Train Acc: 98.05% | Student Val: 79.96% | Teacher Val: 83.94% | LR: 0.000621 | Time: 27.87s
+2025-08-01 18:25:36,172 - INFO - Epoch  60/100 | Total Loss: 0.1679 | Sup Loss: 0.0491 | Cons Loss: 0.0134 | Cons Weight: 8.84 | Train Acc: 98.80% | Student Val: 82.72% | Teacher Val: 85.08% | LR: 0.000448 | Time: 27.80s
+2025-08-01 18:30:14,209 - INFO - Epoch  70/100 | Total Loss: 0.1460 | Sup Loss: 0.0365 | Cons Loss: 0.0110 | Cons Weight: 9.99 | Train Acc: 99.16% | Student Val: 84.08% | Teacher Val: 85.60% | LR: 0.000282 | Time: 27.82s
+2025-08-01 18:34:52,388 - INFO - Epoch  80/100 | Total Loss: 0.1108 | Sup Loss: 0.0234 | Cons Loss: 0.0087 | Cons Weight: 10.00 | Train Acc: 99.55% | Student Val: 85.40% | Teacher Val: 85.98% | LR: 0.000141 | Time: 27.83s
+2025-08-01 18:39:30,604 - INFO - Epoch  90/100 | Total Loss: 0.0844 | Sup Loss: 0.0151 | Cons Loss: 0.0069 | Cons Weight: 10.00 | Train Acc: 99.78% | Student Val: 86.58% | Teacher Val: 86.30% | LR: 0.000044 | Time: 27.84s
+2025-08-01 18:44:08,717 - INFO - Epoch 100/100 | Total Loss: 0.0752 | Sup Loss: 0.0129 | Cons Loss: 0.0062 | Cons Weight: 10.00 | Train Acc: 99.83% | Student Val: 86.24% | Teacher Val: 86.28% | LR: 0.000002 | Time: 27.85s
+2025-08-01 18:44:08,717 - INFO - ------------------------------------------------------------
+2025-08-01 18:44:08,717 - INFO - Training completed! Best teacher validation accuracy: 86.44%
+2025-08-01 18:44:09,540 - INFO - ✅ final teacher test accuracy: 86.36%
+2025-08-01 18:44:09,985 - INFO - 
+📈 5.0% average result: 86.51% ± 0.11%
+2025-08-01 18:44:09,985 - INFO - 
+📊 labeled ratio: 1.0%
+2025-08-01 18:44:09,985 - INFO - ------------------------------------------------------------
+2025-08-01 18:44:09,985 - INFO - 
+🎯 experiment 7/9 - seed: 42
+2025-08-01 18:44:09,985 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 18:44:10,784 - INFO - labeled data: 500 (1.0%)
+2025-08-01 18:44:10,784 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-01 18:44:10,784 - INFO - validation data: 5000 (10.0%)
+2025-08-01 18:44:10,784 - INFO - test data: 10000
+2025-08-01 18:44:10,785 - INFO - 🏗️  create student and teacher models...
+2025-08-01 18:44:10,897 - INFO -     model parameters: 11,173,962
+2025-08-01 18:44:10,897 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 18:44:10,909 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 18:44:10,909 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 18:44:10,909 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 18:44:10,909 - INFO - Warmup epochs: 10
+2025-08-01 18:44:10,909 - INFO - Using mixed precision training
+2025-08-01 18:44:10,909 - INFO - ------------------------------------------------------------
+2025-08-01 18:44:40,023 - INFO - Epoch   1/100 | Total Loss: 0.9929 | Sup Loss: 0.9913 | Cons Loss: 0.0237 | Cons Weight: 0.07 | Train Acc: 65.06% | Student Val: 42.64% | Teacher Val: 50.16% | LR: 0.001000 | Time: 29.11s
+2025-08-01 18:49:02,028 - INFO - Epoch  10/100 | Total Loss: 0.1234 | Sup Loss: 0.1139 | Cons Loss: 0.0490 | Cons Weight: 0.19 | Train Acc: 96.54% | Student Val: 54.18% | Teacher Val: 59.10% | LR: 0.000900 | Time: 29.09s
+2025-08-01 18:53:53,203 - INFO - Epoch  20/100 | Total Loss: 0.0892 | Sup Loss: 0.0646 | Cons Loss: 0.0450 | Cons Weight: 0.55 | Train Acc: 98.18% | Student Val: 56.26% | Teacher Val: 63.12% | LR: 0.000981 | Time: 29.12s
+2025-08-01 18:58:44,667 - INFO - Epoch  30/100 | Total Loss: 0.0807 | Sup Loss: 0.0343 | Cons Loss: 0.0354 | Cons Weight: 1.31 | Train Acc: 99.17% | Student Val: 61.84% | Teacher Val: 66.18% | LR: 0.000905 | Time: 29.05s
+2025-08-01 19:03:35,569 - INFO - Epoch  40/100 | Total Loss: 0.1068 | Sup Loss: 0.0331 | Cons Loss: 0.0274 | Cons Weight: 2.69 | Train Acc: 99.27% | Student Val: 66.90% | Teacher Val: 70.26% | LR: 0.000780 | Time: 29.05s
+2025-08-01 19:08:26,285 - INFO - Epoch  50/100 | Total Loss: 0.1127 | Sup Loss: 0.0242 | Cons Loss: 0.0188 | Cons Weight: 4.72 | Train Acc: 99.59% | Student Val: 68.94% | Teacher Val: 73.18% | LR: 0.000621 | Time: 29.09s
+2025-08-01 19:13:16,848 - INFO - Epoch  60/100 | Total Loss: 0.1061 | Sup Loss: 0.0165 | Cons Loss: 0.0126 | Cons Weight: 7.09 | Train Acc: 99.76% | Student Val: 74.84% | Teacher Val: 75.62% | LR: 0.000448 | Time: 29.01s
+2025-08-01 19:18:07,034 - INFO - Epoch  70/100 | Total Loss: 0.0823 | Sup Loss: 0.0104 | Cons Loss: 0.0079 | Cons Weight: 9.10 | Train Acc: 99.84% | Student Val: 76.42% | Teacher Val: 77.56% | LR: 0.000282 | Time: 29.02s
+2025-08-01 19:22:57,290 - INFO - Epoch  80/100 | Total Loss: 0.0578 | Sup Loss: 0.0060 | Cons Loss: 0.0052 | Cons Weight: 9.99 | Train Acc: 99.95% | Student Val: 77.76% | Teacher Val: 78.12% | LR: 0.000141 | Time: 29.02s
+2025-08-01 19:27:47,711 - INFO - Epoch  90/100 | Total Loss: 0.0427 | Sup Loss: 0.0045 | Cons Loss: 0.0038 | Cons Weight: 10.00 | Train Acc: 99.96% | Student Val: 79.34% | Teacher Val: 78.74% | LR: 0.000044 | Time: 29.07s
+2025-08-01 19:32:38,108 - INFO - Epoch 100/100 | Total Loss: 0.0365 | Sup Loss: 0.0035 | Cons Loss: 0.0033 | Cons Weight: 10.00 | Train Acc: 99.99% | Student Val: 79.30% | Teacher Val: 78.76% | LR: 0.000002 | Time: 29.00s
+2025-08-01 19:32:38,109 - INFO - ------------------------------------------------------------
+2025-08-01 19:32:38,109 - INFO - Training completed! Best teacher validation accuracy: 79.06%
+2025-08-01 19:32:38,923 - INFO - ✅ final teacher test accuracy: 78.46%
+2025-08-01 19:32:39,257 - INFO - 
+🎯 experiment 8/9 - seed: 123
+2025-08-01 19:32:39,257 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 19:32:40,046 - INFO - labeled data: 500 (1.0%)
+2025-08-01 19:32:40,046 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-01 19:32:40,046 - INFO - validation data: 5000 (10.0%)
+2025-08-01 19:32:40,046 - INFO - test data: 10000
+2025-08-01 19:32:40,048 - INFO - 🏗️  create student and teacher models...
+2025-08-01 19:32:40,162 - INFO -     model parameters: 11,173,962
+2025-08-01 19:32:40,162 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 19:32:40,172 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 19:32:40,172 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 19:32:40,172 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 19:32:40,172 - INFO - Warmup epochs: 10
+2025-08-01 19:32:40,172 - INFO - Using mixed precision training
+2025-08-01 19:32:40,172 - INFO - ------------------------------------------------------------
+2025-08-01 19:33:09,299 - INFO - Epoch   1/100 | Total Loss: 1.0277 | Sup Loss: 1.0262 | Cons Loss: 0.0221 | Cons Weight: 0.07 | Train Acc: 64.13% | Student Val: 40.78% | Teacher Val: 48.44% | LR: 0.001000 | Time: 29.13s
+2025-08-01 19:37:31,766 - INFO - Epoch  10/100 | Total Loss: 0.1293 | Sup Loss: 0.1198 | Cons Loss: 0.0488 | Cons Weight: 0.19 | Train Acc: 96.43% | Student Val: 52.68% | Teacher Val: 58.94% | LR: 0.000900 | Time: 29.26s
+2025-08-01 19:42:23,261 - INFO - Epoch  20/100 | Total Loss: 0.0828 | Sup Loss: 0.0587 | Cons Loss: 0.0442 | Cons Weight: 0.55 | Train Acc: 98.35% | Student Val: 56.60% | Teacher Val: 61.70% | LR: 0.000981 | Time: 29.08s
+2025-08-01 19:47:14,476 - INFO - Epoch  30/100 | Total Loss: 0.0885 | Sup Loss: 0.0409 | Cons Loss: 0.0363 | Cons Weight: 1.31 | Train Acc: 98.89% | Student Val: 62.06% | Teacher Val: 64.28% | LR: 0.000905 | Time: 29.05s
+2025-08-01 19:52:05,740 - INFO - Epoch  40/100 | Total Loss: 0.0942 | Sup Loss: 0.0255 | Cons Loss: 0.0255 | Cons Weight: 2.69 | Train Acc: 99.50% | Student Val: 65.36% | Teacher Val: 67.80% | LR: 0.000780 | Time: 29.21s
+2025-08-01 19:56:56,619 - INFO - Epoch  50/100 | Total Loss: 0.1060 | Sup Loss: 0.0221 | Cons Loss: 0.0178 | Cons Weight: 4.72 | Train Acc: 99.62% | Student Val: 69.06% | Teacher Val: 70.34% | LR: 0.000621 | Time: 29.07s
+2025-08-01 20:01:46,992 - INFO - Epoch  60/100 | Total Loss: 0.0900 | Sup Loss: 0.0163 | Cons Loss: 0.0104 | Cons Weight: 7.09 | Train Acc: 99.67% | Student Val: 70.52% | Teacher Val: 72.20% | LR: 0.000448 | Time: 29.02s
+2025-08-01 20:06:37,475 - INFO - Epoch  70/100 | Total Loss: 0.0632 | Sup Loss: 0.0090 | Cons Loss: 0.0060 | Cons Weight: 9.10 | Train Acc: 99.85% | Student Val: 72.14% | Teacher Val: 72.86% | LR: 0.000282 | Time: 29.10s
+2025-08-01 20:11:28,156 - INFO - Epoch  80/100 | Total Loss: 0.0445 | Sup Loss: 0.0056 | Cons Loss: 0.0039 | Cons Weight: 9.99 | Train Acc: 99.92% | Student Val: 74.50% | Teacher Val: 73.14% | LR: 0.000141 | Time: 29.11s
+2025-08-01 20:16:18,739 - INFO - Epoch  90/100 | Total Loss: 0.0331 | Sup Loss: 0.0043 | Cons Loss: 0.0029 | Cons Weight: 10.00 | Train Acc: 99.96% | Student Val: 74.48% | Teacher Val: 72.04% | LR: 0.000044 | Time: 29.05s
+2025-08-01 20:21:09,251 - INFO - Epoch 100/100 | Total Loss: 0.0275 | Sup Loss: 0.0035 | Cons Loss: 0.0024 | Cons Weight: 10.00 | Train Acc: 99.98% | Student Val: 74.26% | Teacher Val: 71.70% | LR: 0.000002 | Time: 29.02s
+2025-08-01 20:21:09,252 - INFO - ------------------------------------------------------------
+2025-08-01 20:21:09,252 - INFO - Training completed! Best teacher validation accuracy: 73.40%
+2025-08-01 20:21:10,068 - INFO - ✅ final teacher test accuracy: 72.25%
+2025-08-01 20:21:10,399 - INFO - 
+🎯 experiment 9/9 - seed: 456
+2025-08-01 20:21:10,400 - INFO - 🔄 prepare semi-supervised data...
+2025-08-01 20:21:11,191 - INFO - labeled data: 500 (1.0%)
+2025-08-01 20:21:11,191 - INFO - unlabeled data: 44500 (89.0%)
+2025-08-01 20:21:11,191 - INFO - validation data: 5000 (10.0%)
+2025-08-01 20:21:11,191 - INFO - test data: 10000
+2025-08-01 20:21:11,191 - INFO - 🏗️  create student and teacher models...
+2025-08-01 20:21:11,304 - INFO -     model parameters: 11,173,962
+2025-08-01 20:21:11,304 - INFO - 🏋️  start Mean Teacher training...
+2025-08-01 20:21:11,313 - INFO - start Mean Teacher training, 100 epochs
+2025-08-01 20:21:11,313 - INFO - EMA alpha: 0.999, max consistency weight: 10.0
+2025-08-01 20:21:11,313 - INFO - Learning rate scheduler: warmup_cosine
+2025-08-01 20:21:11,313 - INFO - Warmup epochs: 10
+2025-08-01 20:21:11,313 - INFO - Using mixed precision training
+2025-08-01 20:21:11,313 - INFO - ------------------------------------------------------------
+2025-08-01 20:21:40,342 - INFO - Epoch   1/100 | Total Loss: 0.9827 | Sup Loss: 0.9811 | Cons Loss: 0.0234 | Cons Weight: 0.07 | Train Acc: 65.42% | Student Val: 42.18% | Teacher Val: 48.36% | LR: 0.001000 | Time: 29.03s
+2025-08-01 20:26:02,352 - INFO - Epoch  10/100 | Total Loss: 0.1221 | Sup Loss: 0.1128 | Cons Loss: 0.0479 | Cons Weight: 0.19 | Train Acc: 96.66% | Student Val: 49.26% | Teacher Val: 57.34% | LR: 0.000900 | Time: 29.11s
+2025-08-01 20:30:53,408 - INFO - Epoch  20/100 | Total Loss: 0.0831 | Sup Loss: 0.0587 | Cons Loss: 0.0446 | Cons Weight: 0.55 | Train Acc: 98.39% | Student Val: 56.42% | Teacher Val: 62.88% | LR: 0.000981 | Time: 29.05s
+2025-08-01 20:35:44,602 - INFO - Epoch  30/100 | Total Loss: 0.0863 | Sup Loss: 0.0392 | Cons Loss: 0.0359 | Cons Weight: 1.31 | Train Acc: 99.02% | Student Val: 60.90% | Teacher Val: 65.26% | LR: 0.000905 | Time: 29.14s
+2025-08-01 20:40:35,376 - INFO - Epoch  40/100 | Total Loss: 0.0999 | Sup Loss: 0.0287 | Cons Loss: 0.0265 | Cons Weight: 2.69 | Train Acc: 99.40% | Student Val: 66.04% | Teacher Val: 68.80% | LR: 0.000780 | Time: 29.09s
+2025-08-01 20:45:25,611 - INFO - Epoch  50/100 | Total Loss: 0.1144 | Sup Loss: 0.0252 | Cons Loss: 0.0189 | Cons Weight: 4.72 | Train Acc: 99.57% | Student Val: 68.98% | Teacher Val: 72.36% | LR: 0.000621 | Time: 29.00s
+2025-08-01 20:50:15,753 - INFO - Epoch  60/100 | Total Loss: 0.0999 | Sup Loss: 0.0166 | Cons Loss: 0.0118 | Cons Weight: 7.09 | Train Acc: 99.67% | Student Val: 73.40% | Teacher Val: 74.72% | LR: 0.000448 | Time: 28.96s
+2025-08-01 20:55:05,559 - INFO - Epoch  70/100 | Total Loss: 0.0745 | Sup Loss: 0.0088 | Cons Loss: 0.0072 | Cons Weight: 9.10 | Train Acc: 99.85% | Student Val: 74.80% | Teacher Val: 75.60% | LR: 0.000282 | Time: 28.95s
+2025-08-01 20:59:55,572 - INFO - Epoch  80/100 | Total Loss: 0.0552 | Sup Loss: 0.0064 | Cons Loss: 0.0049 | Cons Weight: 9.99 | Train Acc: 99.89% | Student Val: 76.54% | Teacher Val: 77.04% | LR: 0.000141 | Time: 28.96s
+2025-08-01 21:04:45,302 - INFO - Epoch  90/100 | Total Loss: 0.0407 | Sup Loss: 0.0041 | Cons Loss: 0.0037 | Cons Weight: 10.00 | Train Acc: 99.96% | Student Val: 78.12% | Teacher Val: 77.88% | LR: 0.000044 | Time: 28.96s
+2025-08-01 21:09:34,813 - INFO - Epoch 100/100 | Total Loss: 0.0355 | Sup Loss: 0.0034 | Cons Loss: 0.0032 | Cons Weight: 10.00 | Train Acc: 99.98% | Student Val: 78.20% | Teacher Val: 78.22% | LR: 0.000002 | Time: 28.97s
+2025-08-01 21:09:34,814 - INFO - ------------------------------------------------------------
+2025-08-01 21:09:34,814 - INFO - Training completed! Best teacher validation accuracy: 78.22%
+2025-08-01 21:09:35,632 - INFO - ✅ final teacher test accuracy: 77.48%
+2025-08-01 21:09:36,076 - INFO - 
+📈 1.0% average result: 76.06% ± 2.73%
+2025-08-01 21:09:36,076 - INFO - 
+================================================================================
+2025-08-01 21:09:36,076 - INFO - 📊 Phase 2 final results summary
+2025-08-01 21:09:36,076 - INFO - ================================================================================
+2025-08-01 21:09:36,076 - INFO - 
+Labeled Ratio        | Mean Accuracy | Std    | 95% CI  
+2025-08-01 21:09:36,076 - INFO - -------------------------------------------------------
+2025-08-01 21:09:36,076 - INFO - 10.0%                |      88.52% |  0.09% | ±0.10%
+2025-08-01 21:09:36,076 - INFO - 5.0%                 |      86.51% |  0.11% | ±0.13%
+2025-08-01 21:09:36,076 - INFO - 1.0%                 |      76.06% |  2.73% | ±3.08%
+2025-08-01 21:09:36,143 - INFO - 📈 visualization results generated
+2025-08-01 21:09:36,143 - INFO - 
+💾 results saved to: ./results/phase2_mean_teacher_results_20250801_141310/
+2025-08-01 21:09:36,146 - INFO - 
+🎉 Phase 2 experiment completed!
+2025-08-01 21:09:36,146 - INFO - 
+📝 key findings:
+2025-08-01 21:09:36,146 - INFO - • 1.0% labeled data: 76.06% ± 2.73%
+2025-08-01 21:09:36,146 - INFO - • 5.0% labeled data: 86.51% ± 0.11%
+2025-08-01 21:09:36,146 - INFO - • 10.0% labeled data: 88.52% ± 0.09%
