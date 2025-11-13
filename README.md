@@ -374,34 +374,6 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
 
 *Note: Exact values depend on seeds, hyperparameters, and computational variations*
 
-### Output Files
-
-**Per Phase**:
-```
-results/
-   phase1_baseline_results_<timestamp>/
-      detailed_results.json      # All runs with per-ratio stats
-      metrics.json               # Training curves data
-   phase2_mean_teacher_results_<timestamp>/
-   phase3_fixmatch_results_<timestamp>/
-   phase4_flexmatch_results_<timestamp>/
-```
-
-**Phase 5 Evaluation**:
-```
-results/
-   phase5_comparison.png         # Comparative bar chart (300 DPI)
-```
-
-**Logs**:
-```
-logs/
-   phase1_baseline_<timestamp>.log
-   phase2_mean_teacher_<timestamp>.log
-   phase3_fixmatch_<timestamp>.log
-   phase4_flexmatch_<timestamp>.log
-```
-
 ---
 
 ## Hyperparameters
