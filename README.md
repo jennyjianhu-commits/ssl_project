@@ -135,3 +135,101 @@ python phase1_baseline.py --epochs 100 --ratios 0.01 0.05 0.1 1.0 --seeds 42 123
 python phase2_mean_teacher.py --epochs 100 --ratios 0.01 0.05 0.1 --seeds 42 123 456
 ```
 ---
+
+### Phase 3: FixMatch (`phase3_fixmatch.py`)
+
+**Goal**: Implement FixMatch with confidence thresholding and consistency regularization.
+
+**Key Features**:
+- **Weak + Strong Augmentation**: Uses RandAugment for unlabeled data
+- **Pseudo-labeling**:
+  - Thresholding on maximum confidence
+  - Only uses predictions with confidence > threshold (default: 0.95)
+- **Consistency Loss**: MSE between predictions of weakly and strongly augmented versions
+- **Cosine Learning Rate Schedule**: With warmup phase
+- **RandAugment Integration**: `randaugment.py` provides augmentation operations
+
+**Components**:
+- `randaugment.py` - RandAugmentMC implementation with FixMatch augmentation pool
+  - 14 augmentation operations: rotation, translation, shear, brightness, contrast, etc.
+  - Configured for FixMatch with specific parameter ranges
+
+**Loss Formulation**:
+```
+L_total = L_sup + lambda * L_unsup
+L_sup = cross_entropy(pred_labeled, label)
+L_unsup = mse(pred_strong_aug, pseudo_label)
+```
+
+**Run**:
+```bash
+python phase3_fixmatch.py --epochs 280 --ratios 0.01 0.05 0.1 --seeds 42 123 456
+```
+---
+
+### Phase 4: FlexMatch (`phase4_flexmatch.py`)
+
+**Goal**: Implement FlexMatch with curriculum pseudo-labeling and adaptive thresholds.
+
+**Key Differences from FixMatch**:
+- **Class-wise Adaptive Thresholds**: Instead of fixed threshold
+  - Adjusts per-class threshold based on learning status
+  - Uses beta mapping function (convex, concave, or linear)
+- **Curriculum Pseudo-labeling**:
+  - Gradually increases labeling as training progresses
+  - Tracks which unlabeled samples have been assigned pseudo-labels
+- **Learning Status Tracking**: Monitors confidence distribution per class
+
+**Features**:
+- Dynamic threshold adjustment during training
+- Beta mapping functions for curriculum scheduling
+- Extended logging of pseudo-labeling statistics
+
+**Run**:
+```bash
+python phase4_flexmatch.py --epochs 280 --ratios 0.01 0.05 0.1 --seeds 42 123 456
+```
+
+---
+
+### Phase 5: Evaluation & Comparison (`phase5_evaluation.py`)
+
+**Goal**: Comprehensive evaluation and visualization of all methods.
+
+**Functionality**:
+- **Aggregation**: Collects results from all 4 methods
+- **Statistics**: Computes mean, standard deviation, and 95% confidence intervals
+- **Visualization**:
+  - Comparative bar chart with error bars
+  - Shows all methods across different labeled ratios
+- **Output Formats**:
+  - Markdown table for reports
+  - High-quality PNG visualization (300 DPI)
+
+**Automatically Locates**:
+```
+results/phase1_baseline_results_*/detailed_results.json
+results/phase2_mean_teacher_results_*/detailed_results.json
+results/phase3_fixmatch_results_*/detailed_results.json
+results/phase4_flexmatch_results_*/detailed_results.json
+```
+
+**Run**:
+```bash
+python phase5_evaluation.py
+```
+
+**Output**:
+```
+# Phase 5 Comprehensive Evaluation Results Comparison
+
+| labeled ratio | Supervised | Mean Teacher | FixMatch | FlexMatch |
+|---|---|---|---|---|
+| 100.0% | 92.34±0.45 | 91.98±0.52 | 91.21±0.89 | 91.87±0.61 |
+| 10.0% | 78.92±1.23 | 85.34±0.98 | 87.45±1.12 | 88.92±0.87 |
+| 5.0% | 68.43±2.15 | 78.92±1.45 | 81.23±1.34 | 83.45±1.02 |
+| 1.0% | 42.12±3.42 | 58.34±2.87 | 62.45±2.12 | 68.92±1.98 |
+
+=± comparison figure generated: results/phase5_comparison.png
+```
+---
