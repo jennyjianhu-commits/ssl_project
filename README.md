@@ -255,6 +255,38 @@ python phase5_evaluation.py
 
 ---
 
+## File Structure
+
+```
+projectA/
+    phase1_baseline.py          # Supervised baseline
+    phase2_mean_teacher.py      # Mean Teacher implementation
+    phase3_fixmatch.py          # FixMatch implementation
+    phase4_flexmatch.py         # FlexMatch implementation
+    phase5_evaluation.py        # Comprehensive evaluation
+
+ utils/
+    common_utils.py         # Shared utilities
+    setup_logging()     # Logging configuration
+    set_seed()          # Reproducibility
+    ModifiedResNet18    # Model architecture
+    get_cifar10_transforms()  # Data transforms
+    prepare_supervised_data()  # Data loading
+    prepare_semi_supervised_data()  # SSL data loading
+    evaluate_model()    # Evaluation logic
+    create_visualizations()  # Plotting
+    create_common_parser()  # CLI args
+ models/
+    ema.py                  # Exponential Moving Average
+    ModelEMA            # EMA wrapper class
+    randaugment.py              # RandAugment implementation
+    RandAugmentPC()         # For custom pool
+    RandAugmentMC()         # For FixMatch/FlexMatch
+ data/                       # CIFAR-10 dataset (auto-downloaded)
+ results/                    # Results, visualizations, JSON outputs
+ logs/                       # Training logs
+ README.md                  # This file
+```
 ---
 
 ## Usage Guide
