@@ -377,13 +377,14 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
 ### Output Files
 
 **Per Phase**:
-- results
-   - phase1_baseline_results_timestamp
-      - detailed_results.json      
-   - phase2_mean_teacher_results_timestamp
-   - phase3_fixmatch_results_timestamp
-   - phase4_flexmatch_results_timestamp
-
+```
+results/
+    phase1_baseline_results_<timestamp>/
+      detailed_results.json      # All runs with per-ratio stats
+    phase2_mean_teacher_results_<timestamp>/
+    phase3_fixmatch_results_<timestamp>/
+    phase4_flexmatch_results_<timestamp>/
+```
 ---
 
 ## Hyperparameters
