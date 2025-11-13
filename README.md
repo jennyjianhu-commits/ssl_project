@@ -385,20 +385,6 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
    - phase4_flexmatch_results_timestamp
 ```
 
-**Phase 5 Evaluation**:
-```
-results/
-   phase5_comparison.png
-```
-
-**Logs**:
-```
-logs/
-   phase1_baseline_timestamp.log
-   phase2_mean_teacher_timestamp.log
-   phase3_fixmatch_timestamp.log
-   phase4_flexmatch_timestamp.log
-```
 ---
 
 ## Hyperparameters
