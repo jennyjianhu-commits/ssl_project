@@ -377,7 +377,7 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
 ### Output Files
 
 **Per Phase**:
-- results/
+- results
    - phase1_baseline_results_timestamp
       - detailed_results.json      
    - phase2_mean_teacher_results_timestamp
