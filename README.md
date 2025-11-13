@@ -383,7 +383,6 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
    - phase2_mean_teacher_results_timestamp
    - phase3_fixmatch_results_timestamp
    - phase4_flexmatch_results_timestamp
-```
 
 ---
 
