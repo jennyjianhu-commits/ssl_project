@@ -379,12 +379,12 @@ predictions = ema_model.ema(unlabeled_data)  # Use for consistency
 **Per Phase**:
 ```
 results/
-   phase1_baseline_results_<timestamp>
+   phase1_baseline_results_timestamp
       detailed_results.json      # All runs with per-ratio stats
       metrics.json               # Training curves data
-   phase2_mean_teacher_results_<timestamp>
-   phase3_fixmatch_results_<timestamp>
-   phase4_flexmatch_results_<timestamp>
+   phase2_mean_teacher_results_timestamp
+   phase3_fixmatch_results_timestamp
+   phase4_flexmatch_results_timestamp
 ```
 
 **Phase 5 Evaluation**:
@@ -396,10 +396,10 @@ results/
 **Logs**:
 ```
 logs/
-   phase1_baseline_<timestamp>.log
-   phase2_mean_teacher_<timestamp>.log
-   phase3_fixmatch_<timestamp>.log
-   phase4_flexmatch_<timestamp>.log
+   phase1_baseline_timestamp.log
+   phase2_mean_teacher_timestamp.log
+   phase3_fixmatch_timestamp.log
+   phase4_flexmatch_timestamp.log
 ```
 ---
 
