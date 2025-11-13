@@ -69,3 +69,69 @@ Key files:
 - NumPy >= 2.0.2
 - Matplotlib >= 3.9.4
 - scikit-learn >= 1.6.1
+
+### Setup
+
+```bash
+# Clone repository
+git clone <repo-url>
+cd projectA
+
+# Install dependencies using uv (recommended)
+uv sync
+
+# Or using pip
+pip install torch torchvision numpy matplotlib scikit-learn
+```
+---
+
+## Phases Overview
+
+### Phase 1: Supervised Baseline (`phase1_baseline.py`)
+
+**Goal**: Establish supervised learning performance baseline with varying labeled data ratios.
+
+**Key Features**:
+- Trains on full dataset (100% labeled) and limited labeled scenarios
+- Labeled ratios: 1%, 5%, 10%, 100%
+- Cross-entropy loss only
+- Learning rate scheduler with decay
+
+**Output**:
+- Training metrics plot
+- Detailed results JSON with per-ratio statistics
+- Test accuracy comparison
+
+**Run**:
+```bash
+python phase1_baseline.py --epochs 100 --ratios 0.01 0.05 0.1 1.0 --seeds 42 123 456
+```
+
+---
+
+### Phase 2: Mean Teacher (`phase2_mean_teacher.py`)
+
+**Goal**: Implement self-ensembling approach using teacher-student framework.
+
+**Key Features**:
+- **Teacher Model**: Exponential Moving Average (EMA) of student
+- **Student Model**: Regular model trained on labeled + unlabeled data
+- **Loss Function**:
+  - Supervised loss (labeled data)
+  - Consistency regularization loss (unlabeled data)
+- **Dual Augmentation**: Weak augmentation for teacher, strong for student
+- **EMA Decay**: 0.999 (configured in code)
+
+**Components**:
+- `models/ema.py` - ModelEMA implementation
+
+**Output**:
+- Tracking metrics per epoch
+- Performance comparison across labeled ratios
+- Training visualizations
+
+**Run**:
+```bash
+python phase2_mean_teacher.py --epochs 100 --ratios 0.01 0.05 0.1 --seeds 42 123 456
+```
+---
