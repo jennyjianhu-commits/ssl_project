@@ -385,6 +385,21 @@ results/
     phase3_fixmatch_results_<timestamp>/
     phase4_flexmatch_results_<timestamp>/
 ```
+
+**Phase 5 Evaluation**:
+```
+results/
+  phase5_comparison.png         # Comparative bar chart (300 DPI)
+```
+
+**Logs**:
+```
+logs/
+  phase1_baseline_<timestamp>.log
+  phase2_mean_teacher_<timestamp>.log
+  phase3_fixmatch_<timestamp>.log
+  phase4_flexmatch_<timestamp>.log
+```
 ---
 
 ## Hyperparameters
